@@ -124,7 +124,7 @@ const all_cheat_icons = {
   swift: <SwiftIcon />,
   r: <RIcon />,
   ocaml: <OcamlIcon/>,
-  perl: <PerlIcon/>,
+  perl: <PerlIcon dimension={45}/>,
   soplang: <SoplangIcon/>,
   mysql: <MySQLIcon />,
   postgresql: <PostgreSQLIcon />,
