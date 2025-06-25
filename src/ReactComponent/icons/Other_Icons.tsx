@@ -387,3 +387,41 @@ export function DesktopIcon({
     </svg>
   );
 }
+
+export function FallIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 1024 1024"
+    >
+      <path
+        fill={color}
+        d="m925.9 804l-24-199.2c-.8-6.6-8.9-9.4-13.6-4.7L829 659.5L557.7 388.3c-6.3-6.2-16.4-6.2-22.6 0L433.3 490L156.6 213.3a8.03 8.03 0 0 0-11.3 0l-45 45.2a8.03 8.03 0 0 0 0 11.3L422 591.7c6.2 6.3 16.4 6.3 22.6 0L546.4 490l226.1 226l-59.3 59.3a8.01 8.01 0 0 0 4.7 13.6l199.2 24c5.1.7 9.5-3.7 8.8-8.9"
+      ></path>
+    </svg>
+  );
+}
+
+export function OpenBookIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill={color}
+        d="M22 5.797v10.76a1.75 1.75 0 0 1-.12.72a1.86 1.86 0 0 1-1.83 1.19a15.4 15.4 0 0 0-3.35.32a9.7 9.7 0 0 0-3.7 1.29V5.218a10.8 10.8 0 0 1 3.46-1a17 17 0 0 1 3.72-.32a1.6 1.6 0 0 1 .71.15c.23.098.437.24.61.42a2 2 0 0 1 .39.64c.08.221.118.455.11.69M7.6 4.187a17 17 0 0 0-3.76-.33a1.81 1.81 0 0 0-1.83 1.83v10.87a1.79 1.79 0 0 0 .51 1.46a1.82 1.82 0 0 0 1.4.56a15.6 15.6 0 0 1 3.44.34a9.3 9.3 0 0 1 3.64 1.23V5.217a10.4 10.4 0 0 0-3.4-1.03m-2 3.52h1.25a.75.75 0 1 1 0 1.5H5.6a.75.75 0 1 1 0-1.5m1.84 7.51H5.6a.75.75 0 1 1 0-1.5h1.84a.75.75 0 1 1 0 1.5m1.67-3H5.76a.75.75 0 1 1 0-1.5h3.35a.75.75 0 1 1 0 1.5"
+      ></path>
+    </svg>
+  );
+}
