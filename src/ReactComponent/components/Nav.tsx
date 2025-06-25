@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MenuIcon } from "../icons/Other_Icons";
+import { FallIcon, MenuIcon, OpenBookIcon } from "../icons/Other_Icons";
 
 import {
   HomeIcon,
@@ -28,6 +28,16 @@ const navData: Array<Props> = [
     sectionName: "Home",
     path: "/",
     icon: <HomeIcon dimension={21} color="#6364f1" />,
+  },
+  {
+    sectionName: "Glossary",
+    path: "https://somglossary.somcheat.dev",
+    icon: <OpenBookIcon dimension={22} color="oklch(76.5% 0.117 163.223)" />,
+  },
+  {
+    sectionName: "Deprecations",
+    path: "https://somdep.somcheat.dev",
+    icon: <FallIcon dimension={22} color="#ffa999" />,
   },
   {
     sectionName: "Progress",
@@ -96,6 +106,7 @@ export default function Nav() {
             >
               {section.icon}
               <a
+                target={section.path.includes("https") ? "_blank" : ""}
                 href={section.path}
                 className="font-medium dark:text-slate-300 text-slate-600 hover:text-blue-400 italic w-fit"
               >
