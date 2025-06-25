@@ -63,6 +63,18 @@
     "name": "Rust",
     "path": "/cheatsheets/rust"
   },
+  "ocaml": {
+    "name": "Ocaml",
+    "path": "/cheatsheets/ocaml"
+  },
+  "perl": {
+    "name": "Perl",
+    "path": "/cheatsheets/perl"
+  },
+  "soplang": {
+    "name": "Soplang",
+    "path": "/cheatsheets/soplang"
+  },
   "bash": {
     "name": "Bash",
     "path": "/cheatsheets/bash"
