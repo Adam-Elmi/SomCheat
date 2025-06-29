@@ -1,3 +1,4 @@
+import computerData from "./computerData";
 import languagesData from "./languageData";
 import databasesData from "./databaseData";
 import frameworkData from "./frameworkData";
@@ -13,10 +14,18 @@ import {
   OSIcon,
   DevToolsIcon,
   CodeIcon,
-  RuntimeIcon
+  RuntimeIcon,
+  ComputerIcon
 } from "../icons/Categories_Icons";
 
 const dataList = [
+  {
+    id: "comp",
+    _name: "Basics",
+    data: computerData,
+    icon: <ComputerIcon dimension={40} color="#777" />,
+    number_of_cheatsheets: computerData.length,
+  },
   {
     id: "langs",
     _name: "Languages",
