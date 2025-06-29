@@ -104,6 +104,16 @@ import {
   HelixIcon,
 } from "../icons/DevTools_Icons";
 import { LinuxIcon, UbuntuIcon } from "../icons/Platform_Icons";
+import {
+  AsciiIcon,
+  BaseConversionIcon,
+  BinaryIcon,
+  CpuIcon,
+  DecimalIcon,
+  HexIcon,
+  StorageUnitsIcon,
+  UnicodeIcon,
+} from "../icons/BasicOfCom_Icons";
 
 const all_cheat_icons = {
   default: <FileCodeIcon />,
@@ -123,9 +133,9 @@ const all_cheat_icons = {
   rust: <RustIcon />,
   swift: <SwiftIcon />,
   r: <RIcon />,
-  ocaml: <OcamlIcon/>,
-  perl: <PerlIcon dimension={45}/>,
-  soplang: <SoplangIcon/>,
+  ocaml: <OcamlIcon />,
+  perl: <PerlIcon dimension={45} />,
+  soplang: <SoplangIcon />,
   mysql: <MySQLIcon />,
   postgresql: <PostgreSQLIcon />,
   mongodb: <MongoDBIcon />,
@@ -193,7 +203,7 @@ const all_cheat_icons = {
   vscode: <VscodeIcon />,
   vim: <VimIcon />,
   neovim: <NeovimIcon />,
-  helix: <HelixIcon/>,
+  helix: <HelixIcon />,
   tmux: <TmuxIcon />,
   curl: <CurlIcon />,
   vite: <ViteIcon />,
@@ -209,6 +219,18 @@ const all_cheat_icons = {
   npm: <NpmIcon />,
   cargo: <CargoIcon />,
   luarocks: <LuaRocksIcon />,
+  binary: <BinaryIcon dimension={30} color="#3791f4" />,
+  storage_units: <StorageUnitsIcon dimension={30} color="#8154f0" />,
+  hex: (
+    <span className="dark:text-white">
+      <HexIcon dimension={35} />
+    </span>
+  ),
+  decimal: <DecimalIcon dimension={30} color="#3791f4" />,
+  base_conversion: <BaseConversionIcon dimension={28} color="#049500" />,
+  _32bit_and_64bit: <CpuIcon dimension={30} color="#ca950b" />,
+  ascii: <AsciiIcon dimension={35} color="#0bb7ca" />,
+  unicode: <UnicodeIcon dimension={30} color="#ca0b4a" />,
 };
 
 export default all_cheat_icons;
