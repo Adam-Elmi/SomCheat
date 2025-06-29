@@ -390,5 +390,37 @@
     "luarocks": {
       "name": "LuaRocks",
       "path": "/cheatsheets/luarocks"
+    },
+    "binary": {
+      "name": "Binary",
+      "path": "/cheatsheets/binary"
+    },
+    "storage_units": {
+      "name": "Storage Units",
+      "path": "/cheatsheets/storage-units"
+    },
+    "hex": {
+      "name": "Hexadecimal",
+      "path": "/cheatsheets/hexadecimal"
+    },
+    "decimal": {
+      "name": "Decimal",
+      "path": "/cheatsheets/decimal"
+    },
+    "base_conversion": {
+      "name": "Base Convertion",
+      "path": "/cheatsheets/base-conversion"
+    },
+    "_32bit_and_64bit": {
+      "name": "32bit & 64bit",
+      "path": "/cheatsheets/32bit-and-64bit"
+    },
+    "ascii": {
+      "name": "Ascii",
+      "path": "/cheatsheets/ascii"
+    },
+    "unicode": {
+      "name": "Unicode",
+      "path": "/cheatsheets/unicode"
     }
 }
