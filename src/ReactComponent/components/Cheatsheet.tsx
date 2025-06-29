@@ -24,7 +24,8 @@ export default function CheatSheet() {
             <div className="flex gap-3 items-center">
               {icon}
               <h1 className="text-[1.1rem] font-medium text-slate-500 italic">
-                {id === "langs"
+                {
+                  id === "langs"
                   ? _name
                   : id === "dbs"
                   ? _name
@@ -38,7 +39,7 @@ export default function CheatSheet() {
                   ? _name
                   : id === "dev"
                   ? _name
-                  : ""}
+                  : id === "comp" ? _name : ""}
               </h1>
             </div>
             {/* 
