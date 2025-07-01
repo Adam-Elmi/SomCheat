@@ -1,0 +1,39 @@
+TASK: Packages - []
+
+TASK: Imports - []
+ 
+TASK: Variables - []
+ 
+TASK: Data Types - []
+
+TASK: Constants - []
+ 
+TASK: Conditionals - []
+
+TASK: Functions - []
+
+TASK: Loops - []
+
+TASK: Array and Slices - []
+
+TASK: Maps - []
+
+TASK: Structs -[]
+
+TASK: Go Routines - []
+ 
+TASK: Go Modules - []
+ 
+TASK: Error Handling - []
+ 
+TASK: Interfaces - []
+ 
+TASK:  Channels -[]
+ 
+TASK: Testing - []
+
+TASK: Json Handling - []
+ 
+TASK: File Handling - []
+ 
+TASK: Date - []
