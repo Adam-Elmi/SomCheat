@@ -1,0 +1,45 @@
+TASK: Variables - []
+
+TASK: Data Types - []
+ 
+TASK: Conditionals - []
+ 
+TASK: Functions - []
+ 
+TASK: Loops - []
+ 
+TASK: Ownership & Borrowing - []
+ 
+TASK: Struct - []
+ 
+TASK: Enums - []
+ 
+TASK: Pattern Matching - []
+ 
+TASK: Error Handling - []
+ 
+TASK: Crate and Modules - []
+ 
+TASK: Vectors - []
+ 
+TASK: Lifetimes - []
+ 
+TASK: Traits - []
+ 
+TASK: Generic - []
+ 
+TASK: Closures - []
+ 
+TASK: Iterators - []
+ 
+TASK: Macros - []
+ 
+TASK: Unit Testing - []
+ 
+TASK: Cargo - []
+ 
+TASK: Smart Pointers - []
+ 
+TASK: Concurrency - []
+
+TASK: Unsafe Rust - []
