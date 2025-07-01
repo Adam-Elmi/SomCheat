@@ -1,0 +1,36 @@
+TASK: Entry Point - []
+
+TASK: Variables - []
+
+TASK: Data Types - []
+
+TASK: String Functions - []
+
+TASK: Conditionals - []
+
+TASK: Loops - []
+
+TASK: Functions - []
+
+TASK: Default and named arguments - []
+
+TASK: Collections (list, map, set) - []
+
+TASK: Type Checking and Casting - []
+
+TASK: Lambda Function - []
+
+TASK: Let / Apply / Also / Run / With - []
+
+TASK: Higher-Order Functions - []
+
+TASK: Exception Handling - []
+
+TASK: Classes & Objects - []
+
+TASK: Data Classes - []
+
+TASK: Companion Object - []
+
+TASK: Sealed Classes - []
+
