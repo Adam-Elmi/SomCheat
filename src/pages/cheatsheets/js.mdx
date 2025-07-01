@@ -10,6 +10,7 @@ import Code from "../../Components/Code.astro";
 import Terminal from "../../Components/Terminal.astro";
 import Message from "../../Components/Message.astro";
 import Link from "../../Components/Link.astro";
+import Table from "../../Components/Table.astro";
 
 <Intro title="JavaScript">
   JavaScript ....
@@ -32,5 +33,20 @@ import Link from "../../Components/Link.astro";
       npm install somcheat
       ```
     </Terminal>
+    
+    <Table 
+  headers={["ID", "Language", "Paradigm(s)", "First Released"]} 
+  body={[
+    { row: ["1", "JavaScript", "Event-driven, Functional, Imperative", "1995"] },
+    { row: ["2", "Python", "Object-oriented, Procedural, Functional", "1991"] },
+    { row: ["3", "Rust", "Multi-paradigm, Memory-safe, Functional", "2010"] },
+    { row: ["4", "Go", "Compiled, Concurrent, Imperative", "2009"] },
+    { row: ["5", "Java", "Object-oriented, Class-based", "1995"] },
+    { row: ["6", "C", "Procedural, Imperative", "1972"] },
+    { row: ["7", "TypeScript", "Static, Object-oriented", "2012"] },
+    { row: ["8", "Ruby", "Object-oriented, Reflective", "1995"] }
+  ]}
+/>
+    
   </Section>
 </Structure>
