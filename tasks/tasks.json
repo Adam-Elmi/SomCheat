@@ -51,6 +51,61 @@
     "file": "c.txt"
   },
   {
+    "go": {
+      "finished_tasks_progress": "0",
+      "unfinished_tasks_progress": "100",
+      "done_len": 0,
+      "empty_len": 20,
+      "done_indices": [],
+      "empty_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "tasks": [
+        "TASK: Packages",
+        "TASK: Imports",
+        "TASK: Variables",
+        "TASK: Data Types",
+        "TASK: Constants",
+        "TASK: Conditionals",
+        "TASK: Functions",
+        "TASK: Loops",
+        "TASK: Array and Slices",
+        "TASK: Maps",
+        "TASK: Structs",
+        "TASK: Go Routines",
+        "TASK: Go Modules",
+        "TASK: Error Handling",
+        "TASK: Interfaces",
+        "TASK:  Channels",
+        "TASK: Testing",
+        "TASK: Json Handling",
+        "TASK: File Handling",
+        "TASK: Date"
+      ]
+    },
+    "id": 1,
+    "file": "go.txt"
+  },
+  {
     "js": {
       "finished_tasks_progress": "0",
       "unfinished_tasks_progress": "100",
@@ -116,8 +171,59 @@
         "TASK: BigInt (ES2020)"
       ]
     },
-    "id": 1,
+    "id": 2,
     "file": "js.txt"
+  },
+  {
+    "kotlin": {
+      "finished_tasks_progress": "0",
+      "unfinished_tasks_progress": "100",
+      "done_len": 0,
+      "empty_len": 18,
+      "done_indices": [],
+      "empty_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "tasks": [
+        "TASK: Entry Point",
+        "TASK: Variables",
+        "TASK: Data Types",
+        "TASK: String Functions",
+        "TASK: Conditionals",
+        "TASK: Loops",
+        "TASK: Functions",
+        "TASK: Default and named arguments",
+        "TASK: Collections (list, map, set)",
+        "TASK: Type Checking and Casting",
+        "TASK: Lambda Function",
+        "TASK: Let / Apply / Also / Run / With",
+        "TASK: Higher-Order Functions",
+        "TASK: Exception Handling",
+        "TASK: Classes & Objects",
+        "TASK: Data Classes",
+        "TASK: Companion Object",
+        "TASK: Sealed Classes"
+      ]
+    },
+    "id": 3,
+    "file": "kotlin.txt"
   },
   {
     "lua": {
@@ -153,8 +259,173 @@
         "TASK: File Handling"
       ]
     },
-    "id": 2,
+    "id": 4,
     "file": "lua.txt"
+  },
+  {
+    "ocaml": {
+      "finished_tasks_progress": "0",
+      "unfinished_tasks_progress": "100",
+      "done_len": 0,
+      "empty_len": 20,
+      "done_indices": [],
+      "empty_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "tasks": [
+        "TASK: Compiling & Running",
+        "TASK: Variables",
+        "TASK: Data Types",
+        "TASK: Conditionals",
+        "TASK: Functions",
+        "TASK: Recursion",
+        "TASK: Loops",
+        "TASK: Tuples & Records",
+        "TASK: Lists",
+        "TASK: Pattern Matching",
+        "TASK: List Pattern Matching",
+        "TASK: Option Type",
+        "TASK: Records with Pattern Matching",
+        "TASK: Error Handling",
+        "TASK: Higher-Order Functions",
+        "TASK: Modules",
+        "TASK: Module & Signatures",
+        "TASK: Functors",
+        "TASK: Using External Opam Packages",
+        "TASK: Concurrency"
+      ]
+    },
+    "id": 5,
+    "file": "ocaml.txt"
+  },
+  {
+    "py": {
+      "finished_tasks_progress": "0",
+      "unfinished_tasks_progress": "100",
+      "done_len": 0,
+      "empty_len": 17,
+      "done_indices": [],
+      "empty_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "tasks": [
+        "TASK: Variables",
+        "TASK: Data Types",
+        "TASK: Conditionals",
+        "TASK: Functions",
+        "TASK: Loops",
+        "TASK: List",
+        "TASK: Tuple",
+        "TASK: Set",
+        "TASK: Dictionary",
+        "TASK: Zip",
+        "TASK: Lambda Function",
+        "TASK: Error Handling",
+        "TASK: Classes and Objects",
+        "TASK: File Handling",
+        "TASK: Json Handling",
+        "TASK: Date",
+        "TASK: Modules and imports"
+      ]
+    },
+    "id": 6,
+    "file": "py.txt"
+  },
+  {
+    "rust": {
+      "finished_tasks_progress": "0",
+      "unfinished_tasks_progress": "100",
+      "done_len": 0,
+      "empty_len": 23,
+      "done_indices": [],
+      "empty_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "tasks": [
+        "TASK: Variables",
+        "TASK: Data Types",
+        "TASK: Conditionals",
+        "TASK: Functions",
+        "TASK: Loops",
+        "TASK: Ownership & Borrowing",
+        "TASK: Struct",
+        "TASK: Enums",
+        "TASK: Pattern Matching",
+        "TASK: Error Handling",
+        "TASK: Crate and Modules",
+        "TASK: Vectors",
+        "TASK: Lifetimes",
+        "TASK: Traits",
+        "TASK: Generic",
+        "TASK: Closures",
+        "TASK: Iterators",
+        "TASK: Macros",
+        "TASK: Unit Testing",
+        "TASK: Cargo",
+        "TASK: Smart Pointers",
+        "TASK: Concurrency",
+        "TASK: Unsafe Rust"
+      ]
+    },
+    "id": 7,
+    "file": "rust.txt"
   },
   {
     "ts": {
@@ -238,7 +509,7 @@
         "TASK: TS Events"
       ]
     },
-    "id": 3,
+    "id": 8,
     "file": "ts.txt"
   }
 ]
