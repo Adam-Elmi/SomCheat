@@ -1,0 +1,39 @@
+TASK: Compiling & Running - []
+
+TASK: Variables - []
+
+TASK: Data Types - []
+
+TASK: Conditionals - []
+
+TASK: Functions - []
+
+TASK: Recursion - []
+
+TASK: Loops - []
+
+TASK: Tuples & Records - []
+
+TASK: Lists - []
+
+TASK: Pattern Matching - []
+
+TASK: List Pattern Matching - []
+
+TASK: Option Type - []
+
+TASK: Records with Pattern Matching - []
+
+TASK: Error Handling - []
+
+TASK: Higher-Order Functions - []
+
+TASK: Modules - []
+
+TASK: Module & Signatures - []
+
+TASK: Functors - []
+
+TASK: Using External Opam Packages - []
+
+TASK: Concurrency - []
