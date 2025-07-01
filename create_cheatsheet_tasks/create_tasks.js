@@ -221,7 +221,7 @@ async function calculateTask() {
         empty_len: unfinished_tasks,
         done_indices: _data[i][filename]?.done_indices,
         empty_indices: _data[i][filename]?.empty_indices,
-        tasks: referenced_data[filename].split("\n").filter(_task => _task !== "" && _task.trim()).map(_task => _task.slice(0, _task.lastIndexOf("-")).trim()),
+        tasks: referenced_data[filename].split("\n").filter(_task => _task.trim() !== "" && _task.length > 10).map(_task => _task.slice(0, _task.lastIndexOf("-")).trim()),
       },
       id: dir_data.findIndex(value => value === filename + ".txt"),
       file: dir_data[i]
