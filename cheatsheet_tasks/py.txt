@@ -1,0 +1,34 @@
+TASK: Variables - []
+
+TASK: Data Types - []
+
+TASK: Conditionals - []
+
+TASK: Functions - []
+
+TASK: Loops - []
+
+TASK: List - []
+
+TASK: Tuple - []
+
+TASK: Set - []
+
+TASK: Dictionary - []
+
+TASK: Zip - []
+
+TASK: Lambda Function - []
+
+TASK: Error Handling - []
+
+TASK: Classes and Objects - []
+
+TASK: File Handling - []
+
+TASK: Json Handling - []
+
+TASK: Date - []
+
+TASK: Modules and imports - []
+
