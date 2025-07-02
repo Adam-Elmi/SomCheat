@@ -12,11 +12,8 @@ import Message from "../../Components/Message.astro";
 import Link from "../../Components/Link.astro";
 import Table from "../../Components/Table.astro";
 
-<Intro title="JavaScript">
-  JavaScript ....
-  <Message type="warning">
-    Kahor intaadan bilaabin, waxaa muhiim ah inaad faham guud ka haysato Programming-ka.
-  </Message>
+<Intro title="JavaScript" version="ES2023" author="Brendan Eich" release="1995" type="Language">
+    JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS.
 </Intro>
 
 <Structure>
@@ -47,6 +44,16 @@ import Table from "../../Components/Table.astro";
     { row: ["8", "Ruby", "Object-oriented, Reflective", "1995"] }
   ]}
 />
-    
+    <Link title="Example" url="https://example.com" description="This link takes you to example.com" />
+    <Link title="Example" url="https://example.com" description="This link takes you to example.com" />
+    <Message type="warning">
+      Kahor intaadan bilaabin Node.js, waxaa muhiim ah inaad faham guud ka haysato JavaScript.
+    </Message>
+    <Message type="error">
+      Haddii aad wax khalad ah ku qorto code-kaaga, waxaa dhici karta in barnaamijkaaga uusan shaqaynin.
+    </Message>
+    <Message type="alert">
+      Haddii aad rabto inaad barato backend-ka oo aad taqaanid nodejs, ku bilow adiga oo baranaya Express.js.
+    </Message>
   </Section>
 </Structure>
