@@ -1,0 +1,49 @@
+TASK: Syntax & Semicolons - []  
+
+TASK: Comments - []  
+   
+TASK: Variables (Scalars, Arrays, Hashes) - []  
+   
+TASK: Data Types & Context - []  
+   
+TASK: Operators - []  
+   
+TASK: Conditionals - []  
+   
+TASK: Loops - []  
+
+TASK: Functions (subroutines) - []  
+   
+TASK: Variable Scope - [] 
+
+TASK: Array Operations - []  
+   
+TASK: Hash (Map) Operations - []  
+   
+TASK: References & Dereferencing - []  
+   
+TASK: Nested Structures - []  
+
+TASK: File Handling - []  
+   
+TASK: String Handling & Regex - []  
+   
+TASK: JSON & Serialization - [] 
+
+TASK: Packages & Modules - []  
+   
+TASK: Object Oriented Perl - []  
+   
+TASK: Error Handling - []  
+   
+TASK: Testing - []  
+   
+TASK: CPAN Usage - []  
+
+TASK: Date & Time - []  
+   
+TASK: Environment & CLI - []  
+   
+TASK: Threads & Concurrency - []  
+   
+TASK: IPC & Networking - []      
