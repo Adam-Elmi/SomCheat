@@ -59,6 +59,6 @@ SomCheat
 ---
 
 > [!Note]
-> Si aad uga qayb qaadid mashruucan, fadlan akhri [SomCheat's Documentation](https://github.com/Adam-Elmi/SomCheat/master/docs)
+> Si aad uga qayb qaadid mashruucan, fadlan akhri [SomCheat's Documentation](https://github.com/Adam-Elmi/SomCheat/tree/master/docs)
 
 ---
