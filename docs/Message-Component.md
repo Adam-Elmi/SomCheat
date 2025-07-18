@@ -1,0 +1,49 @@
+## Component-ka 5aad: `Message`
+
+`Message` waxaa loo isticmaalaa in lagu bixiyo **fariimo** gaar ah sida **digniin**, **talobixin**, ama **error**. Waxaa si gaar ah loogu isticmaalaa in lagu muujiyo fariimo muhiim ah ama digniin ku saabsan isticmaalka code-ka ama hawsha la qabanayo.
+
+---
+
+### Qaabka Isticmaalka (`Syntax`):
+
+```mdx
+<Message type="message_type">
+  Qoraalka fariinta halkan gali.
+</Message>
+```
+
+### `type` Prop:
+
+* `type`: Waa prop ka caawiya in la kala sooco noocyada fariimaha. Waxaa jira saddex nooc oo muhiim ah:
+
+  * `alert`: Fariin muhiim ah ama digniin.
+  * `error`: Fariin khalad ama qalad.
+  * `warning`: Fariin digniin ah oo muujinaysa in la ilaaliyo.
+
+---
+
+### Properties:
+
+| Magaca Prop | Nooca  | Waa khasab? | Sharaxaad                                                          |
+| ----------- | ------ | ----------- | ------------------------------------------------------------------ |
+| `type`      | string | ✅ Haa       | Nooca fariinta. Waxaa laga yaabaa "alert", "error", ama "warning". |
+
+
+---
+
+### Tusaale:
+
+
+```mdx
+<Message type="warning">
+  Kahor intaadan bilaabin Node.js, waxaa muhiim ah inaad faham guud ka haysato JavaScript.
+</Message>
+
+<Message type="error">
+  Haddii aad wax khalad ah ku qorto code-kaaga, waxaa dhici karta in barnaamijkaaga uusan shaqaynin.
+</Message>
+
+<Message type="alert">
+  Haddii aad rabto inaad barato backend-ka, ku bilow adiga oo baranaya Express.js.
+</Message>
+```
