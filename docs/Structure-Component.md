@@ -1,0 +1,44 @@
+## Component-ka 2aad: `Structure`
+
+`Structure` waxaa loo isticmaalaa in lagu habeeyo qaybaha kala duwan ee cheatsheet-ka. Waa sida **isku xidhaha guud** ee ku haya dhammaan **qaybaha hoose** sida `Section`, `Code`, `Message`, iyo kuwo kale.
+
+---
+
+### Qaabka Isticmaalka (`Syntax`):
+
+```mdx
+<Structure>
+  Qaybaha Section-ka halkan geli
+</Structure>
+```
+
+---
+
+### Properties:
+
+`Structure` ma leh wax props ah. Waxaa muhiim ah in gudaha lagu geliyo qaybaha `Section`.
+
+---
+
+### Fiiro Gaar ah:
+
+* Waa **khasab** in qaybaha aad isticmaali doonto sida `<Section>` ay ku jiraan gudaha `<Structure>`.
+* Marka la eego qaab-dhismeedka, `Structure` wuxuu la mid yahay “wrapper” ama “container” — wuxuu ka dhigaa cheatsheet-ka mid habaysan oo la fahmi karo.
+
+---
+
+### Tusaale:
+
+```mdx
+<Structure>
+  <Section>
+    ## Variables
+    Variable waa meel lagu keydiyo xog/qiime.
+  </Section>
+
+  <Section>
+    ## Functions
+    Function waa qaybo code ah oo la isticmaali karo si loo celiyo waxqabad gaar ah.
+  </Section>
+</Structure>
+```
