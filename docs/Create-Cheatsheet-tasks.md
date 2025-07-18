@@ -1,0 +1,33 @@
+## Cheatsheet Tasks
+
+Si aan u ogaano halka ay marayaan cheatsheet-yada, waxaan isticmaalnaa *cheatsheet tasks*. Tani waxay naga caawinaysaa inaan kala saarno:
+
+* ✅ Cheatsheets dhameystiran
+* 🔄 Kuwa weli socdo (in progress)
+* ❌ Kuwa aan weli la bilaabin
+
+### Sida Loo Sameeyo Cheatsheet Task
+
+1. Tag folder-ka:
+
+   ```
+   /cheatsheet_tasks
+   ```
+2. Samee file `.txt` ah oo matalaya mawduuc (tusaale: `js.txt`).
+3. Ku qor liiska mawduucyada (tasks) ee hoos yimaada cheatsheet-kaas:
+
+#### Tusaale:
+
+```txt
+js.txt:
+Task: Arrays - []
+Task: Loops - [done]
+Task: Functions - [Done]
+```
+
+#### Sharaxaad:
+
+* `[ ]` → Mawduuca lama bilaabin, laakiin waa qorshe.
+* `[done]` → Mawduuca waa la dhameystiray.
+
+> **Xasuusin:** Erayada `Task` iyo `Done` uma baahna inay si gaar ah loo qoro — waxaad u isticmaali kartaa `TASK`, `task`, `DONE`, iwm. Qaabka adigu kuugu sahlan uun ku qor.
