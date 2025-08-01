@@ -107,14 +107,15 @@
   },
   {
     "js": {
-      "finished_tasks_progress": "0",
-      "unfinished_tasks_progress": "100",
-      "done_len": 0,
-      "empty_len": 27,
-      "done_indices": [],
-      "empty_indices": [
+      "finished_tasks_progress": "6",
+      "unfinished_tasks_progress": "94",
+      "done_len": 2,
+      "empty_len": 29,
+      "done_indices": [
         0,
-        1,
+        1
+      ],
+      "empty_indices": [
         2,
         3,
         4,
@@ -139,10 +140,18 @@
         23,
         24,
         25,
-        26
+        26,
+        27,
+        28,
+        29,
+        30
       ],
       "tasks": [
+        "TASK: Consol.log",
         "TASK: Variables",
+        "TASK: Var",
+        "TASK: Let",
+        "TASK: Const",
         "TASK: Data Types",
         "TASK: Operators",
         "TASK: Functions",
