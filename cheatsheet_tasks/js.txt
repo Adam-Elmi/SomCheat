@@ -1,4 +1,12 @@
-TASK: Variables - []
+TASK: Consol.log - [done]
+
+TASK: Variables - [done]
+
+TASK: Var - []
+
+TASK: Let - []
+
+TASK: Const - []
 
 TASK: Data Types - []
 
