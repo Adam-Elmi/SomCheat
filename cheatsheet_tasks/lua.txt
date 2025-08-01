@@ -1,3 +1,5 @@
+TASK: Print - [done]
+
 TASK: Variables - []
 
 TASK: Data Types - []
