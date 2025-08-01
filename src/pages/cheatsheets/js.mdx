@@ -14,49 +14,71 @@ import Terminal from "../../Components/Terminal.astro";
 import Message from "../../Components/Message.astro";
 import Link from "../../Components/Link.astro";
 import Table from "../../Components/Table.astro";
+import Steps from "../../Components/Steps.astro";
+import Colorize from "../../Components/Colorize.astro";
 
-<Intro title="JavaScript" version="ES2023" author="Brendan Eich" release="1995" type="Language">
-    JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS.
+<Intro
+  title="JavaScript"
+  version="ES2023"
+  author="Brendan Eich"
+  release="1995"
+  type="Language"
+  language="javascript"
+>
+  <Colorize color="somcheat-blue" is_both={true}>Javascript</Colorize> waa luuqad la sameeyey sannadku marku ahaa <Colorize color="somcheat-blue" is_both={true}>1995</Colorize>, waxaana lo sameeyey si logu adeegsado dhisitaanka <Colorize color="somcheat-blue" is_both={true}>websites(shabakadaha)</Colorize>, sababtuna waxay ahayd in websites laga dhigo  qaar nool iyado javascript lo adeegsanayo si ula fal gasho  <Colorize color="somcheat-blue" is_both={true}>HTML</Colorize> iyo  <Colorize color="somcheat-blue" is_both={true}>CSS</Colorize>. Luuqadan waxyaabo badan ayaad ku dhisi karta oo ay ka mid yihiin: <Colorize color="somcheat-blue" is_both={true}>web apps, mobile apps, desktop apps, games(browser-based games) iyo waxyaabo kale oo badan</Colorize>.
 </Intro>
 
 <Structure>
-  <Section>
-    # First Cheatsheet    
-    <Code>
-      ```js
-      console.log("Hello from SomCheat");
-      ```
-    </Code>
-    
-    <Terminal>
-      ```shell
-      npm install somcheat
-      ```
-    </Terminal>
-    
-    <Table 
-  headers={["ID", "Language", "Paradigm(s)", "First Released"]} 
-  body={[
-    { row: ["1", "JavaScript", "Event-driven, Functional, Imperative", "1995"] },
-    { row: ["2", "Python", "Object-oriented, Procedural, Functional", "1991"] },
-    { row: ["3", "Rust", "Multi-paradigm, Memory-safe, Functional", "2010"] },
-    { row: ["4", "Go", "Compiled, Concurrent, Imperative", "2009"] },
-    { row: ["5", "Java", "Object-oriented, Class-based", "1995"] },
-    { row: ["6", "C", "Procedural, Imperative", "1972"] },
-    { row: ["7", "TypeScript", "Static, Object-oriented", "2012"] },
-    { row: ["8", "Ruby", "Object-oriented, Reflective", "1995"] }
-  ]}
-/>
-    <Link title="Example" url="https://example.com" description="This link takes you to example.com" />
-    <Link title="Example" url="https://example.com" description="This link takes you to example.com" />
-    <Message type="warning">
-      Kahor intaadan bilaabin Node.js, waxaa muhiim ah inaad faham guud ka haysato JavaScript.
-    </Message>
-    <Message type="error">
-      Haddii aad wax khalad ah ku qorto code-kaaga, waxaa dhici karta in barnaamijkaaga uusan shaqaynin.
-    </Message>
-    <Message type="tip">
-      Haddii aad rabto inaad barato backend-ka oo aad taqaanid nodejs, ku bilow adiga oo baranaya Express.js.
-    </Message>
-  </Section>
+    <Section>
+        # Console.log
+        <Colorize color="somcheat-blue" is_both={true}>console.log</Colorize> wuxu inaga caawiya inu na tuso natiijada ka dhalatey ama kaso baxday code-ka (Code-ka aynu qorney), tusaale ahaan:
+        <Code>
+            ```js
+            console.log("Iska waran sxb!");
+            console.log(2 + 2);
+            ```
+        </Code>
+        <Colorize color="somcheat-gray" is_both={true}>Natiijada:</Colorize>
+        <Terminal>
+            ```text
+            Iska waran sxb!
+            4
+            ```
+        </Terminal>
+    </Section>
+    <Section>
+        # Variables
+        Marka la joogo <Colorize color="somcheat-blue" is_both={true}>Computer Programming</Colorize> ama <Colorize color="somcheat-blue" is_both={true}>programming</Colorize> laga hadlayo, <Colorize color="somcheat-blue" is_both={true}>variable</Colorize> waxa loo adeegsada in xog lagu kaydiyo.
+        Ka dib marka xogta lagu kaydiyo <Colorize color="somcheat-blue" is_both={true}>variable-ka</Colorize> ama doorsoomaha, waxaan sameyn karna inaan marwalba oo aan u baahano in xogtaas laso bandhigo kaliya adeegsan karno <Colorize color="somcheat-blue" is_both={true}>variable-kaas</Colorize> xogta lagu kaydiyey kaas oo xogtii aan ku kaydinay ino so bandhigaya inago u baahan in marar badan isla xogtii so celcelino.
+        Marka xogta lagu kaydiyo <Colorize color="somcheat-blue" is_both={true}>variable-ka</Colorize>, waxaan awoodi karna in xogtii la kaydiyey si dhib yar ah u bedbedeli karno inago kaliya adeegsanayna <Colorize color="somcheat-blue" is_both={true}>variable-ka</Colorize>.
+
+        <Colorize color="somcheat-gray" is_both={true}>Qaabka Isticmaalka (Syntax):</Colorize>
+        <Code>
+            ```js
+            let name = "Adam";
+            var age = 25;
+            const gender = "male";
+            ```
+        </Code>
+        
+        <Steps data={[
+        {
+        t: "let , var , const (variable declaration)",
+        d: "wa ereyo bixin luuqada u gaar ah oo loo adeegsado si loo qeexo variable, waxa computer-ka lo sheegaya in la sameynayo ama la qeexayo variable. ",
+    },
+    {
+        t: "name , age , gender (variable identifiers)",
+        d: "waa magaca variable-ku iska leeyahay. Sido kale magaca variable-ka waxa lo yaqaana variable identifier.",
+    },
+    {
+        t: "Adam , 25 , male (values)",
+        d: "wa qiimaha la kaydinayo ama xogta la kaydinayo.",
+    },
+        ]} />
+        
+      <Message type="tip">
+        **Variable** afsomali ahaan waxa lo yaqaana **doorsame**.
+      </Message>
+    </Section>
+
 </Structure>
