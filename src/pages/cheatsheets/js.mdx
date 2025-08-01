@@ -23,9 +23,8 @@ import Colorize from "../../Components/Colorize.astro";
   author="Brendan Eich"
   release="1995"
   type="Language"
-  language="javascript"
 >
-  <Colorize color="somcheat-blue" is_both={true}>Javascript</Colorize> waa luuqad la sameeyey sannadku marku ahaa <Colorize color="somcheat-blue" is_both={true}>1995</Colorize>, waxaana lo sameeyey si logu adeegsado dhisitaanka <Colorize color="somcheat-blue" is_both={true}>websites(shabakadaha)</Colorize>, sababtuna waxay ahayd in websites laga dhigo  qaar nool iyado javascript lo adeegsanayo si ula fal gasho  <Colorize color="somcheat-blue" is_both={true}>HTML</Colorize> iyo  <Colorize color="somcheat-blue" is_both={true}>CSS</Colorize>. Luuqadan waxyaabo badan ayaad ku dhisi karta oo ay ka mid yihiin: <Colorize color="somcheat-blue" is_both={true}>web apps, mobile apps, desktop apps, games(browser-based games) iyo waxyaabo kale oo badan</Colorize>.
+  <Colorize color="somcheat-blue" is_both={true}>Javascript</Colorize> waa luuqad la sameeyey sannadku marku ahaa <Colorize color="somcheat-blue" is_both={true}>1995</Colorize>, waxaana lo sameeyey si logu adeegsado dhisitaanka <Colorize color="somcheat-blue" is_both={true}>websites,</Colorize> sababtuna waxay ahayd in websites laga dhigo  qaar nool iyado javascript lo adeegsanayo si ula fal gasho  <Colorize color="somcheat-blue" is_both={true}>HTML</Colorize> iyo  <Colorize color="somcheat-blue" is_both={true}>CSS</Colorize>. Luuqadan waxyaabo badan ayaad ku dhisi karta oo ay ka mid yihiin: <Colorize color="somcheat-blue" is_both={true}>web apps, mobile apps, desktop apps, games(browser-based games) iyo waxyaabo kale oo badan.</Colorize>
 </Intro>
 
 <Structure>
@@ -55,15 +54,29 @@ import Colorize from "../../Components/Colorize.astro";
         <Colorize color="somcheat-gray" is_both={true}>Qaabka Isticmaalka (Syntax):</Colorize>
         <Code>
             ```js
-            let name = "Adam";
-            var age = 25;
+            var name = "Adam";
+            let age = 25;
             const gender = "male";
+            
+            console.log(name, age, gender);
             ```
         </Code>
-        
+        <Colorize color="somcheat-gray" is_both={true}>Natiijada:</Colorize>
+        <Terminal>
+            ```text
+            Adam 25 male
+            ```
+        </Terminal>
+        <Message type="tip">
+        Si aad u so bandhigto xogta ama qiimaha ku kaydsan variable-ka/doorsomaha, **console.log** dhex gali magaca variable-ka tusaale ahaan: 
+        ```js
+        let name = "Elmi";
+        console.log(name);
+        ```
+        </Message>
         <Steps data={[
         {
-        t: "let , var , const (variable declaration)",
+        t: "var , let , const (variable declaration)",
         d: "wa ereyo bixin luuqada u gaar ah oo loo adeegsado si loo qeexo variable, waxa computer-ka lo sheegaya in la sameynayo ama la qeexayo variable. ",
     },
     {
