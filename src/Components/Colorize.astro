@@ -1,0 +1,19 @@
+---
+const { color, is_bold, is_italic, is_both } = Astro.props;
+function colorSelection() {
+    switch (color) {
+        case "somcheat-blue":
+            return "#2a7dfd";
+        case "somcheat-gray":
+            return "#62748e";
+        default:
+            return color;
+    }
+}
+---
+
+<span
+    style={`color: ${colorSelection()}; font-weight: ${is_bold ? "bold" : "normal"}; font-style: ${is_italic ? "italic" : "normal"}; ${is_both ? "font-weight: bold; font-style: italic" : ""}`}
+>
+    <slot />
+</span>
