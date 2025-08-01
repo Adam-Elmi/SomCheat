@@ -164,7 +164,12 @@ function is_more_than_one(author: string | string[]) {
         aria-label="Description"
         class="mt-4 dark:bg-[#1e2021] bg-gradient-to-br from-slate-800/60 to-slate-900/80 rounded-lg p-5 shadow-inner border border-slate-700/40"
     >
-        <strong class="text-l font-bold text-yellow-200 mb-2">Introduction</strong>
+        <strong class="text-l font-bold text-yellow-200 mb-2 flex items-center gap-2">
+            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 19l7-7a2.828 2.828 0 0 0-4-4l-7 7v4h4z"></path>
+            </svg>
+            Introduction
+        </strong>
         <div
             class="text-slate-100 text-base md:text-lg leading-relaxed tracking-wide"
         >
