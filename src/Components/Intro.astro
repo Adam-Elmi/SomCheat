@@ -1,6 +1,12 @@
 ---
 import { DateIcon } from "../ReactComponent/icons/Other_Icons";
 const { title, type, version, release, author, language } = Astro.props;
+function is_more_than_one(author: string | string[]) {
+  if(author && Array.isArray(author)) {
+    return true;
+  }
+  return false;
+}
 ---
 
 <div
@@ -60,6 +66,29 @@ const { title, type, version, release, author, language } = Astro.props;
                     <dd class="text-slate-400 font-mono text-sm">{release}</dd>
                 </div>
                 <!-- Author -->
+                {
+                is_more_than_one(author) ? (
+                Array.isArray(author) && author.length > 0 ? author.map((name: string, index:number) => (
+                <div class="flex items-center justify-between py-2">
+                    <dt
+                        class="text-slate-300 font-semibold flex items-center gap-1"
+                    >
+                        <svg
+                            class="w-4 h-4 text-green-300 mr-1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            ><circle cx="12" cy="7" r="4"></circle><path
+                                d="M5.5 21a8.38 8.38 0 0 1 13 0"></path></svg
+                        >
+                        {`Author ${index + 1}`}
+                    </dt>
+                    <dd class="text-slate-400 font-mono text-sm">{name}</dd>
+                </div>
+                )): null
+                ):
+                (
                 <div class="flex items-center justify-between py-2">
                     <dt
                         class="text-slate-300 font-semibold flex items-center gap-1"
@@ -77,6 +106,8 @@ const { title, type, version, release, author, language } = Astro.props;
                     </dt>
                     <dd class="text-slate-400 font-mono text-sm">{author}</dd>
                 </div>
+                )
+                }
                 <!-- Language -->
                 {
                     language ? (
@@ -133,12 +164,7 @@ const { title, type, version, release, author, language } = Astro.props;
         aria-label="Description"
         class="mt-4 dark:bg-[#1e2021] bg-gradient-to-br from-slate-800/60 to-slate-900/80 rounded-lg p-5 shadow-inner border border-slate-700/40"
     >
-        <strong class="text-lg font-bold text-yellow-200 mb-2 flex items-center gap-2">
-            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M12 19l7-7a2.828 2.828 0 0 0-4-4l-7 7v4h4z"></path>
-            </svg>
-            Introduction
-        </strong>
+        <strong class="text-l font-bold text-yellow-200 mb-2">Introduction</strong>
         <div
             class="text-slate-100 text-base md:text-lg leading-relaxed tracking-wide"
         >
