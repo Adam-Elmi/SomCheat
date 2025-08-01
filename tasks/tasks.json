@@ -236,13 +236,14 @@
   },
   {
     "lua": {
-      "finished_tasks_progress": "0",
-      "unfinished_tasks_progress": "100",
-      "done_len": 0,
+      "finished_tasks_progress": "8",
+      "unfinished_tasks_progress": "92",
+      "done_len": 1,
       "empty_len": 11,
-      "done_indices": [],
+      "done_indices": [
+        0
+      ],
       "empty_indices": [
-        0,
         1,
         2,
         3,
@@ -252,9 +253,11 @@
         7,
         8,
         9,
-        10
+        10,
+        11
       ],
       "tasks": [
+        "TASK: Print",
         "TASK: Variables",
         "TASK: Data Types",
         "TASK: Conditionals",
@@ -328,13 +331,14 @@
   },
   {
     "perl": {
-      "finished_tasks_progress": "0",
-      "unfinished_tasks_progress": "100",
-      "done_len": 0,
+      "finished_tasks_progress": "4",
+      "unfinished_tasks_progress": "96",
+      "done_len": 1,
       "empty_len": 25,
-      "done_indices": [],
+      "done_indices": [
+        0
+      ],
       "empty_indices": [
-        0,
         1,
         2,
         3,
@@ -358,9 +362,11 @@
         21,
         22,
         23,
-        24
+        24,
+        25
       ],
       "tasks": [
+        "TASK: Print",
         "TASK: Syntax & Semicolons",
         "TASK: Comments",
         "TASK: Variables (Scalars, Arrays, Hashes)",
@@ -393,13 +399,14 @@
   },
   {
     "py": {
-      "finished_tasks_progress": "0",
-      "unfinished_tasks_progress": "100",
-      "done_len": 0,
+      "finished_tasks_progress": "6",
+      "unfinished_tasks_progress": "94",
+      "done_len": 1,
       "empty_len": 17,
-      "done_indices": [],
+      "done_indices": [
+        0
+      ],
       "empty_indices": [
-        0,
         1,
         2,
         3,
@@ -415,9 +422,11 @@
         13,
         14,
         15,
-        16
+        16,
+        17
       ],
       "tasks": [
+        "TASK: Print",
         "TASK: Variables",
         "TASK: Data Types",
         "TASK: Conditionals",
