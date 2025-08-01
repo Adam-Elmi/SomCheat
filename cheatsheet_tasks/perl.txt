@@ -1,3 +1,5 @@
+TASK: Print - [done]  
+
 TASK: Syntax & Semicolons - []  
 
 TASK: Comments - []  
