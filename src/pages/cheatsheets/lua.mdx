@@ -1,0 +1,49 @@
+---
+layout: "../../Layouts/SecondLayout.astro"
+title: "Lua"
+version: "5.4"
+release_date: 1993
+author: "Roberto Ierusalimschy, Waldemar Celes, Luiz Henrique de Figueiredo"
+---
+
+import Intro from "../../Components/Intro.astro";
+import Structure from "../../Components/Structure.astro";
+import Section from "../../Components/Section.astro";
+import Code from "../../Components/Code.astro";
+import Terminal from "../../Components/Terminal.astro";
+import Message from "../../Components/Message.astro";
+import Link from "../../Components/Link.astro";
+import Table from "../../Components/Table.astro";
+import Steps from "../../Components/Steps.astro";
+import Colorize from "../../Components/Colorize.astro";
+
+<Intro
+  title="Lua"
+  version="3.11"
+  author={["Roberto Ierusalimschy", "Waldemar Celes", "Luiz Henrique de Figueiredo"]}
+  release="1993"
+  type="Language"
+>
+  
+</Intro>
+
+<Structure>
+    <Section>
+        # Print
+        <Colorize color="somcheat-blue" is_both={true}>print</Colorize> wuxu inaga caawiya inu na tuso natiijada ka dhalatey ama kaso baxday code-ka (Code-ka aynu qorney), tusaale ahaan:
+        <Code>
+            ```js
+            print("Iska waran sxb!");
+            print(2 + 2);
+            ```
+        </Code>
+        <Colorize color="somcheat-gray" is_both={true}>Natiijada:</Colorize>
+        <Terminal>
+            ```text
+            Iska waran sxb!
+            4
+            ```
+        </Terminal>
+    </Section>
+
+</Structure>
