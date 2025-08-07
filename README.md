@@ -14,8 +14,6 @@
 
 Hadafka SomCheat waa in uu kuu sahlayo inaad si fudud oo degdeg ah dib ugu xasuusato macluumaad hore aad u baratay, gaar ahaan marka aad wax cusub baratay laakiin muddo kadib wax badan iloowday.
 
-Tusaale ahaan, waxaa laga yaabaa inaad bil ka hor baratey luuqad cusub, aadna wakhti badan ku bixisey daawashada casharro, akhriska buugaag iyo qoraallo. Balse dhowr toddobaad kadib waxaad dareentay in wax badan iloowday, SomCheat ayaa kuu noqonaya xasuusiye si aanad markale wakhti badan ugu lumin.
-
 ---
 
 > [!Note]
