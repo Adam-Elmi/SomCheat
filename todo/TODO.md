@@ -7,3 +7,4 @@
 - [ ] Simplify complex code
 - [ ] Remove unused code
 - [ ] Enhance code readability
+- [x] Add classes for cheatsheet
