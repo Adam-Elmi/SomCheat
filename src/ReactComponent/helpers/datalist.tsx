@@ -1,11 +1,12 @@
-import computerData from "./computerData";
-import languagesData from "./languageData";
-import databasesData from "./databaseData";
-import frameworkData from "./frameworkData";
-import librariesData from "./librariesData";
-import platformsData from "./platformsData";
-import runtimeData from "./runtimeData";
-import devToolsData from "./devToolsData";
+import computerData from "../../Cheatsheet-Classes/computerData.ts";
+import languagesData from "../../Cheatsheet-Classes/languageData.ts";
+import databasesData from "../../Cheatsheet-Classes/databaseData.ts";
+import frameworkData from "../../Cheatsheet-Classes/frameworkData.ts";
+import librariesData from "../../Cheatsheet-Classes/librariesData.ts";
+import platformsData from "../../Cheatsheet-Classes/platformsData.ts";
+import runtimeData from "../../Cheatsheet-Classes/runtimeData.ts";
+import devToolsData from "../../Cheatsheet-Classes/devToolsData.ts";
+import { Category } from "../../Cheatsheet-Classes/classData.ts";
 
 import {
   CubesIcon,
@@ -19,62 +20,14 @@ import {
 } from "../icons/Categories_Icons";
 
 const dataList = [
-  {
-    id: "comp",
-    _name: "Basics",
-    data: computerData,
-    icon: <ComputerIcon dimension={40} color="#777" />,
-    number_of_cheatsheets: computerData.length,
-  },
-  {
-    id: "langs",
-    _name: "Languages",
-    data: languagesData,
-    icon: <CodeIcon dimension={40} color="#6364f1" />,
-    number_of_cheatsheets: languagesData.length,
-  },
-  {
-    id: "dbs",
-    _name: "Databases",
-    data: databasesData,
-    icon: <DatabaseIcon dimension={40} color="#fba8a8" />,
-    number_of_cheatsheets: databasesData.length,
-  },
-  {
-    id: "frame",
-    _name: "Frameworks",
-    data: frameworkData,
-    icon: <CubesIcon dimension={40} color="#fecb66" />,
-    number_of_cheatsheets: frameworkData.length,
-  },
-  {
-    id: "lib",
-    _name: "Libraries",
-    data: librariesData,
-    icon: <LibraryIcon dimension={35} color="#caf"/>,
-    number_of_cheatsheets: librariesData.length,
-  },
-  {
-    id: "os",
-    _name: "Platforms",
-    data: platformsData,
-    icon: <OSIcon dimension={45} color="#1aa5e7" />,
-    number_of_cheatsheets: platformsData.length,
-  },
-  {
-    id: "run",
-    _name: "Runtimes",
-    data: runtimeData,
-    icon: <RuntimeIcon dimension={40} color="#acd"/>,
-    number_of_cheatsheets: runtimeData.length,
-  },
-  {
-    id: "dev",
-    _name: "Dev Tools",
-    data: devToolsData,
-    icon: <DevToolsIcon dimension={40} color="#aea" />,
-    number_of_cheatsheets: devToolsData.length,
-  },
+  new Category("comp", "Basics", computerData, <ComputerIcon dimension={40} color="#777" />, computerData.length),
+  new Category("langs", "Languages", languagesData, <CodeIcon dimension={40} color="#6364f1" />, languagesData.length),
+  new Category("dbs", "Databases", databasesData, <DatabaseIcon dimension={40} color="#fba8a8" />, databasesData.length),
+  new Category("frame", "Frameworks", frameworkData, <CubesIcon dimension={40} color="#fecb66" />, frameworkData.length),
+  new Category("lib", "Libraries", librariesData, <LibraryIcon dimension={35} color="#caf"/>, librariesData.length),
+  new Category("os", "Platforms", platformsData, <OSIcon dimension={45} color="#1aa5e7" />, platformsData.length),
+  new Category("run", "runtimes", runtimeData, <RuntimeIcon dimension={40} color="#acd"/>, runtimeData.length),
+  new Category("dev", "Dev Tools", devToolsData, <DevToolsIcon dimension={40} color="#aea" />, devToolsData.length),
 ];
 
 export default dataList;
