@@ -11,8 +11,69 @@ import {
   InProgressIcon,
   InCompleteIcon,
 } from "../icons/Status_Icons";
+import { useState, useEffect } from "react";
 
 export default function Card({ cheatsheet }: { cheatsheet: any }) {
+  const [labels, setLabels] = useState(Array<React.ReactNode>);
+  const labelIcon = {
+    web: (
+      <span className="text-sky-400">
+        <WebIcon />
+      </span>
+    ),
+    desktop: (
+      <span className="text-indigo-400">
+        <DesktopIcon />
+      </span>
+    ),
+    mobile: (
+      <span className="text-orange-500">
+        <MobileIcon />
+      </span>
+    )
+  }
+  function displayMultiLabels() {
+    if (Array.isArray(cheatsheet.targets) && cheatsheet.targets.length > 0) {
+      const newLabels = [];
+  
+      for (const label of cheatsheet.targets) {
+        switch (label) {
+          case "web":
+            newLabels.push(labelIcon.web);
+            break;
+          case "desktop":
+            newLabels.push(labelIcon.desktop);
+            break;
+          case "mobile":
+            newLabels.push(labelIcon.mobile);
+            break;
+          default:
+            break;
+        }
+      }
+  
+      setLabels(newLabels);
+    } else {
+      setLabels([]);
+    }
+  }
+  
+  useEffect(() => {
+    displayMultiLabels();
+  }, [cheatsheet.targets]);
+
+  function displayLabel() {
+     if (cheatsheet.targets && typeof cheatsheet.targets === "string") {
+       switch (cheatsheet.targets) {
+        case "web":
+          return labelIcon.web;
+        case "desktop":
+          return labelIcon.desktop;
+        case "mobile":
+          return labelIcon.mobile;
+      }
+    }
+  }
   return (
     <a href={cheatsheet.path}>
       <div className="relative dark:bg-[#111122] bg-white dark:border-slate-800 border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full">
@@ -21,24 +82,14 @@ export default function Card({ cheatsheet }: { cheatsheet: any }) {
           Label
           ------------------
         */}
-        <div className="absolute top-2 right-10">
-          {cheatsheet.targets ? (
-            cheatsheet.targets === "mobile" ? (
-              <span className="text-orange-500">
-                <MobileIcon />
-              </span>
-            ) : cheatsheet.targets === "desktop" ? (
-              <span className="text-indigo-400">
-                <DesktopIcon />
-              </span>
-            ) : cheatsheet.targets === "web" ? (
-              <span className="text-sky-400">
-                <WebIcon />
-              </span>
-            ) : null
-          ) : null}
+        <div className="absolute top-2 right-10 flex gap-2">
+          {cheatsheet.targets && typeof cheatsheet.targets === "string" ? displayLabel() : Array.isArray(cheatsheet.targets) && cheatsheet.targets.length > 0 ? labels.map((label) => (
+            <>
+              {label}
+            </>
+          )) : null}
         </div>
-          <Label progress={cheatsheet.progress} />
+        <Label progress={cheatsheet.progress} />
         {/*
           ------------------
           Metadata of the cheatsheet such as cheatsheet name, icon and date
@@ -77,7 +128,7 @@ export default function Card({ cheatsheet }: { cheatsheet: any }) {
           title={"Progress: " + String(cheatsheet.progress) + "%"}
         >
           <span className="text-[#cdf] dark:text-slate-700">
-            <StatusIcon/>
+            <StatusIcon />
           </span>
           <div className="flex-1 dark:bg-slate-700 bg-slate-100 rounded-sm">
             <div
@@ -115,7 +166,10 @@ function Label({ progress }: { progress: number }) {
     } else if (progress > 0 && progress < 100) {
       return statusIcon(
         <span className="dark:text-slate-700 text-slate-200">
-          <InProgressIcon progress_number={progress} color="oklch(0.707 0.165 254.624)" />
+          <InProgressIcon
+            progress_number={progress}
+            color="oklch(0.707 0.165 254.624)"
+          />
         </span>,
         "In Progress",
       );
