@@ -22,23 +22,7 @@ import { HomeIcon2 } from "../ReactComponent/icons/Section_Icons";
   </main>
 </BasicLayout>
 
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const messageContainer = document.getElementById("cheatsheet-message");
-    const pathname = window.location.pathname;
-
-    if (messageContainer && pathname.includes("/cheatsheets/")) {
-      const cheatName = decodeURIComponent(pathname.split("/").pop() || "");
-      messageContainer.innerHTML = `
-  <p>Cheatsheet "<strong>${cheatName}</strong>" not found.  
-  <a href="https://github.com/Adam-Elmi/SomCheat" target="_blank" class="text-blue-500 underline">Contribute</a> or  
-  <a href="https://github.com/Adam-Elmi/SomCheat/issues" target="_blank" class="text-blue-500 underline">Request</a>.</p>
-`;
-    } else {
-      messageContainer.style.display = "none";
-    }
-  });
-</script>
+<script src="../utils/displayMessage.ts"></script>
 
 <style>
   main {
