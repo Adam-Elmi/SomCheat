@@ -11,13 +11,15 @@ class Data {
   path: string;
   icon: React.ReactNode;
   progress: number | undefined;
-  constructor(id: string, name: string, lastUpdate: string) {
+  targets?: string | Array<string>
+  constructor(id: string, name: string, lastUpdate: string, targets?: string | Array<string>) {
     this.id = id;
     this.name = name === "_" ? adjustText(this.id) : name;
     this.path = this.getPath;
     this.icon = this.getIcon;
     this.lastUpdate = lastUpdate;
     this.progress = this.getProgressResult;
+    this.targets = targets;
   }
   get getPath() {
     return dynamicPath(this.id);
