@@ -1,6 +1,8 @@
-import jsonData from "../../tasks/tasks.json";
+import dJson from "../../tasks/tasks.json";
 
-export function getIndex(file: any): any {
+const jsonData: Array<{}> = dJson;
+
+export function getIndex(file: string) {
   try {
     if(jsonData) {
         const index = jsonData.findIndex((d) => d?.hasOwnProperty(file));
@@ -8,16 +10,17 @@ export function getIndex(file: any): any {
     }
   } catch (error) {
     console.error(error);
-    return null;
   }
+    return null;
 }
 
-export function getData(file?: any): any {
+export function getData(index?: number) {
   try {
     if (jsonData) {
-      return jsonData[file];
+      return index && jsonData[index];
     }
   } catch (error) {
     console.error(error);
   }
+  return null;
 }
