@@ -1,6 +1,9 @@
 import dataList from "../helpers/datalist";
 import { SheetIcon } from "../icons/Other_Icons";
 import Card from "./Card";
+import type CheatsheetType from "../../types/cheatsheet";
+import type CategoryType from "../../types/category";
+
 
 export default function CheatSheet() {
   return (
@@ -10,7 +13,7 @@ export default function CheatSheet() {
         Mapping through dataList to render each category
         ------------------
       */}
-      {dataList.map(({ id, data, _name, icon, number_of_cheatsheets }) => (
+      {dataList.map(({ id, data, _name, icon, number_of_cheatsheets }: CategoryType) => (
         <div key={id} className="flex flex-col flex-wrap">
           {/* 
             ------------------
@@ -66,8 +69,13 @@ export default function CheatSheet() {
             id="section-bar"
             className="flex dark:bg-[#0f0f0f] gap-5 py-3 flex-wrap items-center justify-center"
           >
-            {data
-              ? data.map((cheatsheet: any, id: number) => (
+            {
+              data
+              ? data.sort((a: CheatsheetType, b: CheatsheetType) => {
+                const progressA = Number(a.progress) || 0;
+                const progressB = Number(b.progress) || 0;
+                 return progressB - progressA;
+             }).map((cheatsheet: CheatsheetType, id: number) => (
                   <Card cheatsheet={cheatsheet} key={id} />
                 ))
               : null}
