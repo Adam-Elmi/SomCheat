@@ -54,7 +54,7 @@ export default function Welcome() {
     /* ------------------
         Main Container
     ------------------ */
-    <div className="flex flex-col gap-4 justify-center items-center p-3">
+    <div className="flex flex-col flex-1 gap-4 justify-center items-center p-3">
       {/* ------------------
           Welcome Message
       ------------------ */}
