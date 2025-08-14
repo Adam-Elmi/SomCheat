@@ -1,4 +1,5 @@
-export default function getProgress(getIndex: any, getData: any, obj: any) {
+import type TaskType from "../types/task";
+export default function getProgress(getIndex: Function, getData: Function, obj: any): number {
   try {
     obj.id = obj.id.split(" ")[0].toLowerCase();
     const index = getIndex(obj.id);
@@ -8,4 +9,5 @@ export default function getProgress(getIndex: any, getData: any, obj: any) {
   } catch (error) {
     console.error(error);
   }
+  return 0;
 }
