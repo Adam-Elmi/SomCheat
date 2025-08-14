@@ -11,11 +11,11 @@ import {
   InProgressIcon,
   InCompleteIcon,
 } from "../icons/Status_Icons";
-import { useState, useEffect } from "react";
+import type CheatsheetType from "../../types/cheatsheet";
 
-export default function Card({ cheatsheet }: { cheatsheet: any }) {
-  const [labels, setLabels] = useState(Array<React.ReactNode>);
-  const labelIcon = {
+export default function Card({ cheatsheet }: { cheatsheet: CheatsheetType }) {
+  type TargetType = "web" | "desktop" | "mobile";
+  const labelIcon:Record<TargetType, React.ReactNode> = {
     web: (
       <span className="text-sky-400">
         <WebIcon />
@@ -32,48 +32,15 @@ export default function Card({ cheatsheet }: { cheatsheet: any }) {
       </span>
     )
   }
-  function displayMultiLabels() {
-    if (Array.isArray(cheatsheet.targets) && cheatsheet.targets.length > 0) {
-      const newLabels = [];
-  
-      for (const label of cheatsheet.targets) {
-        switch (label) {
-          case "web":
-            newLabels.push(labelIcon.web);
-            break;
-          case "desktop":
-            newLabels.push(labelIcon.desktop);
-            break;
-          case "mobile":
-            newLabels.push(labelIcon.mobile);
-            break;
-          default:
-            break;
-        }
-      }
-  
-      setLabels(newLabels);
-    } else {
-      setLabels([]);
-    }
-  }
-  
-  useEffect(() => {
-    displayMultiLabels();
-  }, [cheatsheet.targets]);
+  const labels = Array.isArray(cheatsheet.targets)
+      ? cheatsheet.targets.map(target => labelIcon[target] ?? null)
+      : [];
 
   function displayLabel() {
-     if (cheatsheet.targets && typeof cheatsheet.targets === "string") {
-       switch (cheatsheet.targets) {
-        case "web":
-          return labelIcon.web;
-        case "desktop":
-          return labelIcon.desktop;
-        case "mobile":
-          return labelIcon.mobile;
+      if (typeof cheatsheet.targets === "string") {
+        return labelIcon[cheatsheet.targets] ?? null;
       }
     }
-  }
   return (
     <a href={cheatsheet.path}>
       <div className="relative dark:bg-[#111122] bg-white dark:border-slate-800 border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full">
@@ -89,7 +56,7 @@ export default function Card({ cheatsheet }: { cheatsheet: any }) {
             </>
           )) : null}
         </div>
-        <Label progress={cheatsheet.progress} />
+        {/*<Label progress={cheatsheet.progress} />*/}
         {/*
           ------------------
           Metadata of the cheatsheet such as cheatsheet name, icon and date
