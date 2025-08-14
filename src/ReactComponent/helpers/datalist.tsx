@@ -7,6 +7,7 @@ import platformsData from "../../Cheatsheet-Classes/platformsData.ts";
 import runtimeData from "../../Cheatsheet-Classes/runtimeData.ts";
 import devToolsData from "../../Cheatsheet-Classes/devToolsData.ts";
 import { Category } from "../../Cheatsheet-Classes/classData.ts";
+import type CategoryType from "../../types/category";
 
 import {
   CubesIcon,
@@ -19,7 +20,7 @@ import {
   ComputerIcon
 } from "../icons/Categories_Icons";
 
-const dataList = [
+const dataList: CategoryType[] = [
   new Category("comp", "Basics", computerData, <ComputerIcon dimension={40} color="#777" />, computerData.length),
   new Category("langs", "Languages", languagesData, <CodeIcon dimension={40} color="#6364f1" />, languagesData.length),
   new Category("dbs", "Databases", databasesData, <DatabaseIcon dimension={40} color="#fba8a8" />, databasesData.length),
