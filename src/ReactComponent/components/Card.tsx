@@ -56,7 +56,7 @@ export default function Card({ cheatsheet }: { cheatsheet: CheatsheetType }) {
             </>
           )) : null}
         </div>
-        {/*<Label progress={cheatsheet.progress} />*/}
+        <Label progress={cheatsheet.progress} />
         {/*
           ------------------
           Metadata of the cheatsheet such as cheatsheet name, icon and date
