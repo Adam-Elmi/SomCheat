@@ -3,6 +3,9 @@ import { getData, getIndex } from "../utils/handle_data";
 import getProgress from "../utils/progress";
 import icon_detector from "../ReactComponent/helpers/icon_detector";
 import adjustText from "../utils/adjustText";
+import type CheatsheetType from "../types/cheatsheet";
+
+type TargetType = "web" | "desktop" | "mobile";
 
 class Data {
   id: string;
@@ -10,9 +13,9 @@ class Data {
   lastUpdate: string;
   path: string;
   icon: React.ReactNode;
-  progress: number | undefined;
-  targets?: string | Array<string>
-  constructor(id: string, name: string, lastUpdate: string, targets?: string | Array<string>) {
+  progress: number;
+  targets?: TargetType | TargetType[]
+  constructor(id: string, name: string, lastUpdate: string, targets?: TargetType | TargetType[]) {
     this.id = id;
     this.name = name === "_" ? adjustText(this.id) : name;
     this.path = this.getPath;
@@ -33,7 +36,7 @@ class Data {
 }
 
 class Language extends Data {}
-class Database extends Data {}
+class Database extends Data {}  
 class Framework extends Data {}
 class Library extends Data {}
 class Platform extends Data {}
@@ -44,14 +47,14 @@ class BasicComputer extends Data {}
 class Category {
   id: string;
   _name: string;
-  data: Array<{}>;
+  data:CheatsheetType[];
   icon: React.ReactNode;
   number_of_cheatsheets: number;
 
   constructor(
     id: string,
     _name: string,
-    data: Array<{}>,
+    data: CheatsheetType[],
     icon: React.ReactNode,
     number_of_cheatsheets: number,
   ) {
