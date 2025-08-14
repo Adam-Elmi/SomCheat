@@ -10,7 +10,6 @@ const frameworkData = [
   new Framework("electron", "_", "Feb 27, 2025", "desktop"),
   new Framework("reactnative", "React Native", "Feb 27, 2025", "mobile"),
   new Framework("flutter", "_", "Feb 27, 2025", "mobile"),
-  new Framework("expressjs", "Express.js", "Feb 27, 2025", "web"),
   new Framework("vue", "Vue.js", "Feb 27, 2025", "web"),
   new Framework("angular", "_", "Feb 27, 2025", "web"),
   new Framework("svelte", "_", "Feb 27, 2025", "web"),
