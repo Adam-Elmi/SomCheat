@@ -71,9 +71,37 @@
     "name": "Perl",
     "path": "/cheatsheets/perl"
   },
-  "soplang": {
-    "name": "Soplang",
-    "path": "/cheatsheets/soplang"
+  "nim": {
+    "name": "Nim",
+    "path": "/cheatsheets/nim"
+  },
+  "v": {
+    "name": "V",
+    "path": "/cheatsheets/v"
+  },
+  "gleam": {
+    "name": "Gleam",
+    "path": "/cheatsheets/gleam"
+  },
+  "julia": {
+    "name": "Julia",
+    "path": "/cheatsheets/julia"
+  },
+  "elixir": {
+    "name": "Elixir",
+    "path": "/cheatsheets/elixir"
+  },
+  "erlang": {
+    "name": "Erlang",
+    "path": "/cheatsheets/erlang"
+  },
+  "crystal": {
+    "name": "crystal",
+    "path": "/cheatsheets/crystal"
+  },
+  "reason": {
+    "name": "reason",
+    "path": "/cheatsheets/reason"
   },
   "bash": {
     "name": "Bash",
@@ -390,6 +418,10 @@
     "luarocks": {
       "name": "LuaRocks",
       "path": "/cheatsheets/luarocks"
+    },
+    "nix": {
+      "name": "Nix",
+      "path": "/cheatsheets/nix"
     },
     "binary": {
       "name": "Binary",
