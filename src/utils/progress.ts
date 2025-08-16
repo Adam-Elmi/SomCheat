@@ -1,8 +1,7 @@
-import type TaskType from "../types/task";
-export default function getProgress(getIndex: Function, getData: Function, obj: any): number {
+import type CheatsheetType from "../types/cheatsheet";
+export default function getProgress(getIndex: Function, getData: Function, obj: CheatsheetType): number {
   try {
-    obj.id = obj.id.split(" ")[0].toLowerCase();
-    const index = getIndex(obj.id);
+    const index: number = getIndex(obj.id);
     return index !== null
       ? parseFloat(getData(index)[obj.id]?.finished_tasks_progress)
       : 0;
