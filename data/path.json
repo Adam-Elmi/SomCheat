@@ -343,6 +343,14 @@
     "name": "Ubuntu",
     "path": "/cheatsheets/ubuntu"
   },
+  "windows": {
+    "name": "Windows",
+    "path": "/cheatsheets/windows"
+  },
+  "macos": {
+    "name": "MacOS",
+    "path": "/cheatsheets/macos"
+  },
   "vscode": {
     "name": "Vscode",
     "path": "/cheatsheets/vscode"
