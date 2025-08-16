@@ -25,6 +25,7 @@ const devToolsData = [
   new DevTools("npm", "_", "Feb 27, 2025"),
   new DevTools("cargo", "_", "Feb 27, 2025"),
   new DevTools("luarocks", "_", "Feb 27, 2025"),
+  new DevTools("nix", "_", "Feb 27, 2025"),
 ];
 
 export default devToolsData;
