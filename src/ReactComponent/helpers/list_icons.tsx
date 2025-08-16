@@ -111,7 +111,7 @@ import {
   HelixIcon,
   NixIcon,
 } from "../icons/DevTools_Icons";
-import { LinuxIcon, UbuntuIcon } from "../icons/Platform_Icons";
+import { LinuxIcon, MacOSIcon, UbuntuIcon, WindowsIcon } from "../icons/Platform_Icons";
 import {
   AsciiIcon,
   BaseConversionIcon,
@@ -217,6 +217,10 @@ const all_cheat_icons = {
   sass: <SassIcon />,
   linux: <LinuxIcon />,
   ubuntu: <UbuntuIcon />,
+  windows: <WindowsIcon/>,
+  macos: <span className="dark:text-white">
+    <MacOSIcon/>
+  </span>,
   vscode: <VscodeIcon />,
   vim: <VimIcon />,
   neovim: <NeovimIcon />,
