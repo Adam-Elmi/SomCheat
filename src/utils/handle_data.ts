@@ -1,11 +1,12 @@
-import dJson from "../../tasks/tasks.json";
+import json from "../../tasks/tasks.json";
+import type TaskType from "../types/task";
 
-const jsonData: Array<{}> = dJson;
+const jsonData: TaskType[] = json;
 
-export function getIndex(file: string) {
+export function getIndex(filename: string) {
   try {
     if(jsonData) {
-        const index = jsonData.findIndex((d) => d?.hasOwnProperty(file));
+        const index = jsonData.findIndex((d) => d?.hasOwnProperty(filename));
         return index !== -1 ? index : null;
     }
   } catch (error) {
