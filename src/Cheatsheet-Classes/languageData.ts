@@ -6,7 +6,7 @@ Languages
 ------------------
 */
 const languagesData = [
-  // Scripting languages
+  // Programming languages
   new Language("js", "Javascript", "Feb 27, 2025"),
   new Language("ts", "Typescript", "Feb 27, 2025"),
   new Language("c", "_", "Feb 27, 2025"),
