@@ -1,13 +1,17 @@
-interface TaskType {
+type TaskProgress = {
   finished_tasks_progress: string;
   unfinished_tasks_progress: string;
   done_len: number;
   empty_len: number;
-  done_indices: Array<number>;
-  empty_indices: Array<number>;
-  tasks: Array<string>
+  done_indices: number[];
+  empty_indices: number[];
+  tasks: string[];
+};
+
+type TaskType = {
   id: number;
   file: string;
-}
+  [key]: TaskProgress | object;
+};
 
 export default TaskType;
