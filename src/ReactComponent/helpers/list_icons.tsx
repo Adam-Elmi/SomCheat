@@ -26,7 +26,7 @@ import {
   RIcon,
   OcamlIcon,
   PerlIcon,
-  SoplangIcon,
+  NimIcon,
   BashIcon,
   PowershellIcon,
   ZshIcon,
@@ -38,6 +38,13 @@ import {
   MarkdownIcon,
   CssIcon,
   SassIcon,
+  VIcon,
+  GleamIcon,
+  JuliaIcon,
+  ElixirIcon,
+  ErlangIcon,
+  CrystalIcon,
+  ReasonIcon,
 } from "../icons/lang_icons";
 import {
   ElectronIcon,
@@ -102,6 +109,7 @@ import {
   VscodeIcon,
   WebpackIcon,
   HelixIcon,
+  NixIcon,
 } from "../icons/DevTools_Icons";
 import { LinuxIcon, UbuntuIcon } from "../icons/Platform_Icons";
 import {
@@ -135,7 +143,16 @@ const all_cheat_icons = {
   r: <RIcon />,
   ocaml: <OcamlIcon />,
   perl: <PerlIcon dimension={45} />,
-  soplang: <SoplangIcon />,
+  nim: <NimIcon />,
+  v: <VIcon/>,
+  gleam: <GleamIcon/>,
+  julia: <span className="text-[#1a1a1a] dark:text-white">
+    <JuliaIcon/>
+  </span>,
+  elixir: <ElixirIcon/>,
+  erlang: <ErlangIcon/>,
+  crystal: <CrystalIcon/>,
+  reason: <ReasonIcon/>,
   mysql: <MySQLIcon />,
   postgresql: <PostgreSQLIcon />,
   mongodb: <MongoDBIcon />,
@@ -219,6 +236,7 @@ const all_cheat_icons = {
   npm: <NpmIcon />,
   cargo: <CargoIcon />,
   luarocks: <LuaRocksIcon />,
+  nix: <NixIcon/>,
   binary: <BinaryIcon dimension={30} color="#3791f4" />,
   storage_units: <StorageUnitsIcon dimension={30} color="#8154f0" />,
   hex: (
