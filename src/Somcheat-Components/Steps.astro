@@ -1,0 +1,30 @@
+---
+const { data, title, description } = Astro.props;
+---
+
+<div class={`border-[1.5px] rounded-md border-slate-200 dark:border-slate-800 ${title ? "pt-6" : ""} p-2 flex flex-col`}>
+    <strong class="text-[1.5rem] text-slate-500 border-b-[1.5px] border-slate-200 w-fit rounded-md">{title}</strong>
+    <p class="text-slate-500 mb-3">{description ?? ""}</p>
+    <ul class="flex flex-col gap-3">
+        {
+            data && data.length > 0
+            ? data.map((step: { t: string; d: string }, index: number) => (
+                      <div class={`${data.length - 1 !== index ? "border-b-[1.5px]" : "" } border-slate-100 dark:border-slate-800 p-2`}>
+                          <li class="flex flex-col gap-2">
+                              <div class="flex gap-2">
+                                  <span class="w-[30px] h-[30px] max-[500px]:w-[20px] max-[500px]:h-[20px] border-[1.5px] border-blue-300 dark:border-slate-700/50 bg-slate-100 dark:bg-slate-800 text-slate-400 rounded-full flex justify-center items-center font-bold">
+                                      {index + 1}
+                                  </span>
+                                  <strong class="text-[1.2rem] text-blue-500 max-[500px]:text-[.9rem]">
+                                      {step.t.slice(0, step.t.indexOf("("))}
+                                      <span class="text-slate-500 text-[1.1rem] max-[500px]:text-[.8rem]">{step.t.slice(step.t.indexOf("("))}</span>
+                                  </strong>
+                              </div>
+                              <p class="text-slate-600">{step.d}</p>
+                          </li>
+                      </div>
+                  ))
+                : null
+        }
+    </ul>
+</div>
