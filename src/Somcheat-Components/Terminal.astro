@@ -1,0 +1,25 @@
+---
+import Copy2Icon from "../Icons/Copy2Icon.astro";
+import TerminalIcon from "../Icons/TerminalIcon.astro";
+---
+
+<div class="w-[1000px] max-w-full bg-[#101012] border-2 border-slate-800/70">
+    <!-- Header -->
+    <div class="p-2 flex justify-between items-center border-b-2 border-slate-800/50">
+        <span class="flex gap-2 items-center text-slate-400">
+            <TerminalIcon width="20"/>
+            Terminal
+        </span>
+        <button id="copy-btn-terminal" class="cursor-pointer">
+            <span id="copy-icon-holder-for-terminal" class="hover:text-slate-500 text-slate-200">
+                <Copy2Icon/>
+            </span>
+        </button>
+    </div>
+    <!-- Body -->
+    <div id="code-node-terminal" class="p-2 bg-[#161616] overflow-auto">
+        <slot/>
+    </div>
+</div>
+
+<script src="../utils/copyText.ts"></script>
