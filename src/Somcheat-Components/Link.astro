@@ -1,0 +1,34 @@
+---
+import { LinkIcon } from "../ReactComponent/icons/Other_Icons";
+
+const { title, url, description } = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="block cursor-pointer dark:border-slate-100/30 dark:bg-[#0F0F0F] group my-3 p-5 rounded-lg border border-gray-200 shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
+>
+  <!-- Top Bar -->
+  <div class="flex justify-between items-center mb-3">
+    <span class="text-[0.9rem] text-white bg-blue-500 px-2 py-1 rounded">
+      Reference
+    </span>
+    <div class="text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
+      <LinkIcon />
+    </div>
+  </div>
+
+  <!-- Title -->
+  <span class="block text-lg font-semibold text-slate-500 group-hover:text-blue-600 transition-colors duration-300">
+    {title}
+  </span>
+
+  <!-- Description -->
+  {description && (
+    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+      {description}
+    </p>
+  )}
+</a>
