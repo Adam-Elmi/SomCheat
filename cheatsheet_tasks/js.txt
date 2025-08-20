@@ -1,4 +1,4 @@
-TASK: Consol.log - [done]
+TASK: Console.log - [done]
 
 TASK: Variables - [done]
 

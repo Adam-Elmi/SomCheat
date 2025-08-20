@@ -197,7 +197,7 @@
         48
       ],
       "tasks": [
-        "TASK: Consol.log",
+        "TASK: Console.log",
         "TASK: Variables",
         "TASK: Var",
         "TASK: Let",
