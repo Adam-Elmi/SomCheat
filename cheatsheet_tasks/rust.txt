@@ -1,14 +1,34 @@
+TASK: Main Entry - []
+
 TASK: Variables - []
 
 TASK: Data Types - []
  
-TASK: Conditionals - []
+TASK: If/Else Statements - []
+
+TASK: Match Statement - []
+
+TASK: Comments - []
+
+TASK: Static Typing - []
  
 TASK: Functions - []
  
+TASK: Arrays - []
+
+TASK: Slices - []
+
+TASK: Vectors - []
+
 TASK: Loops - []
+
+TASK: String Methods - []
+
+TASK: Array/Slice Methods - []
  
-TASK: Ownership & Borrowing - []
+TASK: Ownership - []
+
+TASK: Borrowing - []
  
 TASK: Struct - []
  

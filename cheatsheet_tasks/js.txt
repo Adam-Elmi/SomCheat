@@ -12,29 +12,67 @@ TASK: Data Types - []
 
 TASK: Operators - []
 
+TASK: If/Else Statements - []
+
+TASK: Switch Statement - []
+
+TASK: Ternary Operator - []
+
+TASK: Comments - []
+
+TASK: Dynamic Typing - []
+
 TASK: Functions - []
 
 TASK: Hoisting - []
 
-TASK: Conditionals - []
+TASK: Scope - []
 
-TASK: Scope and Closures - []
+TASK: Closure - []
+
+TASK: Arrays - []
 
 TASK: Loops - []
 
-TASK: Arrays - []
+TASK: For Loop - []
+
+TASK: While Loop - []
+
+TASK: Do-While Loop - []
+
+TASK: String Methods - []
+
+TASK: Array Methods - []
 
 TASK: Objects - []
 
 TASK: This Keyword - []
 
+TASK: Object Methods - []
+
+TASK: Getter Method - []
+
+TASK: Setter Method - []
+
+TASK: Call method (Built-in Function Method) - []
+
+TASK: Apply method (Built-in Function Method) - []
+
+TASK: Bind method (Built-in Function Method) - []
+
+TASK: ToString method (Built-in Function Method) - []
+
+TASK: Name Property (Built-in Function Property) - []
+
+TASK: Length Property (Built-in Function Property) - []
+
 TASK: Classes (ES6) - []
 
-TASK: Prototype and Inheritance - []
+TASK: Prototype - []
 
-TASK: Function methods - []
+TASK: Inheritance - []
 
-TASK: Error Handling - []
+TASK: Try and Catch - []
 
 TASK: Nullish Coalescing (??) - []
 
@@ -44,18 +82,16 @@ TASK: Destructuring - []
 
 TASK: Modules (ES6) - []
 
-TASK: Async / Await - []
+TASK: Export - []
+
+TASK: Import - []
+
+TASK: Promises - []
+
+TASK: Async & Await - []
 
 TASK: Strict Mode - []
 
-TASK : Set and Map - []
+TASK : Set - []
 
-TASK: Generator Functions - []
-
-TASK: Async Generators - []
-
-TASK: Iterators and Iterables - []
-
-TASK: Symbol (ES6) - []
-
-TASK: BigInt (ES2020) - []
+TASK : Map - []

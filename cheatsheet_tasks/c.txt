@@ -1,18 +1,26 @@
-TASK: Main Function - []
-
-TASK: Data Types - []
+TASK: Main Entry - []
 
 TASK: Variables - []
+
+TASK: Data Types - []
  
 TASK: Operators - []
 
-TASK: Conditionals - []
+TASK: If/Else Statements - []
 
-TASK: Loops - []
- 
+TASK: Switch Statement - []
+
+TASK: Ternary Operator - []
+
+TASK: Comments - []
+
+TASK: Static Typing - []
+
 TASK: Functions - []
  
 TASK: Arrays - []
+ 
+TASK: Loops - []
  
 TASK: Enums - []
  

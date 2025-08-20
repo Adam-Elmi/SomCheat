@@ -2,22 +2,54 @@ TASK: Print - [done]
 
 TASK: Variables - []
 
+TASK: Global Variables - []
+
+TASK: Local Variables - []
+
 TASK: Data Types - []
 
-TASK: Conditionals - []
+TASK: Operators - []
 
-TASK: Loops - []
+TASK: If/Else Statements - []
+
+TASK: Comments - []
+
+TASK: Dynamic Typing - []
 
 TASK: Functions - []
 
 TASK: Tables - []
 
+TASK: Loops - []
+
+TASK: For Loop - []
+
+TASK: While Loop - []
+
+TASK: Repeat Unitl Loop - []
+
+TASK: String Functions - []
+
 TASK: Metatables - []
 
 TASK: Metamethods - []
 
-TASK: Error Handling - []
+TASK: pcall (Protected Call) - []
+
+TASK: xpcall (Extended Protected Call) - []
 
 TASK: Modules - []
 
+TASK: Module Return - []
+
+TASK: Require - []
+
+TASK: Dofile - []
+
 TASK: File Handling - []
+
+TASK: File Modes - []
+
+TASK: Read File - []
+
+TASK: Write File - []

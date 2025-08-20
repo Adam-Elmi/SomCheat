@@ -1,16 +1,32 @@
-TASK: Entry Point - []
+TASK: Main Entry - []
 
 TASK: Variables - []
 
 TASK: Data Types - []
 
-TASK: String Functions - []
+TASK: Operators - []
 
-TASK: Conditionals - []
+TASK: If/Else Statements - []
+
+TASK: When Statement - []
+
+TASK: Comments - []
+
+TASK: Static Typing - []
+
+TASK: Functions - []
+
+TASK: Arrays - []
 
 TASK: Loops - []
 
-TASK: Functions - []
+TASK: For Loop - []
+
+TASK: While Loop - []
+
+TASK: Do-While Loop - []
+
+TASK: String Functions - []
 
 TASK: Default and named arguments - []
 

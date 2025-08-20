@@ -1,20 +1,30 @@
-TASK: Compiling & Running - []
-
 TASK: Variables - []
 
 TASK: Data Types - []
 
-TASK: Conditionals - []
+TASK: Operators - []
+
+TASK: If/Else Statements - []
+
+TASK: Match Statement - []
+
+TASK: Comments - []
+
+TASK: Static Typing - []
 
 TASK: Functions - []
 
-TASK: Recursion - []
+TASK: Lists - []
 
 TASK: Loops - []
 
-TASK: Tuples & Records - []
+TASK: For Loop - []
 
-TASK: Lists - []
+TASK: While Loop - []
+
+TASK: Recursion - []
+
+TASK: Tuples & Records - []
 
 TASK: Pattern Matching - []
 

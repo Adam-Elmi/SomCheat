@@ -1,24 +1,38 @@
 TASK: Print - [done]  
 
-TASK: Syntax & Semicolons - []  
-
-TASK: Comments - []  
+TASK: Variables - []  
    
-TASK: Variables (Scalars, Arrays, Hashes) - []  
+TASK: Semicolon Rule - []  
    
-TASK: Data Types & Context - []  
+TASK: Data Types - []  
    
 TASK: Operators - []  
    
-TASK: Conditionals - []  
-   
-TASK: Loops - []  
+TASK: If/Else Statements - []
 
-TASK: Functions (subroutines) - []  
-   
-TASK: Variable Scope - [] 
+TASK: Comments - []
 
-TASK: Array Operations - []  
+TASK: Dynamic Typing - []
+  
+TASK: Variable Scope - []
+ 
+TASK: Functions (subroutines) - []
+
+TASK: Arrays - []
+   
+TASK: Loops - []
+
+TASK: For Loop - []
+
+TASK: Foreach Loop - []
+
+TASK: While Loop - []
+
+TASK: Until Loop - []
+
+TASK: Array Operations - []
+
+TASK: Hash - []  
    
 TASK: Hash (Map) Operations - []  
    

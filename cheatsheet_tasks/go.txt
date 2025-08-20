@@ -1,20 +1,44 @@
-TASK: Packages - []
+TASK: Main Entry - []
 
-TASK: Imports - []
+TASK: Fmt - []
  
 TASK: Variables - []
+
+TASK: Var - []
+
+TASK: Const - []
  
 TASK: Data Types - []
 
-TASK: Constants - []
+TASK: Operators - []  
  
-TASK: Conditionals - []
+TASK: If/Else Statements - []
+
+TASK: Switch Statement - []
+
+TASK: Comments - []
+
+TASK: Static Typing - []
 
 TASK: Functions - []
 
+TASK: Blank Identifier - []
+
+TASK: Array - []
+
+TASK: Slices - []
+
 TASK: Loops - []
 
-TASK: Array and Slices - []
+TASK: For Loop - []
+
+TASK: For Loop with range - []
+
+TASK: Infinite Loop - []
+
+TASK: String Functions - []
+
+TASK: Slice Functions - []
 
 TASK: Maps - []
 
@@ -28,7 +52,7 @@ TASK: Error Handling - []
  
 TASK: Interfaces - []
  
-TASK:  Channels -[]
+TASK: Channels -[]
  
 TASK: Testing - []
 

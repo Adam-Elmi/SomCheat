@@ -4,13 +4,23 @@ TASK: Variables - []
 
 TASK: Data Types - []
 
-TASK: Conditionals - []
+TASK: Operators - []
+
+TASK: If/Else Statements - []
+
+TASK: Comments - []
+
+TASK: Dynamic Typing - []
 
 TASK: Functions - []
 
+TASK: List - []
+
 TASK: Loops - []
 
-TASK: List - []
+TASK: For Loop - []
+
+TASK: While Loop - []
 
 TASK: Tuple - []
 
@@ -32,5 +42,5 @@ TASK: Json Handling - []
 
 TASK: Date - []
 
-TASK: Modules and imports - []
+TASK: Modules - []
 
