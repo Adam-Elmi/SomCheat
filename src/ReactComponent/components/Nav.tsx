@@ -74,7 +74,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="w-full border-b-[1.5px] dark:bg-[#111122] dark:border-b-1 dark:border-indigo-500 border-slate-200 min-h-[50px] flex flex-col bg-amber-50">
+    <nav className="w-full border-b-[1.5px] dark:bg-[#101012] dark:border-b-1 dark:border-indigo-500 border-slate-200 min-h-[50px] flex flex-col justify-center items-center bg-amber-50">
       {/*
         ------------------
         Mobile Menu Button (Visible only on small screens)
