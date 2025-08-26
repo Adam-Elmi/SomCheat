@@ -122,6 +122,7 @@ import {
   StorageUnitsIcon,
   UnicodeIcon,
 } from "../icons/BasicOfCom_Icons";
+import { BrowserIcon } from "../icons/Additional_Icons";
 
 const all_cheat_icons = {
   default: <FileCodeIcon />,
@@ -253,6 +254,7 @@ const all_cheat_icons = {
   _32bit_and_64bit: <CpuIcon dimension={30} color="#ca950b" />,
   ascii: <AsciiIcon dimension={35} color="#0bb7ca" />,
   unicode: <UnicodeIcon dimension={30} color="#ca0b4a" />,
+  web_api: <BrowserIcon/>,
 };
 
 export default all_cheat_icons;
