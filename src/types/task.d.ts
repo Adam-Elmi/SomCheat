@@ -8,6 +8,10 @@ type TaskProgress = {
   tasks: string[];
 };
 
+export type TaskData = {
+  [key]: TaskProgress | object
+}
+
 type TaskType = {
   id: number;
   file: string;
