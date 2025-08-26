@@ -1,6 +1,6 @@
 (() => {
-  const light_btn = document.getElementById("light-btn") as HTMLButtonElement | null;
-  const dark_btn = document.getElementById("dark-btn") as HTMLButtonElement | null;
+  const light_btn: HTMLElement | null = document.getElementById("light-btn");
+    const dark_btn: HTMLElement | null = document.getElementById("dark-btn");
   const html = document.documentElement as HTMLElement & { dataset: { theme: string } };
 
   const saved_theme: string | null = localStorage.getItem("theme-value");
