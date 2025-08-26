@@ -1,11 +1,11 @@
 import { Library } from "./classData";
-
+import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
   Libraries
   ------------------
 */
-const librariesData = [
+const librariesData: CheatsheetType[] = [
   new Library("react", "_", "Feb 27, 2025"),
   new Library("jquery", "_", "Feb 27, 2025"),
   new Library("mongoose", "_", "Feb 27, 2025"),
