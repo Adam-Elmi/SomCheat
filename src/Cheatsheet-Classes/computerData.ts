@@ -1,12 +1,12 @@
 import { BasicComputer } from "./classData";
-
+import type CheatsheetType from "../types/cheatsheet";
 /*
   ------------------
   Computer Data
   ------------------
 */
 
-const computerData = [
+const computerData: CheatsheetType[] = [
   new BasicComputer("binary", "_", "Feb 27, 2025"),
   new BasicComputer("storage_units", "_", "Feb 27, 2025"),
   new BasicComputer("hex", "Hexidecimal", "Feb 27, 2025"),
