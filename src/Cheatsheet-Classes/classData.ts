@@ -4,8 +4,7 @@ import getProgress from "../utils/progress";
 import icon_detector from "../ReactComponent/helpers/icon_detector";
 import adjustText from "../utils/adjustText";
 import type CheatsheetType from "../types/cheatsheet";
-
-type TargetType = "web" | "desktop" | "mobile";
+import type { TargetType } from "../types/cheatsheet";
 
 class Data {
   id: string;
@@ -35,14 +34,6 @@ class Data {
   }
 }
 
-class Language extends Data {}
-class Database extends Data {}  
-class Framework extends Data {}
-class Library extends Data {}
-class Platform extends Data {}
-class DevTools extends Data {}
-class Runtime extends Data {}
-class BasicComputer extends Data {}
 
 class Category {
   id: string;
@@ -66,6 +57,16 @@ class Category {
   }
 }
 
+class Language extends Data {}
+class Database extends Data {}  
+class Framework extends Data {}
+class Library extends Data {}
+class Platform extends Data {}
+class DevTools extends Data {}
+class Runtime extends Data {}
+class BasicComputer extends Data {}
+class Additional extends Data {}
+
 export {
   Language,
   Database,
@@ -75,5 +76,6 @@ export {
   DevTools,
   Runtime,
   BasicComputer,
+  Additional,
   Category,
 };
