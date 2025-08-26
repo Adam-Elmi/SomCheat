@@ -17,8 +17,10 @@ import {
   DevToolsIcon,
   CodeIcon,
   RuntimeIcon,
-  ComputerIcon
+  ComputerIcon,
+  AddOnIcon
 } from "../icons/Categories_Icons";
+import additionalData from "../../Cheatsheet-Classes/additionalData.ts";
 
 const dataList: CategoryType[] = [
   new Category("comp", "Basics", computerData, <ComputerIcon dimension={40} color="#777" />, computerData.length),
@@ -29,6 +31,7 @@ const dataList: CategoryType[] = [
   new Category("os", "Platforms", platformsData, <OSIcon dimension={45} color="#1aa5e7" />, platformsData.length),
   new Category("run", "runtimes", runtimeData, <RuntimeIcon dimension={40} color="#acd"/>, runtimeData.length),
   new Category("dev", "Dev Tools", devToolsData, <DevToolsIcon dimension={40} color="#aea" />, devToolsData.length),
+  new Category("add", "Additionals", additionalData, <AddOnIcon dimension={40} color="#7ebae4" />, additionalData.length),
 ];
 
 export default dataList;
