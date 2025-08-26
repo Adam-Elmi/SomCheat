@@ -463,4 +463,9 @@
       "name": "Unicode",
       "path": "/cheatsheets/unicode"
     }
+    ,
+    "web_api": {
+      "name": "Web APIs",
+      "path": "/cheatsheets/web-api"
+    }
 }
