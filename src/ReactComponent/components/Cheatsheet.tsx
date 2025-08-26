@@ -3,9 +3,11 @@ import { SheetIcon } from "../icons/Other_Icons";
 import Card from "./Card";
 import type CheatsheetType from "../../types/cheatsheet";
 import type CategoryType from "../../types/category";
+import { extractFolders } from "../../utils/filter_tasks";
 
 
 export default function CheatSheet() {
+  console.log(extractFolders())
   return (
     <div className="w-full flex flex-col">
       {/* 
@@ -42,6 +44,8 @@ export default function CheatSheet() {
                   ? _name
                   : id === "dev"
                   ? _name
+                  : id === "add" 
+                  ?  _name
                   : id === "comp" ? _name : ""}
               </h1>
             </div>
