@@ -5,14 +5,14 @@ const jsonData: TaskType[] = json;
 
 export function getIndex(filename: string) {
   try {
-    if(jsonData) {
-        const index = jsonData.findIndex((d) => d?.hasOwnProperty(filename));
-        return index !== -1 ? index : null;
+    if (jsonData) {
+      const index = jsonData.findIndex((d) => d?.hasOwnProperty(filename));
+      return index !== -1 ? index : null;
     }
   } catch (error) {
     console.error(error);
   }
-    return null;
+  return null;
 }
 
 export function getData(index?: number) {
