@@ -1,11 +1,11 @@
 import { Framework } from "./classData";
-
+import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
   Frameworks
   ------------------
 */
-const frameworkData = [
+const frameworkData: CheatsheetType[] = [
   new Framework("expressjs", "Express.js", "Feb 27, 2025"),
   new Framework("electron", "_", "Feb 27, 2025", "desktop"),
   new Framework("reactnative", "React Native", "Feb 27, 2025", "mobile"),
