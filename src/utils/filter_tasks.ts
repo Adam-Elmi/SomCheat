@@ -1,24 +1,25 @@
 import jsonData from "../../tasks/tasks.json";
+import type {TaskData} from "../types/task";
 
 const jData: any = jsonData;
-export function extractFolders() {
-  const folders: any = [];
+export function extractFolders(): string[] {
+  const folders: string[] = [];
   try {
     if (jsonData) {
       for (const props of jsonData) {
         folders.push(props.file.slice(0, props.file.lastIndexOf(".")));
       }
-      return folders;
     }
   } catch (error) {
     console.error(error);
   }
+  return folders;
 }
 const directories = extractFolders();
 
-const tasks: any = [];
+const tasks: TaskData[] = [];
 
-function getTasks() {
+function getTasks(): void {
   try {
     if (jData) {
       for (let i = 0; i < jData.length; i++) {
@@ -33,19 +34,20 @@ function getTasks() {
 }
 getTasks();
 
-export function filterTasks() {
+export function filterTasks(): TaskData[] {
   try {
     for (let i = 0; i < tasks.length; i++) {
-      const taskName = tasks[i][directories[i]];
-      taskName.finished_t = taskName.tasks.filter(
-        (_: any, i: number) => taskName?.done_indices.includes(i) 
+      const dir: string = directories[i];
+      const taskName = (tasks[i] as any)?.[dir ];
+      taskName.finished_t = taskName.tasks.filter((_: undefined, i: number) =>
+        taskName?.done_indices.includes(i),
       );
-      taskName.unfinished_t = taskName.tasks.filter(
-        (_: any, i: number) => taskName?.empty_indices.includes(i)
+      taskName.unfinished_t = taskName.tasks.filter((_: undefined, i: number) =>
+        taskName?.empty_indices.includes(i),
       );
     }
-    return tasks;
   } catch (error) {
     console.error(error);
   }
+    return tasks;
 }
