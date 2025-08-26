@@ -1,11 +1,11 @@
 import { Database } from "./classData";
-
+import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
   Databases
   ------------------
 */
-const databasesData = [
+const databasesData: CheatsheetType[] = [
   new Database("mysql", "MySQL", "Feb 27, 2025"),
   new Database("postgresql", "PostgreSQL", "Feb 27, 2025"),
   new Database("sqlite", "SQLite", "Feb 27, 2025"),
