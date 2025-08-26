@@ -5,7 +5,7 @@ function adjustText(text: string): string | null {
       .split("_")
       .map((value: string) => {
         value = value.replace("_", "").replace(/\band\b/gi, "&");
-        return value && value[0] ? value[0].toUpperCase() + value.slice(1) : null;
+        return value ? value[0].toUpperCase() + value.slice(1) : null;
       })
       .join(" ")
   );
