@@ -1,10 +1,11 @@
 import { DevTools } from "./classData";
+import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
   Dev tools
   ------------------
 */
-const devToolsData = [
+const devToolsData: CheatsheetType[] = [
   new DevTools("git", "_", "Feb 27, 2025"),
   new DevTools("vscode", "_", "Feb 27, 2025"),
   new DevTools("vim", "_", "Feb 27, 2025"),
