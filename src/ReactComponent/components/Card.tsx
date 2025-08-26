@@ -12,9 +12,9 @@ import {
   InCompleteIcon,
 } from "../icons/Status_Icons";
 import type CheatsheetType from "../../types/cheatsheet";
+import type { TargetType } from "../../types/cheatsheet";
 
 export default function Card({ cheatsheet }: { cheatsheet: CheatsheetType }) {
-  type TargetType = "web" | "desktop" | "mobile";
   const labelIcon:Record<TargetType, React.ReactNode> = {
     web: (
       <span className="text-sky-400">
