@@ -1,4 +1,4 @@
-type TargetType = "web" | "desktop" | "mobile";
+export type TargetType = "web" | "desktop" | "mobile";
 interface CheatsheetType {
   id: string;
   name: string;
