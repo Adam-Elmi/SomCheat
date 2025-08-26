@@ -1,11 +1,11 @@
 import { Language } from "./classData";
-
+import type CheatsheetType from "../types/cheatsheet";
 /* 
 ------------------
 Languages
 ------------------
 */
-const languagesData = [
+const languagesData: CheatsheetType[] = [
   // Programming languages
   new Language("js", "Javascript", "Feb 27, 2025"),
   new Language("ts", "Typescript", "Feb 27, 2025"),
