@@ -52,7 +52,7 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
         <Colorize color="somcheat-gray" is_both={true}>Qaabka Isticmaalka (Syntax):</Colorize>
         <Code>
             ```js
-            let number = 5;
+            <keyword> <variable_name> = <initial_value>;
             ```
         </Code>
         <Colorize color="somcheat-gray" is_both={true}>Tusaale:</Colorize>
@@ -81,7 +81,7 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
         <Steps data={[
         {
         t: "var , let , const (variable declaration)",
-        d: "wa ereyo bixin luuqada u gaar ah oo loo adeegsado si loo qeexo variable, waxa computer-ka lo sheegaya in la sameynayo ama la qeexayo variable. ",
+        d: "wa ereyo bixin luuqada u gaar ah oo loo adeegsado si loo qeexo variables.",
     },
     {
         t: "name , age , gender (variable identifiers)",
@@ -96,6 +96,75 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
       <Message type="note">
         **Variable** afsomali ahaan waxa lo yaqaana **doorsame**.
       </Message>
+    </Section>
+
+    <Section>
+    # Var
+     <Colorize color="somcheat-blue" is_both={true}>Var</Colorize> waa erey bixin lo adeegsado in variable(doorsame) lagu qeexo.
+     <Steps title="Astaamaha uu iska leeyahay - Var"  data={[
+        {
+        t: "Reassignment",
+        d: "Qiimaha ku kaydsan variable-ka waad bedeli karta.",
+    },
+    {
+        t: "Redeclaration",
+        d: "Variable-ka dib ayaad u qeexi karta.",
+    },
+    {
+        t: "Function scope",
+        d: "Variables-ka lagu dhex qeexo function-ka dhexdiisa, kaliya waxa laga heli kara function-ka lagu dhex qeexay.",
+    },
+    {
+        t: "Hoisting",
+        d: "Hadduu jiro variable aan la qeexin ka dibna la qeexo, wax mushkilad ah ma keenayo.",
+    },
+        ]} />
+        <Colorize color="somcheat-gray" is_both={true}>Tusaale: </Colorize>
+        <Colorize color="somcheat-blue" is_both={true}>1. Reassignment</Colorize>
+        <Code>
+            ```js
+            // Reassignment
+            var price = 10;
+            price = 20;
+            console.log(price); // natiijada: 20
+            ```
+        </Code>
+        <Colorize color="somcheat-blue" is_both={true}>2. Redeclaration</Colorize>
+        <Code>
+            ```js
+            // Redeclaration
+            var color = "red";
+            var color = "blue";
+            console.log(color); // natiijada: blue
+            ```
+        </Code>
+        <Colorize color="somcheat-blue" is_both={true}>3. Function scope</Colorize>
+        <Code>
+            ```js
+            // Function scope
+            function add(a, b) {
+              var result = a + b;
+              console.log(result); // natiijada: 5
+            }
+            add(2, 3);
+            console.log(result); // Error
+            ```
+            <Message type="error">
+            **ReferenceError:** ***result*** is not defined
+            </Message>
+            <Message type="note">
+            **Variables**-ka lagu dhex qeexo **function**-ka dhexdiisa, kaliya waxa laga heli kara **function**-ka lagu dhex qeexay.
+            </Message>
+        </Code>
+        <Colorize color="somcheat-blue" is_both={true}>4. Hoisting</Colorize>
+        <Code>
+            ```js
+            // Hoisting
+            console.log(id); // undefined (lama qeexin)
+            var id = 101;
+            console.log(id); // natiijada: 101
+            ```
+        </Code>
     </Section>
 
 </Structure>
