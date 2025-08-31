@@ -2,11 +2,11 @@ TASK: Console.log - [done]
 
 TASK: Variables - [done]
 
-TASK: Var - []
+TASK: Var - [done]
 
-TASK: Let - []
+TASK: Let - [done]
 
-TASK: Const - []
+TASK: Const - [done]
 
 TASK: Data Types - []
 
