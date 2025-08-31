@@ -6,7 +6,7 @@ const { data, title, description } = Astro.props;
     class={`border-[1.5px] rounded-md border-slate-200 dark:border-slate-800 ${title ? "pt-6" : ""} p-2 flex flex-col`}
 >
     <strong
-        class="text-[1.5rem] text-slate-500 border-b-[1.5px] border-dotted border-slate-200 dark:border-slate-700  pb-2 w-fit rounded-md"
+        class="text-[1.5rem] max-[500px]:text-[1rem] max-[500px]:text-center text-slate-500 border-b-[1.5px] border-dotted border-slate-200 dark:border-slate-700  pb-2 w-fit rounded-md"
         >{title}</strong
     >
     <p class="text-slate-500 mb-3">{description ?? ""}</p>
