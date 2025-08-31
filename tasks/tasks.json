@@ -139,18 +139,18 @@
   },
   {
     "js": {
-      "finished_tasks_progress": "4",
-      "unfinished_tasks_progress": "96",
-      "done_len": 2,
-      "empty_len": 47,
+      "finished_tasks_progress": "10",
+      "unfinished_tasks_progress": "90",
+      "done_len": 5,
+      "empty_len": 44,
       "done_indices": [
         0,
-        1
-      ],
-      "empty_indices": [
+        1,
         2,
         3,
-        4,
+        4
+      ],
+      "empty_indices": [
         5,
         6,
         7,
