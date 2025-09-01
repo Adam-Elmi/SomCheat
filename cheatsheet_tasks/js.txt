@@ -8,7 +8,11 @@ TASK: Let - [done]
 
 TASK: Const - [done]
 
-TASK: Data Types - []
+TASK: Rules for Variable Names - [done]
+
+TASK: Data Types - [done]
+
+TASK: Primitive Data Types - [done]
 
 TASK: Operators - []
 
