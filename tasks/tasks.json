@@ -139,21 +139,21 @@
   },
   {
     "js": {
-      "finished_tasks_progress": "10",
-      "unfinished_tasks_progress": "90",
-      "done_len": 5,
-      "empty_len": 44,
+      "finished_tasks_progress": "16",
+      "unfinished_tasks_progress": "84",
+      "done_len": 8,
+      "empty_len": 43,
       "done_indices": [
         0,
         1,
         2,
         3,
-        4
-      ],
-      "empty_indices": [
+        4,
         5,
         6,
-        7,
+        7
+      ],
+      "empty_indices": [
         8,
         9,
         10,
@@ -194,7 +194,9 @@
         45,
         46,
         47,
-        48
+        48,
+        49,
+        50
       ],
       "tasks": [
         "TASK: Console.log",
@@ -202,7 +204,9 @@
         "TASK: Var",
         "TASK: Let",
         "TASK: Const",
+        "TASK: Rules for Variable Names",
         "TASK: Data Types",
+        "TASK: Primitive Data Types",
         "TASK: Operators",
         "TASK: If/Else Statements",
         "TASK: Switch Statement",
