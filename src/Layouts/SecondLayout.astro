@@ -43,13 +43,12 @@ const { frontmatter } = Astro.props;
         transition: border-color 0.2s ease;
     }
 
-    h1 {
-        font-size: 2rem;
-        color: #1f2937;
-        border-bottom-color: #3b82f6;
-    }
     [data-theme="light"] h1 {
         color: #1f2937;
+    }
+    h1 {
+        font-size: 2rem;
+        border-bottom-color: #3b82f6;
     }
     h1::before {
         content: "#";
@@ -57,67 +56,72 @@ const { frontmatter } = Astro.props;
         color: #3b82f6;
     }
 
-    h2 {
-        font-size: 1.75rem;
-        color: #111;
-        border-bottom-color: #4ed87e;
-    }
     [data-theme="light"] h2 {
         color: #111;
     }
+    
+    h2 {
+        font-size: 1.75rem;
+        border-bottom-color: #4ed87e;
+    }
+
     h2::before {
         content: "#";
         font-size: 2.2rem;
         color: #4ed87e;
     }
 
-    h3 {
-        font-size: 1.5rem;
-        color: #222;
-        border-bottom-color: #d8c64e;
-    }
     [data-theme="light"] h3 {
         color: #222;
     }
+    
+    h3 {
+        font-size: 1.5rem;
+        border-bottom-color: #d8c64e;
+    }
+
     h3::before {
         content: "#";
         font-size: 2.2rem;
         color: #d8c64e;
     }
 
-    h4 {
-        font-size: 1.25rem;
-        color: #333;
-    }
     [data-theme="light"] h4 {
         color: #333;
     }
+    
+    h4 {
+        font-size: 1.25rem;
+    }
+
     h4::before {
         content: "#";
         font-size: 2.2rem;
         color: #ccc;
     }
 
-    h5 {
-        font-size: 1rem;
-        color: #444;
-    }
     [data-theme="light"] h5 {
         color: #444;
     }
+
+    h5 {
+        font-size: 1rem;
+    }
+    
     h5::before {
         content: "#";
         font-size: 2.2rem;
         color: #ccc;
     }
 
-    h6 {
-        font-size: 0.875rem;
-        color: #555;
-    }
     [data-theme="light"] h6 {
         color: #555;
     }
+    
+    h6 {
+        font-size: 0.875rem;
+    }
+
     h6::before {
         content: "#";
         font-size: 2.2rem;
@@ -213,6 +217,12 @@ const { frontmatter } = Astro.props;
         }
         .code-header {
             padding: 0.25rem;
+        }
+        #message-container > span {
+            font-size: 0.85rem;
+        }
+        #message-container > p {
+            font-size: 0.75rem;
         }
     }
 
