@@ -1,14 +1,14 @@
-import { Runtime } from "./classData";
+import { RuntimeData } from "./classData";
 import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
-  Runtime
+  Runtimes Data
   ------------------
 */
 const runtimeData: CheatsheetType[] = [
-  new Runtime("nodejs", "_", "Feb 27, 2025"),
-  new Runtime("deno", "_", "Feb 27, 2025"),
-  new Runtime("bun", "_", "Feb 27, 2025"),
+  new RuntimeData("nodejs", "_", "Feb 27, 2025"),
+  new RuntimeData("deno", "_", "Feb 27, 2025"),
+  new RuntimeData("bun", "_", "Feb 27, 2025"),
 ];
 
 export default runtimeData;
