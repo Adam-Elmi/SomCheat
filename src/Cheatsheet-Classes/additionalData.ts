@@ -1,4 +1,4 @@
-import { Additional } from "./classData";
+import { AdditionalData } from "./classData";
 import type CheatsheetType from "../types/cheatsheet";
 /*
   ------------------
@@ -7,7 +7,7 @@ import type CheatsheetType from "../types/cheatsheet";
 */
 
 const additionalData: CheatsheetType[] = [
-  new Additional("web_api", "Web APIs", "Feb 27, 2025"),
+  new AdditionalData("web_api", "Web APIs", "Feb 27, 2025"),
 ];
 
 export default additionalData;
