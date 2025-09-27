@@ -1,4 +1,4 @@
-### To-do
+### Code Enhancements
 - [ ] Enhance types in **ts**
 - [ ] Rewrite documentation
 - [ ] Add testing
