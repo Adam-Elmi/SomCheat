@@ -1,15 +1,16 @@
-import { Platform } from "./classData";
+import { PlatformData } from "./classData";
 import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
-  Platforms
+  Platforms Data
   ------------------
 */
 const platformsData: CheatsheetType[] = [
-  new Platform("linux", "_", "Feb 27, 2025"),
-  new Platform("ubuntu", "_", "Feb 27, 2025"),
-  new Platform("windows", "_", "Feb 27, 2025"),
-  new Platform("macos", "MacOS", "Feb 27, 2025"),
+  new PlatformData("linux", "_", "Feb 27, 2025"),
+  new PlatformData("windows", "_", "Feb 27, 2025"),
+  new PlatformData("macos", "MacOS", "Feb 27, 2025"),
+  new PlatformData("ubuntu", "_", "Feb 27, 2025"),
+  new PlatformData("nixos", "NixOS", "Feb 27, 2025"),
 ];
 
 export default platformsData;
