@@ -9,7 +9,7 @@
 - [ ] Enhance code readability
 - [x] Add classes for cheatsheet
 
-  ### Cheetsheets
+### Cheetsheets
    - [ ] Add C cheatsheet
    - [x] Add Javascript cheatsheet
    - [x] Add Python cheatsheet
@@ -21,7 +21,7 @@
    - [ ] Add npm cheatsheet
    - [ ] Add helix cheatsheet
 
- ### Cheatsheet Tasks
+### Cheatsheet Tasks
   - [ ] Add Nodejs tasks
   - [ ] Add Bash tasks
   - [ ] Add Json tasks
