@@ -6,7 +6,7 @@ import adjustText from "../utils/adjustText";
 import type CheatsheetType from "../types/cheatsheet";
 import type { TargetType } from "../types/cheatsheet";
 
-class Data {
+class CheatsheetData {
   id: string;
   name: string;
   lastUpdate: string;
@@ -57,25 +57,25 @@ class Category {
   }
 }
 
-class Language extends Data {}
-class Database extends Data {}  
-class Framework extends Data {}
-class Library extends Data {}
-class Platform extends Data {}
-class DevTools extends Data {}
-class Runtime extends Data {}
-class BasicComputer extends Data {}
-class Additional extends Data {}
+class LanguageData extends CheatsheetData {}
+class DatabaseData extends CheatsheetData {}  
+class FrameworkData extends CheatsheetData {}
+class LibraryData extends CheatsheetData {}
+class PlatformData extends CheatsheetData {}
+class DevToolsData extends CheatsheetData {}
+class RuntimeData extends CheatsheetData {}
+class BasicsData extends CheatsheetData {}
+class AdditionalData extends CheatsheetData {}
 
 export {
-  Language,
-  Database,
-  Framework,
-  Library,
-  Platform,
-  DevTools,
-  Runtime,
-  BasicComputer,
-  Additional,
+  LanguageData,
+  DatabaseData,
+  FrameworkData,
+  LibraryData,
+  PlatformData,
+  DevToolsData,
+  RuntimeData,
+  BasicsData,
+  AdditionalData,
   Category,
 };
