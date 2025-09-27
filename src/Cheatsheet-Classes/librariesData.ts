@@ -1,23 +1,23 @@
-import { Library } from "./classData";
+import { LibraryData } from "./classData";
 import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
-  Libraries
+  Libraries Data
   ------------------
 */
 const librariesData: CheatsheetType[] = [
-  new Library("react", "_", "Feb 27, 2025"),
-  new Library("jquery", "_", "Feb 27, 2025"),
-  new Library("mongoose", "_", "Feb 27, 2025"),
-  new Library("redux", "_", "Feb 27, 2025"),
-  new Library("axios", "_", "Feb 27, 2025"),
-  new Library("prisma", "_", "Feb 27, 2025"),
-  new Library("pandas", "_", "Feb 27, 2025"),
-  new Library("chartjs", "Chart.js", "Feb 27, 2025"),
-  new Library("d3", "D3.js", "Feb 27, 2025"),
-  new Library("tensorflow", "_", "Feb 27, 2025"),
-  new Library("numpy", "NumPy", "Feb 27, 2025"),
-  new Library("mdx", "MDX", "Feb 27, 2025"),
+  new LibraryData("react", "_", "Feb 27, 2025"),
+  new LibraryData("jquery", "_", "Feb 27, 2025"),
+  new LibraryData("mongoose", "_", "Feb 27, 2025"),
+  new LibraryData("redux", "_", "Feb 27, 2025"),
+  new LibraryData("axios", "_", "Feb 27, 2025"),
+  new LibraryData("prisma", "_", "Feb 27, 2025"),
+  new LibraryData("pandas", "_", "Feb 27, 2025"),
+  new LibraryData("chartjs", "Chart.js", "Feb 27, 2025"),
+  new LibraryData("d3", "D3.js", "Feb 27, 2025"),
+  new LibraryData("tensorflow", "_", "Feb 27, 2025"),
+  new LibraryData("numpy", "NumPy", "Feb 27, 2025"),
+  new LibraryData("mdx", "MDX", "Feb 27, 2025"),
 ];
 
 export default librariesData;
