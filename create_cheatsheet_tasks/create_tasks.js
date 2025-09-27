@@ -2,6 +2,12 @@ import fs from "fs/promises";
 
 const dirname = "cheatsheet_tasks";
 
+/*
+  ----------------
+  Natiijada u function-kan u so celinayo waxa weeye array ka kooban strings.
+  Tusaale ahaan:  [ 'js.txt', 'lua.txt' ]
+  ----------------
+ */
 async function readFolder() {
   try {
     const data = await fs.readdir(`./${dirname}`);
@@ -10,19 +16,25 @@ async function readFolder() {
     console.error(error);
   }
 }
-/*
-  ----------------
-  readFolder(): wuxu so celinaya array ka kooban strings.
-  Tusaale ahaan:  [ 'js.txt', 'lua.txt' ]
-  ----------------
- */
+
 const dir_data = await readFolder();
 
-// Helper function 
+/*
+  ----------------
+  Function-kan wuxu so celinaya magac file-ga.
+  Tusaale ahaan:  "js"
+  ----------------
+ */
 function getFileName(index) {
   return dir_data[index]?.slice(0, dir_data[index].lastIndexOf("."));
 }
 
+/*
+  ----------------
+  readContents(): wuxu so celinaya array ka kooban arrays-iyo, kuwaas oo kasi kooban strings.
+  Tusaale ahaan:contents wuxu so celinaya: ["TASK: Variables & Data Types - [Done]"]
+  ----------------
+ */
 async function readContents() {
   let contents = [], contents_with_reference = {};
   try {
@@ -44,15 +56,19 @@ async function readContents() {
 
 let metadata = [],
   status = [];
-/*
-  ----------------
-  readContents(): wuxu so celinaya array ka kooban arrays-iyo, kuwaas oo kasi kooban strings.
-  Tusaale ahaan:contents wuxu so celinaya: ["TASK: Variables & Data Types - [Done]"]
-  ----------------
- */
 
 const [data, referenced_data] = await readContents();
 
+/*
+  ----------------
+  extractData() wuxu so celinaya array ka kooban objects-iyo, kuwaas oo iyana ka kooban objects-iyo kale.
+  Tusaale ahaan: 
+  [ 
+    { js: {raw_status: [{ '0': '[Done]' },  {'0': '[Done]' }]}},
+    { lua: {raw_status: [{ '1': '[Done]' },  {'1': '[]' }]}}
+  ]
+  ----------------
+ */
 async function extractData() {
   const split_data = data.map((content) => content.split("\n"));
   /*
@@ -62,7 +78,7 @@ async function extractData() {
     ["TASK: Js - Variables & Data Types - [Done]"],
     ["TASK: Lua - Control Flow - [done]"]
   ]
-    ----------------
+  ----------------
     */
   for (let i = 0; i < split_data.length; i++) {
     // js.txt --> js
@@ -80,16 +96,7 @@ async function extractData() {
   }
   return metadata;
 }
-/*
-  ----------------
-  extractData() wuxu so celinaya array ka kooban objects-iyo, kuwaas oo iyana ka kooban objects-iyo kale.
-  Tusaale ahaan: 
-  [ 
-    { js: {raw_status: [{ '0': '[Done]' },  {'0': '[Done]' }]}},
-    { lua: {raw_status: [{ '1': '[Done]' },  {'1': '[]' }]}}
-  ]
-  ----------------
- */
+
 const tasks_data = await extractData();
 
 async function evaluate() {
