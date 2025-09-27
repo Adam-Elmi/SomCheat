@@ -467,5 +467,9 @@
     "web_api": {
       "name": "Web APIs",
       "path": "/cheatsheets/web-api"
+    },
+    "nixos": {
+      "name": "NixOS",
+      "path": "/cheatsheets/nixos"
     }
 }
