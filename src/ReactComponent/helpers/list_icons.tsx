@@ -111,7 +111,12 @@ import {
   HelixIcon,
   NixIcon,
 } from "../icons/DevTools_Icons";
-import { LinuxIcon, MacOSIcon, UbuntuIcon, WindowsIcon } from "../icons/Platform_Icons";
+import {
+  LinuxIcon,
+  MacOSIcon,
+  UbuntuIcon,
+  WindowsIcon,
+} from "../icons/Platform_Icons";
 import {
   AsciiIcon,
   BaseConversionIcon,
@@ -145,15 +150,17 @@ const all_cheat_icons = {
   ocaml: <OcamlIcon />,
   perl: <PerlIcon dimension={45} />,
   nim: <NimIcon />,
-  v: <VIcon/>,
-  gleam: <GleamIcon/>,
-  julia: <span className="text-[#1a1a1a] dark:text-white">
-    <JuliaIcon/>
-  </span>,
-  elixir: <ElixirIcon/>,
-  erlang: <ErlangIcon/>,
-  crystal: <CrystalIcon/>,
-  reason: <ReasonIcon/>,
+  v: <VIcon />,
+  gleam: <GleamIcon />,
+  julia: (
+    <span className="text-[#1a1a1a] dark:text-white">
+      <JuliaIcon />
+    </span>
+  ),
+  elixir: <ElixirIcon />,
+  erlang: <ErlangIcon />,
+  crystal: <CrystalIcon />,
+  reason: <ReasonIcon />,
   mysql: <MySQLIcon />,
   postgresql: <PostgreSQLIcon />,
   mongodb: <MongoDBIcon />,
@@ -218,10 +225,12 @@ const all_cheat_icons = {
   sass: <SassIcon />,
   linux: <LinuxIcon />,
   ubuntu: <UbuntuIcon />,
-  windows: <WindowsIcon/>,
-  macos: <span className="dark:text-white">
-    <MacOSIcon/>
-  </span>,
+  windows: <WindowsIcon />,
+  macos: (
+    <span className="dark:text-white">
+      <MacOSIcon />
+    </span>
+  ),
   vscode: <VscodeIcon />,
   vim: <VimIcon />,
   neovim: <NeovimIcon />,
@@ -241,7 +250,7 @@ const all_cheat_icons = {
   npm: <NpmIcon />,
   cargo: <CargoIcon />,
   luarocks: <LuaRocksIcon />,
-  nix: <NixIcon/>,
+  nix: <NixIcon />,
   binary: <BinaryIcon dimension={30} color="#3791f4" />,
   storage_units: <StorageUnitsIcon dimension={30} color="#8154f0" />,
   hex: (
@@ -254,7 +263,12 @@ const all_cheat_icons = {
   _32bit_and_64bit: <CpuIcon dimension={30} color="#ca950b" />,
   ascii: <AsciiIcon dimension={35} color="#0bb7ca" />,
   unicode: <UnicodeIcon dimension={30} color="#ca0b4a" />,
-  web_api: <BrowserIcon/>,
+  web_api: (
+    <span className="dark:text-white">
+      <BrowserIcon />
+    </span>
+  ),
+  nixos: <NixIcon />,
 };
 
 export default all_cheat_icons;
