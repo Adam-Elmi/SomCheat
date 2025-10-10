@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "create": "node create_cheatsheet_tasks/create_tasks.js"
+    "create": "node create_cheatsheet_tasks/create_tasks.js",
+    "update:submodule": "git submodule update --remote --merge"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.1.0",
