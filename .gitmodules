@@ -1,0 +1,3 @@
+[submodule "tools/DocMerge"]
+	path = tools/DocMerge
+	url = https://github.com/Adam-Elmi/DocMerge.git
