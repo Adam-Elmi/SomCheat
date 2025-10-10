@@ -1,0 +1,51 @@
+<Section>
+    # Variables
+    <Colorize color="somcheat-blue" is_both={true}>Variables</Colorize> waxa loo adeegsada in xog lagu kaydiyo.
+      <Colorize color="somcheat-gray" is_both={true}>Qaabka Isticmaalka (Syntax):</Colorize>
+      <Code>
+          ```js
+          <keyword> <variable_name> = <initial_value>;
+          ```
+      </Code>
+      <Colorize color="somcheat-gray" is_both={true}>Tusaale:</Colorize>
+      <Code>
+          ```js
+          var name = "Adam";
+          let age = 25;
+          const gender = "male";
+          
+          console.log(name, age, gender);
+          ```
+      </Code>
+      <Colorize color="somcheat-gray" is_both={true}>Natiijada:</Colorize>
+      <Terminal>
+          ```text
+          Adam 25 male
+          ```
+      </Terminal>
+      <Message type="note">
+      Si aad u so bandhigto xogta ama qiimaha ku kaydsan variable-ka/doorsamaha, **console.log** dhex gali magaca variable-katusaale ahaan: 
+      ```js
+      let name = "Elmi";
+      console.log(name);
+      ```
+      </Message>
+      <Steps data={[
+      {
+      t: "var , let , const (variable declaration)",
+      d: "wa ereyo bixin luuqada u gaar ah oo loo adeegsado si loo qeexo variables.",
+    },
+    {
+        t: "name , age , gender (variable identifiers)",
+        d: "waa magaca variable-ku iska leeyahay. Sido kale magaca variable-ka waxa lo yaqaana variable identifier.",
+    },
+    {
+        t: "Adam , 25 , male (values)",
+        d: "wa qiimayaasha la kaydinayo ama xogta la kaydinayo.",
+    },
+        ]} />
+        
+  <Message type="note">
+    **Variable** afsomali ahaan waxa lo yaqaana **doorsame**.
+  </Message>
+</Section>
