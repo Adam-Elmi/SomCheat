@@ -5,7 +5,6 @@ version: "ES2023"
 release_date: 1995
 author: "Brendan Eich"
 ---
-
 import Intro from "../../Somcheat-Components/Intro.astro";
 import Structure from "../../Somcheat-Components/Structure.astro";
 import Section from "../../Somcheat-Components/Section.astro";
@@ -25,63 +24,62 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
   type="Language"
 >
  Luuqadan <Colorize color="somcheat-blue" is_both={true}>Javascript</Colorize> waxa la sameeyey sannadku marku ahaa <Colorize color="somcheat-blue" is_both={true}>1995</Colorize>, waxaana lo sameeyey si logu adeegsado dhisitaanka <Colorize color="somcheat-blue" is_both={true}>websites,</Colorize> sababtuna waxay ahayd in websites laga dhigo  qaar nool iyado javascript lo adeegsanayo si ula fal gasho  <Colorize color="somcheat-blue" is_both={true}>HTML</Colorize> iyo  <Colorize color="somcheat-blue" is_both={true}>CSS</Colorize>. Luuqadan waxyaabo badan ayaad ku dhisi karta oo ay ka mid yihiin: <Colorize color="somcheat-blue" is_both={true}>web apps, mobile apps, desktop apps, games(browser-based games) iyo waxyaabo kale oo badan.</Colorize>
-</Intro>
+ </Intro>
 
 <Structure>
-    <Section>
-        # Console.log
-        <Colorize color="somcheat-blue" is_both={true}>console.log</Colorize> wuxu inaga caawiya inu na tuso natiijada ka dhalatey ama kaso baxday code-ka (Code-ka aynu qorney), tusaale ahaan:
-        <Code>
-            ```js
-            console.log("Iska waran sxb!");
-            console.log(2 + 2);
-            ```
-        </Code>
-        <Colorize color="somcheat-gray" is_both={true}>Natiijada:</Colorize>
-        <Terminal>
-            ```text
-            Iska waran sxb!
-            4
-            ```
-        </Terminal>
-    </Section>
-    <Section>
-        # Variables
-        <Colorize color="somcheat-blue" is_both={true}>Variables</Colorize> waxa loo adeegsada in xog lagu kaydiyo.
-
-        <Colorize color="somcheat-gray" is_both={true}>Qaabka Isticmaalka (Syntax):</Colorize>
-        <Code>
-            ```js
-            <keyword> <variable_name> = <initial_value>;
-            ```
-        </Code>
-        <Colorize color="somcheat-gray" is_both={true}>Tusaale:</Colorize>
-        <Code>
-            ```js
-            var name = "Adam";
-            let age = 25;
-            const gender = "male";
-            
-            console.log(name, age, gender);
-            ```
-        </Code>
-        <Colorize color="somcheat-gray" is_both={true}>Natiijada:</Colorize>
-        <Terminal>
-            ```text
-            Adam 25 male
-            ```
-        </Terminal>
-        <Message type="note">
-        Si aad u so bandhigto xogta ama qiimaha ku kaydsan variable-ka/doorsamaha, **console.log** dhex gali magaca variable-ka tusaale ahaan: 
+<Section>
+    # Console.log
+    <Colorize color="somcheat-blue" is_both={true}>console.log</Colorize> wuxu inaga caawiya inu na tuso natiijada kadhalatey ama kaso baxday code-ka (Code-ka aynu qorney), tusaale ahaan:
+    <Code>
         ```js
-        let name = "Elmi";
-        console.log(name);
+        console.log("Iska waran sxb!");
+        console.log(2 + 2);
         ```
-        </Message>
-        <Steps data={[
-        {
-        t: "var , let , const (variable declaration)",
-        d: "wa ereyo bixin luuqada u gaar ah oo loo adeegsado si loo qeexo variables.",
+    </Code>
+    <Colorize color="somcheat-gray" is_both={true}>Natiijada:</Colorize>
+    <Terminal>
+        ```text
+        Iska waran sxb!
+        4
+        ```
+    </Terminal>
+</Section>
+<Section>
+    # Variables
+    <Colorize color="somcheat-blue" is_both={true}>Variables</Colorize> waxa loo adeegsada in xog lagu kaydiyo.
+      <Colorize color="somcheat-gray" is_both={true}>Qaabka Isticmaalka (Syntax):</Colorize>
+      <Code>
+          ```js
+          <keyword> <variable_name> = <initial_value>;
+          ```
+      </Code>
+      <Colorize color="somcheat-gray" is_both={true}>Tusaale:</Colorize>
+      <Code>
+          ```js
+          var name = "Adam";
+          let age = 25;
+          const gender = "male";
+          
+          console.log(name, age, gender);
+          ```
+      </Code>
+      <Colorize color="somcheat-gray" is_both={true}>Natiijada:</Colorize>
+      <Terminal>
+          ```text
+          Adam 25 male
+          ```
+      </Terminal>
+      <Message type="note">
+      Si aad u so bandhigto xogta ama qiimaha ku kaydsan variable-ka/doorsamaha, **console.log** dhex gali magaca variable-katusaale ahaan: 
+      ```js
+      let name = "Elmi";
+      console.log(name);
+      ```
+      </Message>
+      <Steps data={[
+      {
+      t: "var , let , const (variable declaration)",
+      d: "wa ereyo bixin luuqada u gaar ah oo loo adeegsado si loo qeexo variables.",
     },
     {
         t: "name , age , gender (variable identifiers)",
@@ -93,12 +91,11 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
     },
         ]} />
         
-      <Message type="note">
-        **Variable** afsomali ahaan waxa lo yaqaana **doorsame**.
-      </Message>
-    </Section>
-    {/* Var */}
-    <Section>
+  <Message type="note">
+    **Variable** afsomali ahaan waxa lo yaqaana **doorsame**.
+  </Message>
+</Section>
+<Section>
     # Var
      <Colorize color="somcheat-blue" is_both={true}>Var</Colorize> waa erey bixin lo adeegsado in variable(doorsame) lagu qeexo.
      <Steps title="Astaamaha uu iska leeyahay - Var"  data={[
@@ -178,8 +175,7 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
             ```
         </Code>
     </Section>
-    {/* Let  */}
-    <Section>
+<Section>
     # Let
      <Colorize color="somcheat-blue" is_both={true}>Let</Colorize> waa erey bixin lo adeegsado in variable(doorsame) lagu qeexo.
      <Steps title="Astaamaha uu iska leeyahay - Let"  data={[
@@ -278,8 +274,7 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
             ```
         </Code>
     </Section>
-    {/* Const */}
-    <Section>
+<Section>
     # Const
      <Colorize color="somcheat-blue" is_both={true}>Const</Colorize> waa erey bixin lo adeegsado in variable(doorsame) lagu qeexo.
      <Steps title="Astaamaha uu iska leeyahay - Const"  data={[
@@ -383,9 +378,8 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
         <Message type="error">
         **SyntaxError:** Missing initializer in const declaration
         </Message>
-    </Section>
-    {/* Rules for Variable Names  */}
-    <Section>
+</Section>
+<Section>
        # Rules for Variable Names
        Marka la magacaabayo variable-ka waxa jira sharciyo u gaar ah oo ku saabsan sida lo magacaabo variables-ka. Shuruucdaas waxa ka mid ah:
        #### <Colorize color="somcheat-blue" is_both={true}>1. Magaca variable-ku kuma bilaabmi karo tiro </Colorize>
@@ -463,9 +457,8 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
 	let user_name = "Adam";
       ```
     </Code>
-    </Section> 
-    {/* Data Type */}
-    <Section>
+</Section> 
+<Section>
         # Data Types
         Xogta variable-ka lagu kaydinayo waxa lo kala qaybiya laba nooc oo kale ah 
         <Colorize color="somcheat-blue" is_both={true}>Primitive Data Types</Colorize> iyo
@@ -523,9 +516,8 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
             let file = Null;
             ```
         </Code>
-    </Section>
-    {/* Primitive Data Types */}
-    <Section>
+</Section>
+<Section>
     # Primitive Data Types
         <Steps title="Astaamaha - Primitive Data Types"  data={[
         {
@@ -592,5 +584,5 @@ import Colorize from "../../Somcheat-Components/Colorize.astro";
 	  console.log(typeof address); // null
 	   ```
 	</Code>
-    </Section>
+</Section>
 </Structure>
