@@ -1,4 +1,4 @@
-import { PlatformData } from "./classData";
+import { PlatformData } from "./cheatsheetData";
 import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
