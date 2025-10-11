@@ -1,4 +1,4 @@
-import { DevToolsData } from "./classData";
+import { DevToolsData } from "./cheatsheetData";
 import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
