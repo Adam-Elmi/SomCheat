@@ -12,7 +12,8 @@
     "create": "node create_cheatsheet_tasks/create_tasks.js",
     "get:submodule": "git submodule update --init --recursive",
     "update:submodule": "git submodule update --remote --merge",
-    "doc:js": "node lib/DocMerge/merge.js cheatsheet_topics/js/"
+    "doc:js": "node lib/DocMerge/merge.js cheatsheet_topics/js/",
+    "doc:lua": "node lib/DocMerge/merge.js cheatsheet_topics/lua"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.1.0",
