@@ -6,7 +6,7 @@ import librariesData from "../../Cheatsheet-Classes/librariesData.ts";
 import platformsData from "../../Cheatsheet-Classes/platformsData.ts";
 import runtimeData from "../../Cheatsheet-Classes/runtimeData.ts";
 import devToolsData from "../../Cheatsheet-Classes/devToolsData.ts";
-import { Category } from "../../Cheatsheet-Classes/classData.ts";
+import { Category } from "../../Cheatsheet-Classes/cheatsheetData.ts";
 import type CategoryType from "../../types/category";
 
 import {
