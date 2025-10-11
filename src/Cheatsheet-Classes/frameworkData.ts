@@ -1,4 +1,4 @@
-import { FrameworkData } from "./classData";
+import { FrameworkData } from "./cheatsheetData";
 import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
