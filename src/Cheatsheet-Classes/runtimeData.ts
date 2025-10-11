@@ -1,4 +1,4 @@
-import { RuntimeData } from "./classData";
+import { RuntimeData } from "./cheatsheetData";
 import type CheatsheetType from "../types/cheatsheet";
 /* 
   ------------------
