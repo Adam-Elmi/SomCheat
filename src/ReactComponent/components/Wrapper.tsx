@@ -41,8 +41,8 @@ const indicators = [
 
 export default function Wrapper() {
   return (
-    <div className="min-h-[100px] h-auto pb-10 dark:bg-[#15151a]">
-      <div className="flex gap-5 flex-wrap p-2 justify-center items-center">
+    <div className="min-h-[100px] h-auto pb-10 dark:pat pt-3">
+      <div className="w-full flex gap-5 flex-wrap p-2 justify-center items-center">
         <Welcome />
       </div>
       <SearchBar />
