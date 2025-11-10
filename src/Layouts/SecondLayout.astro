@@ -8,242 +8,235 @@ const { frontmatter } = Astro.props;
 
 <!doctype html>
 <html lang="en" data-theme="light">
-    <BasicHead title={frontmatter.title} />
-    <body>
-        <script is:inline>
-            (() => {
-              const theme = localStorage.getItem("theme-value") || "light";
-              document.documentElement.dataset.theme = theme;
-            })();
-        </script>
-        <Nav path={frontmatter.url} />
-        <main>
-            <slot />
-        </main>
-    </body><Footer />
+  <BasicHead title={frontmatter.title} />
+  <body>
+    <script is:inline>
+      (() => {
+        const theme = localStorage.getItem("theme-value") || "light";
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <Nav path={frontmatter.url} />
+    <main>
+      <slot />
+    </main>
+  </body><Footer />
 </html>
 
 <style is:inline>
-    /* Headings */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding-bottom: 0.5rem;
-        margin: 1rem 0;
-        border-bottom: 3px solid #eee;
-        letter-spacing: -0.02em;
-        line-height: 1.2;
-        transition: border-color 0.2s ease;
-    }
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 1rem 0;
+    border-bottom: 3px solid #aaa;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    transition: border-color 0.2s ease;
+  }
 
-    [data-theme="light"] h1 {
-        color: #1f2937;
-    }
+  h1 {
+    font-size: 2rem;
+    border-bottom-color: #3b82f6;
+  }
+  h1::before {
+    content: "#";
+    font-size: 2.5rem;
+    color: #3b82f6;
+  }
+
+  h2 {
+    color: #111;
+    font-size: 1.75rem;
+    border-bottom-color: #4ed87e;
+  }
+
+  h2::before {
+    content: "#";
+    font-size: 2.2rem;
+    color: #4ed87e;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    border-bottom-color: #d8c64e;
+  }
+
+  h3::before {
+    content: "#";
+    font-size: 2.2rem;
+    color: #d8c64e;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h4::before {
+    content: "#";
+    font-size: 2.2rem;
+    color: #aaa;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h5::before {
+    content: "#";
+    font-size: 2.2rem;
+    color: #aaa;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+  }
+
+  h6::before {
+    content: "#";
+    font-size: 2.2rem;
+    color: #aaa;
+  }
+
+  /* Paragraphs */
+  p {
+    line-height: 1.8;
+    display: inline;
+    font-size: 1rem;
+  }
+
+  /* Code blocks */
+  code:not(.astro-code > code) {
+    background-color: #e3f8d0;
+    padding: 0 2px;
+    font-family: monospace;
+    border-radius: 2px;
+  }
+
+  [data-theme="dark"] code:not(.astro-code > code) {
+    color: #1f2937;
+    background-color: #f8f8d0d4;
+  }
+
+  [data-theme="dark"] h1
+  color: #fff;
+  }
+
+  [data-theme="dark"] h2
+  color: #fff;
+  }
+
+  [data-theme="dark"] h3
+  color: #fff;
+  }
+
+  [data-theme="dark"] h4
+  color: #fff;
+  }
+
+  [data-theme="dark"] h5
+  color: #fff;
+  }
+
+  [data-theme="dark"] h6
+  color: #fff;
+  }
+
+  [data-theme="dark"] ol > li {
+    color: #cdf;
+  }
+  [data-theme="dark"] #layout-container {
+    background-color: #101012;
+  }
+  [data-theme="dark"] #block-section {
+    border: 1.5px solid #aaaaaa2d;
+  }
+
+  /* Ordered lists */
+  ol,
+  ol > li {
+    font-size: 1rem;
+    list-style: decimal;
+  }
+  ol {
+    line-height: 2;
+    padding-left: 1.5rem;
+  }
+
+  ol > li {
+    color: #073ac7;
+  }
+
+  p > a {
+    color: #2a7dfd;
+    text-decoration: underline;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 640px) {
     h1 {
-        font-size: 2rem;
-        border-bottom-color: #3b82f6;
+      font-size: 1.75rem;
     }
-    h1::before {
-        content: "#";
-        font-size: 2.5rem;
-        color: #3b82f6;
-    }
-
-    [data-theme="light"] h2 {
-        color: #111;
-    }
-    
     h2 {
-        font-size: 1.75rem;
-        border-bottom-color: #4ed87e;
+      font-size: 1.5rem;
     }
-
-    h2::before {
-        content: "#";
-        font-size: 2.2rem;
-        color: #4ed87e;
-    }
-
-    [data-theme="light"] h3 {
-        color: #222;
-    }
-    
     h3 {
-        font-size: 1.5rem;
-        border-bottom-color: #d8c64e;
+      font-size: 1.25rem;
     }
-
-    h3::before {
-        content: "#";
-        font-size: 2.2rem;
-        color: #d8c64e;
-    }
-
-    [data-theme="light"] h4 {
-        color: #333;
-    }
-    
-    h4 {
-        font-size: 1.25rem;
-    }
-
-    h4::before {
-        content: "#";
-        font-size: 2.2rem;
-        color: #ccc;
-    }
-
-    [data-theme="light"] h5 {
-        color: #444;
-    }
-
-    h5 {
-        font-size: 1rem;
-    }
-    
-    h5::before {
-        content: "#";
-        font-size: 2.2rem;
-        color: #ccc;
-    }
-
-    [data-theme="light"] h6 {
-        color: #555;
-    }
-    
-    h6 {
-        font-size: 0.875rem;
-    }
-
-    h6::before {
-        content: "#";
-        font-size: 2.2rem;
-        color: #ccc;
-    }
-
-    /* Paragraphs */
     p {
-        line-height: 1.8;
-        display: inline;
-        font-size: 1rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
     }
-
-    /* Code blocks */
-    code:not(.astro-code > code) {
-        background-color: #e3f8d0;
-        padding: 0 2px;
-        font-family: monospace;
-        border-radius: 2px;
-    }
-
-    [data-theme="dark"] code:not(.astro-code > code) {
-        color: #1f2937;
-        background-color: #f8f8d0d4;
-    }
-
-    [data-theme="dark"] h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: #fff;
-    }
-
-    [data-theme="dark"] ol > li {
-        color: #cdf;
-    }
-    [data-theme="dark"] #layout-container {
-        background-color: #101012;
-    }
-    [data-theme="dark"] #block-section {
-        border: 1.5px solid #aaaaaa2d;
-    }
-
-    /* Ordered lists */
     ol,
     ol > li {
-        font-size: 1rem;
-        list-style: decimal;
+      font-size: 0.875rem;
+      line-height: 1.5;
     }
-    ol {
-        line-height: 2;
-        padding-left: 1.5rem;
+    .astro-code {
+      font-size: 0.75rem;
+      padding: 0.5rem;
     }
+    .code-container {
+      border-width: 1px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .code-header {
+      padding: 0.25rem;
+    }
+    #message-container > span {
+      font-size: 0.85rem;
+    }
+    #message-container > p {
+      font-size: 0.75rem;
+    }
+  }
 
-    ol > li {
-        color: #073ac7;
+  @media (max-width: 460px) {
+    h1 {
+      font-size: 1.5rem;
     }
-    
-    p > a {
-        color: #2a7dfd;
-        text-decoration: underline;
+    h2 {
+      font-size: 1.2rem;
     }
-    
-    /* Responsive styles */
-    @media (max-width: 640px) {
-        h1 {
-            font-size: 1.75rem;
-        }
-        h2 {
-            font-size: 1.5rem;
-        }
-        h3 {
-            font-size: 1.25rem;
-        }
-        p {
-            font-size: 0.875rem;
-            line-height: 1.5;
-        }
-        ol,
-        ol > li {
-            font-size: 0.875rem;
-            line-height: 1.5;
-        }
-        .astro-code {
-            font-size: 0.75rem;
-            padding: 0.5rem;
-        }
-        .code-container {
-            border-width: 1px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        .code-header {
-            padding: 0.25rem;
-        }
-        #message-container > span {
-            font-size: 0.85rem;
-        }
-        #message-container > p {
-            font-size: 0.75rem;
-        }
+    h3 {
+      font-size: 1rem;
     }
-
-    @media (max-width: 460px) {
-        h1 {
-            font-size: 1.5rem;
-        }
-        h2 {
-            font-size: 1.2rem;
-        }
-        h3 {
-            font-size: 1rem;
-        }
-        h4 {
-            font-size: 0.875rem;
-        }
-        h5 {
-            font-size: 0.75rem;
-        }
-        h6 {
-            font-size: 0.625rem;
-        }
+    h4 {
+      font-size: 0.875rem;
     }
+    h5 {
+      font-size: 0.75rem;
+    }
+    h6 {
+      font-size: 0.625rem;
+    }
+  }
 </style>
