@@ -23,7 +23,7 @@ Hadafka SomCheat waa in uu kuu sahlayo inaad si fudud oo degdeg ah dib ugu xasuu
 > Mashruucan wuxu isticmaalaya submodule marka clone-gareynaysid repository-ka habkan raac:
 
 ```sh
-git clone git clone --recurse-submodules https://github.com/Adam-Elmi/SomCheat.git
+git clone --recurse-submodules https://github.com/Adam-Elmi/SomCheat.git
 ```
 
 Haddii repository-ga clone dhahday oo aad rabtid inaad laso degtid submodules uu mashruucan adeegsanayo, adeegso command-kan:
