@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../../styles/global.css";
-import { DocsIcon } from "../icons/Other_Icons";
+import { BulbIcon, DocsIcon, RocketIcon, ThunderIcon } from "../icons/Other_Icons";
 import { SmileIcon, SmileBeamIcon, WinkFaceIcon } from "../icons/Welcome_Icons";
 import { GithubIcon } from "../icons/Social_Icons";
 /* ------------------
@@ -8,26 +8,29 @@ import { GithubIcon } from "../icons/Social_Icons";
 ------------------ */
 const welcome_messages: Array<object> = [
   {
-    icon: <SmileIcon color="#6364f1" />,
+    left_icon: <SmileIcon color="#6364f1" />,
     message: (
       <>
         Ku soo dhowow <span className="text-indigo-400">SomCheat</span>!
-        Xasuusin degdeg ah oo koodhkaaga fududeynaya. 🚀
+        Xasuusin degdeg ah oo koodhkaaga fududeynaya.
       </>
     ),
+    right_icon: <RocketIcon/>
   },
   {
-    icon: <SmileBeamIcon color="#6364f1" />,
+    left_icon: <SmileBeamIcon color="#6364f1" />,
     message: (
       <>
         Ma u baahan tahay xasuusin degdeg ah?{" "}
-        <span className="text-indigo-400">SomCheat</span> waa diyaar! 💡
+        <span className="text-indigo-500">SomCheat</span> waa diyaar!
       </>
     ),
+    right_icon: <BulbIcon/>
   },
   {
-    icon: <WinkFaceIcon color="#6364f1" />,
-    message: "Koodhkaaga fududee oo xasuuso waxa muhiimka ah! ⚡",
+    left_icon: <WinkFaceIcon color="#6364f1" />,
+    message: "Koodhkaaga fududee oo xasuuso waxa muhiimka ah!",
+    right_icon: <ThunderIcon/>
   },
 ];
 
@@ -49,20 +52,20 @@ export default function Welcome() {
     };
   }, [counter]);
 
-  const { icon, message } = state;
+  const { left_icon, message, right_icon } = state;
   return (
     /* ------------------
         Main Container
     ------------------ */
-    <div className="flex flex-col flex-1 gap-4 justify-center items-center p-3">
+    <div className="flex-1 flex flex-col rounded-md bg-gradient-to-r from-slate-50 to-amber-50 dark:from-slate-900 dark:to-indigo-700 dark:bg-[#0f0f0f] dark:border-slate-800 gap-4 justify-center items-center p-3 border-2 border-slate-200">
       {/* ------------------
           Welcome Message
       ------------------ */}
       {state ? (
         <div className="flex gap-2 items-center justify-center flex-wrap">
-          <span>{icon}</span>
+          <span>{left_icon}</span>
           <p className="roboto italic font-bold text-center dark:text-slate-300  text-slate-700 text-[1.2rem] max-[385px]:text-[1rem]">
-            {message}
+            <span className="flex items-center gap-2">{message}{right_icon}</span>
           </p>
         </div>
       ) : null}
@@ -75,7 +78,7 @@ export default function Welcome() {
         ------------------ */}
         <a href="https://github.com/Adam-Elmi/SomCheat" title="Contribute to this project">
           <button className="cursor-pointer flex gap-2 items-center dark:border-slate-700 border-2 border-slate-500 p-2 rounded-md bg-[#111122e5]">
-            <span className="font-semibold text-slate-200 hover:text-blue-300">
+            <span className="font-semibold text-slate-200 hover:text-indigo-400 transition-all duration-200">
               Contribute
             </span>
             <GithubIcon color="#e2e8f0" />
@@ -85,8 +88,8 @@ export default function Welcome() {
            Read Docs Button
         ------------------ */}
         <a href="https://github.com/Adam-Elmi/SomCheat/tree/master/docs" title="Read documentation">
-          <button className="flex gap-2 items-center cursor-pointer dark:border-slate-700 border-2 border-slate-300 p-2 rounded-md bg-slate-100 dark:bg-indigo-500">
-            <span className="flex-1 flex justify-between items-center gap-2 font-semibold text-indigo-400 dark:text-slate-200 hover:text-slate-800">
+          <button className="flex gap-2 items-center cursor-pointer dark:border-slate-700 border-2 border-slate-300 p-2 rounded-md  light:bg-white dark:bg-gradient-to-r from-indigo-500 to-indigo-600">
+            <span className="flex-1 flex justify-between items-center gap-2 font-semibold text-slate-800  dark:text-slate-200 dark:hover:text-indigo-300 hover:text-indigo-400 transition-all duration-200">
               Read Docs
             <DocsIcon/>
             </span>
