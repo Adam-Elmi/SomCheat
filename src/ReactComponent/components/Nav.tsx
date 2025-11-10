@@ -108,7 +108,7 @@ export default function Nav() {
               <a
                 target={section.path.includes("https") ? "_blank" : ""}
                 href={section.path}
-                className="font-medium dark:text-slate-300 text-slate-600 hover:text-blue-400 italic w-fit"
+                className="font-medium dark:text-slate-300 text-slate-600 hover:text-blue-400 transition-all duration-200 italic w-fit"
               >
                 {section.sectionName}
               </a>
