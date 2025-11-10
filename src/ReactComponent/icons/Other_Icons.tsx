@@ -425,3 +425,73 @@ export function OpenBookIcon({
     </svg>
   );
 }
+
+export function RocketIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 512 512"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={32}
+        d="M461.81 53.81a4.4 4.4 0 0 0-3.3-3.39c-54.38-13.3-180 34.09-248.13 102.17a295 295 0 0 0-33.09 39.08c-21-1.9-42-.3-59.88 7.5c-50.49 22.2-65.18 80.18-69.28 105.07a9 9 0 0 0 9.8 10.4l81.07-8.9a180 180 0 0 0 1.1 18.3a18.15 18.15 0 0 0 5.3 11.09l31.39 31.39a18.15 18.15 0 0 0 11.1 5.3a180 180 0 0 0 18.19 1.1l-8.89 81a9 9 0 0 0 10.39 9.79c24.9-4 83-18.69 105.07-69.17c7.8-17.9 9.4-38.79 7.6-59.69a294 294 0 0 0 39.19-33.09c68.38-68 115.47-190.86 102.37-247.95M298.66 213.67a42.7 42.7 0 1 1 60.38 0a42.65 42.65 0 0 1-60.38 0"
+      ></path>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={32}
+        d="M109.64 352a45.06 45.06 0 0 0-26.35 12.84C65.67 382.52 64 448 64 448s65.52-1.67 83.15-19.31A44.73 44.73 0 0 0 160 402.32"
+      ></path>
+    </svg>
+  );
+}
+
+export function BulbIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 512 512"
+    >
+      <path
+        fill={color}
+        fillRule="evenodd"
+        d="M256 106.666c70.693 0 128 57.308 128 128c0 47.378-25.74 88.744-64 110.876v81.124L298.667 448h-21.333c0 11.782-9.552 21.333-21.334 21.333s-21.333-9.551-21.333-21.333h-21.333L192 426.666v-81.124c-38.26-22.132-64-63.498-64-110.876c0-70.692 57.308-128 128-128m21.335 254.23a129 129 0 0 1-21.335 1.77c-7.269 0-14.396-.606-21.334-1.77l.001 44.437h42.667zm-138.243-31.949l22.627 22.628l-45.254 45.254l-22.628-22.627zm233.817 0l45.254 45.255l-22.627 22.627l-45.255-45.254zM256 149.333c-47.128 0-85.333 38.205-85.333 85.333S208.872 320 256 320s85.334-38.205 85.334-85.334c0-47.128-38.205-85.333-85.334-85.333m213.334 69.333v32h-64v-32zm-362.667 0v32h-64v-32zm288.87-146.163l22.626 22.628l-45.254 45.254l-22.628-22.627zm-279.072 0l45.254 45.255l-22.627 22.627l-45.255-45.254zM272 21.333v64h-32v-64z"
+      ></path>
+    </svg>
+  );
+}
+
+export function ThunderIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 1024 1024"
+    >
+      <path
+        fill={color}
+        d="M848 359.3H627.7L825.8 109c4.1-5.3.4-13-6.3-13H436c-2.8 0-5.5 1.5-6.9 4L170 547.5c-3.1 5.3.7 12 6.9 12h174.4l-89.4 357.6c-1.9 7.8 7.5 13.3 13.3 7.7L853.5 373c5.2-4.9 1.7-13.7-5.5-13.7M378.2 732.5l60.3-241H281.1l189.6-327.4h224.6L487 427.4h211z"
+      ></path>
+    </svg>
+  );
+}
