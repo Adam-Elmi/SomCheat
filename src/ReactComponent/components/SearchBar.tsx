@@ -42,7 +42,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="relative flex justify-center items-center min-h-[50px] px-2 bg-transparent w-full">
+    <div className="relative flex justify-center items-center min-h-[50px] px-2 bg-transparent w-full pt-3">
       <div className="bg-white dark:bg-[#111122] w-[700px] max-w-full flex gap-4 justify-center items-center dark:border-slate-700 border border-slate-200 shadow-lg rounded-lg px-2 py-1 z-10">
         <div className="flex gap-2 flex-1 justify-center items-center">
           <span className="px-2">
@@ -58,7 +58,7 @@ export default function SearchBar() {
           />
         </div>
         <button
-          className="p-2 bg-indigo-500 italic font-medium rounded-md text-slate-200 cursor-pointer dark:border-slate-700 border-2 border-slate-200"
+          className="p-2 bg-gradient-to-r from-indigo-500 to-indigo-600 italic font-medium rounded-md text-slate-200 cursor-pointer dark:border-slate-700 border-2 border-slate-200"
           onClick={handleSearch}
         >
           Search
