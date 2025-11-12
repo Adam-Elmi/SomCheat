@@ -64,15 +64,15 @@ export default function Welcome() {
       {state ? (
         <div className="flex gap-2 items-center justify-center flex-wrap">
           <span>{left_icon}</span>
-          <p className="roboto italic font-bold text-center dark:text-slate-300  text-slate-700 text-[1.2rem] max-[385px]:text-[1rem]">
-            <span className="flex items-center gap-2">{message}{right_icon}</span>
+          <p className="roboto italic max-[750px]:text-sm font-bold text-center dark:text-slate-300  text-slate-700 text-[1.2rem]">
+            <span className="flex items-center gap-2 flex-wrap justify-center">{message}{right_icon}</span>
           </p>
         </div>
       ) : null}
       {/* ------------------
           Action Buttons
       ------------------ */}
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-wrap items-center justify-center">
         {/* ------------------
            Contribute Button
         ------------------ */}
