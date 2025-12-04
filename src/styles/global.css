@@ -9,8 +9,18 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 [data-theme="dark"] body {
   background-color: #101012;
+}
+
+[data-theme="dark"] #error-contianer {
+  background-color: #101012;
+}
+
+[data-theme="dark"] #cheatsheet-message {
+  background: linear-gradient(135deg, #101012, #161616) !important;
+  border-color: #6364f1 !important;
 }
 
 main {
