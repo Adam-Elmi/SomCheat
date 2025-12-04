@@ -55,7 +55,7 @@ export default function Wrapper() {
                 <span className="text-[#ddd] dark:text-slate-600">
                   <ArrowRightLongIcon />
                 </span>
-                <span className="text-blue-400 dark:text-indigo-400 italic">
+                <span className="text-blue-400 dark:text-indigo-300 italic">
                   {status.indicator}
                 </span>
               </div>
