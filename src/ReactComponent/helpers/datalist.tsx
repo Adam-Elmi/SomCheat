@@ -1,4 +1,4 @@
-import basicsData from "../../Cheatsheet-Classes/basicsData.ts";
+import conceptData from "../../Cheatsheet-Classes/conceptData.ts";
 import languagesData from "../../Cheatsheet-Classes/languageData.ts";
 import databasesData from "../../Cheatsheet-Classes/databaseData.ts";
 import frameworkData from "../../Cheatsheet-Classes/frameworkData.ts";
@@ -23,7 +23,7 @@ import {
 import additionalData from "../../Cheatsheet-Classes/additionalData.ts";
 
 const dataList: CategoryType[] = [
-  new Category("comp", "Basics", basicsData, <ComputerIcon dimension={40} color="#777" />, basicsData.length),
+  new Category("con", "Concepts", conceptData, <ComputerIcon dimension={40} color="#777" />, conceptData.length),
   new Category("langs", "Languages", languagesData, <CodeIcon dimension={40} color="#6364f1" />, languagesData.length),
   new Category("dbs", "Databases", databasesData, <DatabaseIcon dimension={40} color="#fba8a8" />, databasesData.length),
   new Category("frame", "Frameworks", frameworkData, <CubesIcon dimension={40} color="#fecb66" />, frameworkData.length),
