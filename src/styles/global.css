@@ -9,6 +9,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+[data-theme="dark"] body {
+  background-color: #101012;
+}
 
 main {
   flex: 1;
