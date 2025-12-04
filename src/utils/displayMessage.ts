@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const key: string = decodeURIComponent(pathname.split("/").pop() || "")
     const cheatName: string = pathData.hasOwnProperty(key) ?(pathData as any)[key].name : pathname.split("/").filter(value => value != "")[1];
     messageContainer.innerHTML = `
-    <p>Cheatsheet "<strong>${cheatName}</strong>" not found.
+    <p class="dark:text-slate-500">Cheatsheet "<strong class="text-pink-400">${cheatName}</strong>" not found.
     <a href=${repo} target="_blank" class="text-blue-500 underline">Contribute</a> or
     <a href=${repo}/issues target="_blank" class="text-blue-500 underline">Request</a>.</p>
   `;
