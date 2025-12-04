@@ -46,7 +46,7 @@ export default function CheatSheet() {
                   ? _name
                   : id === "add" 
                   ?  _name
-                  : id === "comp" ? _name : ""}
+                  : id === "con" ? _name : ""}
               </h1>
             </div>
             {/* 
