@@ -63,7 +63,7 @@ class LibraryData extends CheatsheetData {}
 class PlatformData extends CheatsheetData {}
 class DevToolsData extends CheatsheetData {}
 class RuntimeData extends CheatsheetData {}
-class BasicsData extends CheatsheetData {}
+class ConceptData extends CheatsheetData {}
 class AdditionalData extends CheatsheetData {}
 
 export {
@@ -74,7 +74,7 @@ export {
   PlatformData,
   DevToolsData,
   RuntimeData,
-  BasicsData,
+  ConceptData,
   AdditionalData,
   Category,
 };
