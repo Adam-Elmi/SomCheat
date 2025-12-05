@@ -74,7 +74,7 @@ export default function SearchBar() {
                   href={item.path}
                   className="text-slate-400 italic"
                 >
-                  <li className="p-2 dark:border-slate-800/50 dark:hover:bg-slate-900 border-b border-slate-200 hover:bg-indigo-100 flex gap-2">
+                  <li className="p-2 dark:border-slate-800/50 dark:hover:bg-slate-900 border-b border-slate-200/50 hover:bg-indigo-50 flex gap-2">
                     <SheetIcon color="oklch(67.3% 0.182 276.935)" />
                     {item.name}
                   </li>
