@@ -1,0 +1,53 @@
+---
+import { DocsIcon } from "../ReactComponent/icons/Other_Icons";
+
+interface Heading {
+    depth: number;
+    slug: string;
+    text: string;
+}
+
+interface Props {
+    headings: Heading[];
+}
+
+const { headings } = Astro.props;
+---
+
+<nav class="toc font-medium text-sm">
+    <ul class="list-none p-0 m-0 flex flex-col gap-1">
+        {
+            headings.map((heading) => (
+                <li
+                    class="toc-item relative"
+                    style={`padding-left: ${(heading.depth - 2) * 12}px`}
+                >
+                    <a
+                        href={`#${heading.slug}`}
+                        class={`
+                           group flex items-start py-1.5 pr-2 rounded-md
+                           text-slate-500 dark:text-gray-400 
+                           hover:bg-slate-100 dark:hover:bg-white/5
+                           hover:text-indigo-600 dark:hover:text-indigo-400 
+                           transition-all duration-200 ease-in-out
+                        `}
+                    >
+                        <span
+                            class={`
+                                mt-0.5 mr-1.5 shrink-0 
+                                text-slate-300 dark:text-gray-600 
+                                group-hover:text-indigo-500 dark:group-hover:text-indigo-400
+                                transition-colors
+                            `}
+                        >
+                            <DocsIcon dimension={16} />
+                        </span>
+                        <span class="leading-tight group-hover:translate-x-0.5 transition-transform duration-200">
+                            {heading.text}
+                        </span>
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</nav>
