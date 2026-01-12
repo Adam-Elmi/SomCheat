@@ -3,12 +3,15 @@ import BasicLayout from "../Layouts/BasicLayout.astro";
 import Header from "../Components/Header.astro";
 import Wrapper from "../ReactComponent/components/Wrapper";
 import CheatSheet from "../ReactComponent/components/Cheatsheet";
+import { getAllCheatsheets } from "../data/cheatsheets";
+
+const cheatsheets = getAllCheatsheets();
 ---
 
 <BasicLayout title="SomCheat">
-  <Header/>
+  <Header />
   <main class="hero flex flex-col dark:bg-[#15151a]">
-      <Wrapper client:load/>
+    <Wrapper client:load cheatsheets={cheatsheets} />
   </main>
-  <CheatSheet client:load/>
+  <CheatSheet client:load />
 </BasicLayout>
