@@ -1,0 +1,28 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="step-item relative pl-12 pb-5 last:pb-0 group">
+    <div
+        class="step-line absolute left-3.75 top-10 bottom-0 w-px bg-slate-200 dark:bg-slate-800 group-hover:bg-blue-200 dark:group-hover:bg-blue-900 transition-colors"
+    >
+    </div>
+
+    <div
+        class="step-number absolute left-0 top-1 w-8 h-8 rounded-full border-2 border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-sm font-bold text-slate-500 dark:text-slate-400 z-10 shadow-sm group-hover:border-blue-400/50 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-all"
+    >
+    </div>
+
+    <div class="">
+        {
+            title && (
+                <span class="text-lg font-semibold text-[#3b82f6] dark:text-slate-100 mb-2">
+                    {title}
+                </span>
+            )
+        }
+        <div class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            <slot />
+        </div>
+    </div>
+</div>
