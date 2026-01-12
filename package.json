@@ -9,11 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "create": "node create_cheatsheet_tasks/create_tasks.js",
-    "get:submodule": "git submodule update --init --recursive",
-    "update:submodule": "git submodule update --remote --merge",
-    "doc:js": "node lib/DocMerge/merge.js cheatsheet_topics/js/",
-    "doc:lua": "node lib/DocMerge/merge.js cheatsheet_topics/lua"
+    "create": "node create_cheatsheet_tasks/create_tasks.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.1.0",
@@ -35,6 +31,7 @@
     "@types/unist": "^3.0.3",
     "chokidar-cli": "^3.0.0",
     "npm-run-all": "^4.1.5",
-    "rollup-plugin-visualizer": "^6.0.0"
+    "rollup-plugin-visualizer": "^6.0.0",
+    "sommark": "^1.1.1"
   }
 }
