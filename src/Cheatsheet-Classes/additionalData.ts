@@ -1,13 +1,16 @@
 import { AdditionalData } from "./cheatsheetData";
 import type CheatsheetType from "../types/cheatsheet";
+import { getAllCheatsheets } from "../data/cheatsheets";
+
 /*
   ------------------
   Additional Data
   ------------------
 */
+const all = getAllCheatsheets();
 
-const additionalData: CheatsheetType[] = [
-  new AdditionalData("web_api", "Web APIs", "Feb 27, 2025"),
-];
+const additionalData: CheatsheetType[] = all
+  .filter(c => c.category === "Additional" || c.category === "Other")
+  .map(c => new AdditionalData(c.id, c.title, "Unknown", undefined, c.lastModified));
 
 export default additionalData;
