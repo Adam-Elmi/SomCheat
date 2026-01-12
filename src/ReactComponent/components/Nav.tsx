@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FallIcon, MenuIcon, OpenBookIcon } from "../icons/Other_Icons";
+import { MenuIcon, OpenBookIcon } from "../icons/Other_Icons";
 
 import {
   HomeIcon,
@@ -30,14 +30,9 @@ const navData: Array<Props> = [
     icon: <HomeIcon dimension={21} color="#6364f1" />,
   },
   {
-    sectionName: "Glossary",
-    path: "https://somglossary.somcheat.dev",
+    sectionName: "Cheatsheets",
+    path: "/cheatsheets",
     icon: <OpenBookIcon dimension={22} color="oklch(76.5% 0.117 163.223)" />,
-  },
-  {
-    sectionName: "Deprecations",
-    path: "https://somdep.somcheat.dev",
-    icon: <FallIcon dimension={22} color="#ffa999" />,
   },
   {
     sectionName: "Progress",
@@ -74,7 +69,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="w-full border-b-[1.5px] dark:bg-[#101012] dark:border-b-1 dark:border-indigo-500 border-slate-200 min-h-[50px] flex flex-col justify-center items-center bg-amber-50">
+    <nav className="w-full border-b-[1.5px] dark:bg-[#101012] dark:border-b dark:border-indigo-500 border-slate-200 min-h-[50px] flex flex-col justify-center items-center bg-amber-50">
       {/*
         ------------------
         Mobile Menu Button (Visible only on small screens)
