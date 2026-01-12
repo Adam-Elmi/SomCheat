@@ -1,0 +1,32 @@
+{
+  "pages/cheatsheets/c.mdx": {
+    "lastUpdated": "2025-08-30T18:21:01+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "98d3ab33125376cd6e0ab467f704db2858022792"
+  },
+  "pages/cheatsheets/go.mdx": {
+    "lastUpdated": "2025-08-28T21:59:29+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6ab4731f147a4bfec46da993c4fd5a31d0758804"
+  },
+  "pages/cheatsheets/js.mdx": {
+    "lastUpdated": "2025-10-11T00:28:12+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "5d585d4d9a2b63c81ced3018e7b066b1712fa373"
+  },
+  "pages/cheatsheets/lua.mdx": {
+    "lastUpdated": "2025-10-11T22:34:07+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6acc78976d1970f790635ac659e9fa19d1d4638d"
+  },
+  "pages/cheatsheets/perl.mdx": {
+    "lastUpdated": "2025-08-17T23:40:36+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "ec39e7f9ed884ffc654490a9ef279272c6792360"
+  },
+  "pages/cheatsheets/py.mdx": {
+    "lastUpdated": "2025-08-28T21:59:26+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "2188378ed2d8b7efda29d873ea83e4416e1227fe"
+  }
+}
