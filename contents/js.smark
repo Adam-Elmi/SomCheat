@@ -1,0 +1,14 @@
+[Header = Var, 1, 2, Adam, js]
+
+[end]
+[Section]
+@_Code_@: js, File.js
+console.log("Hello World")
+@_end_@
+[end]
+
+[Section]
+@_Code_@: lua
+print("Hello World")
+@_end_@
+[end]
