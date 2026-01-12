@@ -43,7 +43,7 @@ export default function Card({ cheatsheet }: { cheatsheet: CheatsheetType }) {
     }
   return (
     <a href={cheatsheet.path}>
-      <div className="relative dark:bg-[#111122] bg-white dark:border-slate-800 border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full">
+      <div className="relative dark:bg-[#15151a] bg-white dark:border-indigo-400 border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full">
         {/*
           ------------------
           Label
