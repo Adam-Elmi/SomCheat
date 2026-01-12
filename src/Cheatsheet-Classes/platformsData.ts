@@ -1,16 +1,16 @@
 import { PlatformData } from "./cheatsheetData";
 import type CheatsheetType from "../types/cheatsheet";
+import { getAllCheatsheets } from "../data/cheatsheets";
+
 /* 
   ------------------
   Platforms Data
   ------------------
 */
-const platformsData: CheatsheetType[] = [
-  new PlatformData("linux", "_", "Feb 27, 2025"),
-  new PlatformData("windows", "_", "Feb 27, 2025"),
-  new PlatformData("macos", "MacOS", "Feb 27, 2025"),
-  new PlatformData("ubuntu", "_", "Feb 27, 2025"),
-  new PlatformData("nixos", "NixOS", "Feb 27, 2025"),
-];
+const all = getAllCheatsheets();
+
+const platformsData: CheatsheetType[] = all
+  .filter(c => c.category === "Platform")
+  .map(c => new PlatformData(c.id, c.title, "Unknown", undefined, c.lastModified));
 
 export default platformsData;
