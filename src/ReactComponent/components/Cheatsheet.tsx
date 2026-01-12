@@ -3,11 +3,8 @@ import { SheetIcon } from "../icons/Other_Icons";
 import Card from "./Card";
 import type CheatsheetType from "../../types/cheatsheet";
 import type CategoryType from "../../types/category";
-import { extractFolders } from "../../utils/filter_tasks";
-
 
 export default function CheatSheet() {
-  console.log(extractFolders())
   return (
     <div className="w-full flex flex-col">
       {/* 
@@ -24,7 +21,7 @@ export default function CheatSheet() {
           */}
           <div
             key={id}
-            className="bg-[#ffeecc44] dark:bg-slate-900/95 flex flex-col gap-3 shadow-md border-b-2 border-indigo-400 p-2 w-full"
+            className="bg-[#ffeecc44] dark:bg-[#15151a] flex flex-col gap-3 shadow-md border-b-2 border-indigo-400 p-2 w-full"
           >
             <div className="flex gap-3 items-center">
               {icon}
