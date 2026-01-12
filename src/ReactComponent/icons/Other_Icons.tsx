@@ -495,3 +495,40 @@ export function ThunderIcon({
     </svg>
   );
 }
+
+export function TableOfContentsIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={dimension}
+      height={dimension}
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M16 5H3m13 7H3m13 7H3M21 5h.01M21 12h.01M21 19h.01"
+      ></path>
+    </svg>
+  );
+}
+
+export function UserIcon({
+  dimension = defaultProps.dimension,
+  color = defaultProps.color,
+}) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg"
+      width={dimension} height={dimension} viewBox="0 0 256 256">
+      <path fill={color}
+        d="M229.19 213c-15.81-27.32-40.63-46.49-69.47-54.62a70 70 0 1 0-63.44 0C67.44 166.5 42.62 185.67 26.81 213a6 6 0 1 0 10.38 6c19.21-33.19 53.15-53 90.81-53s71.6 19.81 90.81 53a6 6 0 1 0 10.38-6M70 96a58 58 0 1 1 58 58a58.07 58.07 0 0 1-58-58">
+      </path>
+    </svg>
+  );
+}
