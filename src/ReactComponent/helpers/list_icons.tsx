@@ -260,7 +260,7 @@ const all_cheat_icons = {
   ),
   decimal: <DecimalIcon dimension={30} color="#3791f4" />,
   base_conversion: <BaseConversionIcon dimension={28} color="#049500" />,
-  _32bit_and_64bit: <CpuIcon dimension={30} color="#ca950b" />,
+  "32bit_and_64bit": <CpuIcon dimension={30} color="#ca950b" />,
   ascii: <AsciiIcon dimension={35} color="#0bb7ca" />,
   unicode: <UnicodeIcon dimension={30} color="#ca0b4a" />,
   web_api: (
