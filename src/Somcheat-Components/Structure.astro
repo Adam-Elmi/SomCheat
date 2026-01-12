@@ -1,10 +1,31 @@
 ---
-import path from "../../data/path.json";
+import { getAllCheatsheets } from "../data/cheatsheets";
+import { TableOfContentsIcon } from "../ReactComponent/icons/Other_Icons";
+import TableOfContents from "./TableOfContents.astro";
+
+const posts = import.meta.glob("../pages/cheatsheets/*.mdx");
+const cheatsheets = getAllCheatsheets();
+let headings: { depth: number; slug: string; text: string }[] = [];
+
+interface MarkdownInstance {
+    getHeadings: () => { depth: number; slug: string; text: string }[];
+}
+
+for (const path in posts) {
+    const currentPath = Astro.url.pathname.replace(/\/$/, "");
+    const fileName = path.split("/").pop()?.replace(".mdx", "");
+
+    if (fileName && currentPath.endsWith(fileName)) {
+        const mod = (await posts[path]()) as MarkdownInstance;
+        headings = mod.getHeadings();
+        break;
+    }
+}
 ---
 
 <div class="w-full relative">
     <div
-        class="w-full min-h-[60px] dark:bg-[#101012] dark:border-gray-700/50 bg-white border-b border-slate-200 flex gap-4 items-center justify-center"
+        class="w-full min-h-15 dark:bg-[#101012] dark:border-gray-700/50 bg-white border-b border-slate-200 flex gap-4 items-center justify-center"
     >
         <!-- Sun Icon -->
         <button id="light-btn" class="text-yellow-500 cursor-pointer p-2">
@@ -39,28 +60,190 @@ import path from "../../data/path.json";
                 ></path>
             </svg>
         </button>
+        <!-- Table of Contents Icon -->
+        <button
+            id="toc-btn"
+            class="xl:hidden cursor-pointer dark:text-gray-200"
+        >
+            <TableOfContentsIcon dimension={24} />
+        </button>
     </div>
     <div
-        class="w-full sticky top-0  dark:bg-[#101012] dark:border-gray-700/50 bg-white border-b border-slate-200 flex items-center justify-center flex-col"
+        class="w-full sticky top-0 z-100 dark:bg-[#101012] dark:border-gray-700/50 bg-white border-b border-slate-200 flex items-center justify-center flex-col group/nav"
     >
+        <button
+            id="scroll-left-btn"
+            class="absolute left-0 z-20 h-full px-2 bg-linear-to-r from-white via-white to-transparent dark:from-[#101012] dark:via-[#101012] dark:to-transparent cursor-pointer flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="m15 18-6-6 6-6"></path>
+            </svg>
+        </button>
+
         <u
             id="scroll-box"
-            class="dark:text-slate-300 text-[12px] font-medium active:cursor-grabbing select-none overflow-x-auto no-underline decoration-none hover:no-underline visited:no-underline w-full flex flex-nowrap whitespace-nowrap items-center gap-10"
+            class="scrollbar-hide dark:text-slate-300 text-[12px] font-medium active:cursor-grabbing select-none overflow-x-auto no-underline decoration-none hover:no-underline visited:no-underline w-full flex flex-nowrap whitespace-nowrap items-center gap-10 px-8 scroll-smooth"
         >
             {
-                Object.values(path).map((value) => (
-                    <li class={`list-none px-4 py-4 ${Astro.originPathname === value.path + "/" ? "bg-indigo-600 text-slate-200" : ""}`}>
-                        <a href={value.path}>{value.name} </a>
-                    </li>
-                ))
+                cheatsheets.map((value) => {
+                    const path = "/cheatsheets/" + value.id;
+                    return (
+                        <li
+                            data-active={
+                                Astro.url.pathname === path ||
+                                Astro.url.pathname === path + "/"
+                                    ? "true"
+                                    : undefined
+                            }
+                            class={`list-none px-4 py-4 ${Astro.url.pathname === path || Astro.url.pathname === path + "/" ? "bg-indigo-600 text-slate-200" : ""}`}
+                        >
+                            <a href={path}>{value.title} </a>
+                        </li>
+                    );
+                })
             }
         </u>
+
+        <button
+            id="scroll-right-btn"
+            class="absolute right-0 z-20 h-full px-2 bg-linear-to-l from-white via-white to-transparent dark:from-[#101012] dark:via-[#101012] dark:to-transparent cursor-pointer flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="m9 18 6-6-6-6"></path>
+            </svg>
+        </button>
     </div>
     <div
         id="layout-container"
-        class="p-4 flex gap-8 flex-wrap bg-slate-50 justify-center"
+        class="p-4 flex gap-8 flex-wrap bg-slate-50 justify-between items-start"
     >
-        <slot />
+        <!-- Sidebar Desktop -->
+        {
+            headings.length > 0 && (
+                <aside class="hidden xl:block w-64 top-32 sticky self-start overflow-y-auto max-h-[80vh] p-4 border-r border-slate-200 dark:border-gray-700/50">
+                    <div class="font-bold text-lg mb-4 text-slate-800 dark:text-gray-200">
+                        Table of Contents
+                    </div>
+                    <TableOfContents headings={headings} />
+                </aside>
+            )
+        }
+
+        <div
+            class="flex-1 min-w-0 w-full gap-2 flex justify-center items-center flex-col"
+        >
+            <slot />
+        </div>
+    </div>
+
+    <!-- Mobile Modal -->
+    <div
+        id="mobile-toc-modal"
+        class="fixed inset-0 z-100 bg-white dark:bg-[#101012] p-6 overflow-y-auto hidden"
+    >
+        <div class="flex justify-between items-center mb-6">
+            <div class="font-bold text-xl text-slate-800 dark:text-gray-200">
+                On this page
+            </div>
+            <button
+                id="close-toc-btn"
+                class="p-2 cursor-pointer text-slate-500 hover:text-slate-800 dark:text-gray-400 dark:hover:text-gray-200"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <TableOfContents headings={headings} />
     </div>
 </div>
-<script src="../utils/mouse_scroll.js"></script>
+<style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+<script>
+    import "../utils/mouse_scroll.js";
+
+    const scrollBox = document.getElementById("scroll-box");
+    const leftBtn = document.getElementById("scroll-left-btn");
+    const rightBtn = document.getElementById("scroll-right-btn");
+
+    const tocBtn = document.getElementById("toc-btn");
+    const closeTocBtn = document.getElementById("close-toc-btn");
+    const mobileTocModal = document.getElementById("mobile-toc-modal");
+
+    if (tocBtn && mobileTocModal && closeTocBtn) {
+        tocBtn.addEventListener("click", () => {
+            mobileTocModal.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+        });
+
+        closeTocBtn.addEventListener("click", () => {
+            mobileTocModal.classList.add("hidden");
+            document.body.style.overflow = "";
+        });
+
+        const links = mobileTocModal.querySelectorAll("a");
+        links.forEach((link) => {
+            link.addEventListener("click", () => {
+                mobileTocModal.classList.add("hidden");
+                document.body.style.overflow = "";
+            });
+        });
+    }
+
+    if (scrollBox && leftBtn && rightBtn) {
+        leftBtn.addEventListener("click", () => {
+            scrollBox.scrollBy({ left: -200, behavior: "smooth" });
+        });
+
+        rightBtn.addEventListener("click", () => {
+            scrollBox.scrollBy({ left: 200, behavior: "smooth" });
+        });
+
+        const activeItem = scrollBox.querySelector('[data-active="true"]');
+        if (activeItem instanceof HTMLElement) {
+            const scrollLeft =
+                activeItem.offsetLeft -
+                scrollBox.clientWidth / 2 +
+                activeItem.clientWidth / 2;
+            scrollBox.scrollTo({ left: scrollLeft, behavior: "instant" });
+        }
+    }
+</script>
