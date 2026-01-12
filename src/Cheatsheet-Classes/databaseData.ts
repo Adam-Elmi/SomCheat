@@ -1,17 +1,16 @@
 import { DatabaseData } from "./cheatsheetData";
 import type CheatsheetType from "../types/cheatsheet";
+import { getAllCheatsheets } from "../data/cheatsheets";
+
 /* 
   ------------------
   Databases Data
   ------------------
 */
-const databasesData: CheatsheetType[] = [
-  new DatabaseData("mysql", "MySQL", "Feb 27, 2025"),
-  new DatabaseData("postgresql", "PostgreSQL", "Feb 27, 2025"),
-  new DatabaseData("sqlite", "SQLite", "Feb 27, 2025"),
-  new DatabaseData("mongodb", "MongoDB", "Feb 27, 2025"),
-  new DatabaseData("redis", "_", "Feb 27, 2025"),
-  new DatabaseData("firestore", "_", "Feb 27, 2025"),
-];
+const all = getAllCheatsheets();
+
+const databasesData: CheatsheetType[] = all
+  .filter(c => c.category === "Database")
+  .map(c => new DatabaseData(c.id, c.title, "Unknown", undefined, c.lastModified));
 
 export default databasesData;
