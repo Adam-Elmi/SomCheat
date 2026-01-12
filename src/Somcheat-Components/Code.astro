@@ -1,27 +1,145 @@
 ---
-import { CopyIcon } from "../ReactComponent/icons/Other_Icons";
+import Copy2Icon from "../Icons/Copy2Icon.astro";
 const { filename = "" } = Astro.props;
 ---
 
-<div class="w-[1000px] max-w-full bg-[#101012] border-2 border-slate-800/70">
-    <!-- Header -->
+<div
+    class="code-block-container w-full max-w-[1000px] my-2 rounded-md overflow-hidden bg-[#0d1117] border border-[#30363d] shadow-lg"
+>
     <div
-        class="p-2 flex justify-between items-center border-b-2 border-slate-800/50"
+        class="flex items-center justify-between px-4 py-2 bg-[#161b22] border-b border-[#30363d]"
     >
-        <span class="text-slate-500 text-sm font-mono">{filename}</span>
-        <button id="copy-btn" class="cursor-pointer">
+        <div class="flex items-center gap-2">
+            <div class="text-[#8b949e]">
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-terminal"
+                >
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" x2="20" y1="19" y2="19"></line>
+                </svg>
+            </div>
+            {
+                filename && (
+                    <span class="text-xs font-mono text-[#7ee787] bg-[rgba(56,139,253,0.1)] px-2 py-0.5 rounded border border-[rgba(56,139,253,0.4)] tracking-wide">
+                        {filename}
+                    </span>
+                )
+            }
+        </div>
+        <button
+            id="copy-btn"
+            class="group relative p-1.5 hover:bg-[#30363d] rounded transition-colors cursor-pointer"
+            aria-label="Copy code"
+        >
             <span
-                id="copy-icon-holder"
-                class="hover:text-slate-500 text-slate-300"
+                class="text-[#8b949e] group-hover:text-white transition-colors"
             >
-                <CopyIcon />
+                <Copy2Icon dimension={16} />
+            </span>
+            <span
+                class="absolute top-1/2 right-full mr-2 -translate-y-1/2 px-2 py-1 bg-black text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-[#30363d]"
+            >
+                Copy
             </span>
         </button>
     </div>
-    <!-- Body -->
-    <div id="code-node" class="p-2 bg-[#161616] overflow-auto">
+    <div class="p-0 overflow-x-auto custom-scrollbar">
         <slot />
     </div>
 </div>
 
+<style is:global>
+    pre,
+    pre.astro-code,
+    pre.shiki {
+        counter-reset: step;
+        background-color: transparent !important;
+        margin: 0 !important;
+        padding: 1rem 0 !important;
+        font-family: "JetBrains Mono", "Fira Code", monospace;
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+    pre > code {
+        display: grid;
+    }
+    .line {
+        display: block;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-left: 2px solid transparent;
+        min-height: 1rem;
+    }
+    .line::before {
+        counter-increment: step;
+        content: counter(step);
+        display: inline-block;
+        width: 1.5rem;
+        margin-right: 1.5rem;
+        text-align: right;
+        color: #484f58;
+        font-size: 0.75rem;
+        font-family: inherit;
+        user-select: none;
+        -webkit-user-select: none;
+        border-right: 1px solid #30363d;
+        padding-right: 0.5rem;
+        line-height: inherit;
+    }
+    .line.highlighted {
+        background-color: rgba(56, 139, 253, 0.15);
+        border-left-color: #58a6ff;
+    }
+    .line.diff.add {
+        background-color: rgba(46, 160, 67, 0.15);
+        border-left-color: #3fb950;
+    }
+    .line.diff.remove {
+        background-color: rgba(248, 81, 73, 0.15);
+        border-left-color: #f85149;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+        height: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #0d1117;
+        border-top: 1px solid #30363d;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #30363d;
+        border-radius: 5px;
+        border: 2px solid #0d1117;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #484f58;
+    }
+
+    @media (max-width: 640px) {
+        pre,
+        pre.astro-code,
+        pre.shiki {
+            font-size: 0.75rem !important;
+            padding: 0.5rem 0 !important;
+            line-height: 1.5;
+        }
+        .line {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        .line::before {
+            width: 1.15rem;
+            margin-right: 0.75rem;
+            font-size: 0.625rem;
+            padding-right: 0.4rem;
+        }
+    }
+</style>
 <script src="../utils/copyText.ts"></script>
