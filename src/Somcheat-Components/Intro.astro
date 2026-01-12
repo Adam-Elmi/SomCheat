@@ -1,179 +1,200 @@
 ---
-import { DateIcon } from "../ReactComponent/icons/Other_Icons";
+import { DateIcon, UserIcon } from "../ReactComponent/icons/Other_Icons";
+// @ts-ignore
+import fs from "node:fs";
+// @ts-ignore
+import path from "node:path";
+import metadata from "../../data/metadata.json";
+import { formatDate } from "../utils/formatDate";
+
 const { title, type, version, release, author, language } = Astro.props;
+
 function is_more_than_one(author: string | string[]) {
-  if(author && Array.isArray(author)) {
-    return true;
-  }
-  return false;
+	if (author && Array.isArray(author)) {
+		return true;
+	}
+	return false;
+}
+
+let lastUpdated = "Unknown";
+let updatedBy = "Unknown";
+try {
+	const pathname = Astro.url.pathname;
+	const id = pathname
+		.split("/")
+		.filter(p => p && p !== "cheatsheets")
+		.pop();
+
+	if (id) {
+		const filePath = path.join(
+			// @ts-ignore
+			process.cwd(),
+			"src",
+			"pages",
+			"cheatsheets",
+			`${id}.mdx`
+		);
+
+		if (fs.existsSync(filePath)) {
+			const content = fs.readFileSync(filePath, "utf-8");
+			const match = content.match(/lastModified:\s*["']([^"']+)["']/);
+
+			const metadataKey = `pages/cheatsheets/${id}.mdx`;
+			// @ts-ignore
+			if (metadata[metadataKey]) {
+				// @ts-ignore
+				if (metadata[metadataKey].updatedBy) {
+					// @ts-ignore
+					updatedBy = metadata[metadataKey].updatedBy;
+				}
+			}
+
+			if (match && match[1]) {
+				lastUpdated = formatDate(match[1]);
+			} else {
+				// @ts-ignore
+				if (metadata[metadataKey]) {
+					// @ts-ignore
+					lastUpdated = formatDate(metadata[metadataKey].lastUpdated);
+				}
+			}
+		}
+	}
+} catch (e) {
+	console.error("Error determining date in Intro.astro", e);
+}
+
+if (lastUpdated === "Unknown") {
+	lastUpdated = "Feb 27, 2025";
 }
 ---
 
-<div
-    class="w-full p-5 border-b-1 dark:border-b-slate-700/50 dark:bg-[#18191b] bg-gray-800 relative"
->
-    <!-- Info Card -->
-    <div
-        class="bg-gradient-to-br from-[#232526]/80 to-[#18191b]/70 w-full max-w-[520px] rounded-xl border border-slate-700/60 shadow-lg overflow-hidden mt-7"
-    >
-        <!-- Title -->
-        <div
-            class="flex items-center gap-2 bg-[#1e2022]/80 border-b border-slate-800 px-4 py-3"
-        >
-            <span class="text-2xl font-extrabold text-yellow-100 tracking-wide"
-                >{title}</span
-            >
-            <span
-                class="ml-auto px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-200 text-xs font-mono uppercase tracking-wider"
-                >{type}</span
-            >
-        </div>
-        <div class="p-5">
-            <dl class="divide-y divide-slate-800">
-                <!-- Version -->
-                <div class="flex items-center justify-between py-2">
-                    <dt
-                        class="text-slate-300 font-semibold flex items-center gap-1"
-                    >
-                        <svg
-                            class="w-4 h-4 text-yellow-300 mr-1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            ><path d="M12 4v16m8-8H4"></path></svg
-                        >
-                        Version
-                    </dt>
-                    <dd class="text-slate-400 font-mono text-sm">{version}</dd>
-                </div>
-                <!-- Release Date -->
-                <div class="flex items-center justify-between py-2">
-                    <dt
-                        class="text-slate-300 font-semibold flex items-center gap-1"
-                    >
-                        <svg
-                            class="w-4 h-4 text-blue-300 mr-1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            ><circle cx="12" cy="12" r="10"></circle><path
-                                d="M12 6v6l4 2"></path></svg
-                        >
-                        Release Date
-                    </dt>
-                    <dd class="text-slate-400 font-mono text-sm">{release}</dd>
-                </div>
-                <!-- Author -->
-                {
-                is_more_than_one(author) ? (
-                Array.isArray(author) && author.length > 0 ? author.map((name: string, index:number) => (
-                <div class="flex items-center justify-between py-2">
-                    <dt
-                        class="text-slate-300 font-semibold flex items-center gap-1"
-                    >
-                        <svg
-                            class="w-4 h-4 text-green-300 mr-1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            ><circle cx="12" cy="7" r="4"></circle><path
-                                d="M5.5 21a8.38 8.38 0 0 1 13 0"></path></svg
-                        >
-                        {`Author ${index + 1}`}
-                    </dt>
-                    <dd class="text-slate-400 font-mono text-sm max-[500px]:text-[0.75rem]">{name}</dd>
-                </div>
-                )): null
-                ):
-                (
-                <div class="flex items-center justify-between py-2">
-                    <dt
-                        class="text-slate-300 font-semibold flex items-center gap-1"
-                    >
-                        <svg
-                            class="w-4 h-4 text-green-300 mr-1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            ><circle cx="12" cy="7" r="4"></circle><path
-                                d="M5.5 21a8.38 8.38 0 0 1 13 0"></path></svg
-                        >
-                        Author
-                    </dt>
-                    <dd class="text-slate-400 font-mono text-sm">{author}</dd>
-                </div>
-                )
-                }
-                <!-- Language -->
-                {
-                    language ? (
-                        <div class="flex items-center justify-between py-2">
-                            <dt class="text-slate-300 font-semibold flex items-center gap-1">
-                                <svg
-                                    class="w-4 h-4 text-purple-300 mr-1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <rect
-                                        x="3"
-                                        y="6"
-                                        width="18"
-                                        height="12"
-                                        rx="2"
-                                    />
-                                    <rect
-                                        x="8"
-                                        y="18"
-                                        width="8"
-                                        height="2"
-                                        rx="1"
-                                    />
-                                    <circle cx="12" cy="19" r="0.5" />
-                                    <path d="M3 6h18" />
-                                </svg>
-                                Language
-                            </dt>
-                            <dd class="text-slate-400 font-mono text-sm">
-                                {language}
-                            </dd>
-                        </div>
-                    ) : null
-                }
-            </dl>
-        </div>
-    </div>
-    <!-- Last Updated -->
-    <div
-        class="flex items-center gap-2 text-yellow-200 bg-slate-900/80 rounded-full px-3 py-1 shadow absolute top-2 right-2 border border-slate-700/60"
-    >
-        <DateIcon dimension={18} color="oklch(90.5% 0.182 98.111)" />
-        <span class="italic text-sm font-medium tracking-wide"
-            >Last updated:</span
-        >
-        <span class="font-mono text-yellow-100">1/2/2025</span>
-    </div>
+<div class="w-full p-5 border-b dark:border-b-slate-700/50 dark:bg-[#15151a] bg-gray-800 relative">
+	<div class="flex items-center gap-4 flex-col">
+		<!-- Last Updated -->
+		<div
+			class="flex flex-wrap justify-center items-center max-[700px]:static gap-2 text-yellow-200 bg-slate-900/80 rounded-full px-3 py-1 shadow absolute top-2 right-2 border border-slate-700/60"
+		>
+			<DateIcon dimension={18} color="oklch(90.5% 0.182 98.111)" />
+			<span class="italic text-sm font-medium tracking-wide">Last updated:</span>
+			<span class="font-mono text-yellow-100">{lastUpdated}</span>
+		</div>
+		<!-- Updated By: Contributor -->
+		<div
+			class="flex flex-wrap justify-center items-center max-[700px]:static gap-2 text-yellow-200 bg-slate-900/80 rounded-full px-3 py-1 shadow absolute top-2 right-70 border border-slate-700/60"
+		>
+			<UserIcon dimension={18} color="oklch(90.5% 0.182 98.111)" />
+			<span class="italic text-sm font-medium tracking-wide">Updated by:</span>
+			<span class="font-mono text-yellow-100">{updatedBy}</span>
+		</div>
+	</div>
+	<!-- Info Card -->
+	<div
+		class="bg-linear-to-br from-[#232526]/80 to-[#18191b]/70 w-full max-w-130 rounded-xl border border-slate-700/60 shadow-lg overflow-hidden mt-7"
+	>
+		<!-- Title -->
+		<div class="flex items-center gap-2 bg-[#1e2022]/80 border-b border-slate-800 px-4 py-3">
+			<span class="text-2xl font-extrabold text-yellow-100 tracking-wide">{title}</span>
+			<span class="ml-auto px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-200 text-xs font-mono uppercase tracking-wider"
+				>{type}</span
+			>
+		</div>
+		<div class="p-5">
+			<dl class="divide-y divide-slate-800">
+				<!-- Version -->
+				<div class="flex items-center justify-between py-2">
+					<dt class="text-slate-300 font-semibold flex items-center gap-1">
+						<svg class="w-4 h-4 text-yellow-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+							><path d="M12 4v16m8-8H4"></path></svg
+						>
+						Version
+					</dt>
+					<dd class="text-slate-400 font-mono text-sm">{version}</dd>
+				</div>
+				<!-- Release Date -->
+				<div class="flex items-center justify-between py-2">
+					<dt class="text-slate-300 font-semibold flex items-center gap-1">
+						<svg class="w-4 h-4 text-blue-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+							><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg
+						>
+						Release Date
+					</dt>
+					<dd class="text-slate-400 font-mono text-sm">{release}</dd>
+				</div>
+				<!-- Author -->
+				{
+					is_more_than_one(author) ? (
+						Array.isArray(author) && author.length > 0 ? (
+							author.map((name: string, index: number) => (
+								<div class="flex items-center justify-between py-2">
+									<dt class="text-slate-300 font-semibold flex items-center gap-1">
+										<svg
+											class="w-4 h-4 text-green-300 mr-1"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											viewBox="0 0 24 24"
+										>
+											<>
+												<circle cx="12" cy="7" r="4" />
+												<path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+											</>
+										</svg>
+										{`Author ${index + 1}`}
+									</dt>
+									<dd class="text-slate-400 font-mono text-sm max-[500px]:text-[0.75rem]">{name}</dd>
+								</div>
+							))
+						) : null
+					) : (
+						<div class="flex items-center justify-between py-2">
+							<dt class="text-slate-300 font-semibold flex items-center gap-1">
+								<svg class="w-4 h-4 text-green-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+									<>
+										<circle cx="12" cy="7" r="4" />
+										<path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+									</>
+								</svg>
+								Author
+							</dt>
+							<dd class="text-slate-400 font-mono text-sm">{author}</dd>
+						</div>
+					)
+				}
+				<!-- Language -->
+				{
+					language ? (
+						<div class="flex items-center justify-between py-2">
+							<dt class="text-slate-300 font-semibold flex items-center gap-1">
+								<svg class="w-4 h-4 text-purple-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+									<rect x="3" y="6" width="18" height="12" rx="2" />
+									<rect x="8" y="18" width="8" height="2" rx="1" />
+									<circle cx="12" cy="19" r="0.5" />
+									<path d="M3 6h18" />
+								</svg>
+								Language
+							</dt>
+							<dd class="text-slate-400 font-mono text-sm">{language}</dd>
+						</div>
+					) : null
+				}
+			</dl>
+		</div>
+	</div>
 
-    <!-- Description -->
-    <section
-        aria-label="Description"
-        class="mt-4 dark:bg-[#1e2021] bg-gradient-to-br from-slate-800/60 to-slate-900/80 rounded-lg p-5 shadow-inner border border-slate-700/40"
-    >
-        <strong class="text-l font-bold text-yellow-200 mb-2 flex items-center gap-2">
-            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M12 19l7-7a2.828 2.828 0 0 0-4-4l-7 7v4h4z"></path>
-            </svg>
-            Introduction
-        </strong>
-        <div
-            class="text-slate-100 text-base md:text-lg leading-relaxed tracking-wide"
-        >
-            <slot />
-        </div>
-    </section>
+	<!-- Description -->
+	<section
+		aria-label="Description"
+		class="mt-4 dark:bg-[#1e2021] bg-linear-to-br from-slate-800/60 to-slate-900/80 rounded-lg p-5 shadow-inner border border-slate-700/40"
+	>
+		<strong class="text-l font-bold text-yellow-200 mb-2 flex items-center gap-2">
+			<svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+				<path d="M12 19l7-7a2.828 2.828 0 0 0-4-4l-7 7v4h4z"></path>
+			</svg>
+			Introduction
+		</strong>
+		<div class="text-slate-100 text-base md:text-lg leading-relaxed tracking-wide">
+			<slot />
+		</div>
+	</section>
 </div>
