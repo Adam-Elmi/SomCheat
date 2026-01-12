@@ -37,7 +37,7 @@ const { frontmatter } = Astro.props;
     gap: 0.5rem;
     padding-bottom: 0.5rem;
     margin: 1rem 0;
-    border-bottom: 3px solid #aaa;
+    border-bottom: 3px solid rgb(59, 130, 246, 0.5);
     letter-spacing: -0.02em;
     line-height: 1.2;
     transition: border-color 0.2s ease;
@@ -83,7 +83,7 @@ const { frontmatter } = Astro.props;
   h4::before {
     content: "#";
     font-size: 2.2rem;
-    color: #aaa;
+    color: rgb(59, 130, 246, 0.3);
   }
 
   h5 {
@@ -93,7 +93,7 @@ const { frontmatter } = Astro.props;
   h5::before {
     content: "#";
     font-size: 2.2rem;
-    color: #aaa;
+    color: rgb(59, 130, 246, 0.3);
   }
 
   h6 {
@@ -103,7 +103,7 @@ const { frontmatter } = Astro.props;
   h6::before {
     content: "#";
     font-size: 2.2rem;
-    color: #aaa;
+    color: rgb(59, 130, 246, 0.3);
   }
 
   /* Paragraphs */
@@ -126,28 +126,28 @@ const { frontmatter } = Astro.props;
     background-color: #f8f8d0d4;
   }
 
-  [data-theme="dark"] h1
-  color: #fff;
+  [data-theme="dark"] h1 {
+    color: #fff;
   }
 
-  [data-theme="dark"] h2
-  color: #fff;
+  [data-theme="dark"] h2 {
+    color: #fff;
   }
 
-  [data-theme="dark"] h3
-  color: #fff;
+  [data-theme="dark"] h3 {
+    color: #fff;
   }
 
-  [data-theme="dark"] h4
-  color: #fff;
+  [data-theme="dark"] h4 {
+    color: #fff;
   }
 
-  [data-theme="dark"] h5
-  color: #fff;
+  [data-theme="dark"] h5 {
+    color: #fff;
   }
 
-  [data-theme="dark"] h6
-  color: #fff;
+  [data-theme="dark"] h6 {
+    color: #fff;
   }
 
   [data-theme="dark"] ol > li {
