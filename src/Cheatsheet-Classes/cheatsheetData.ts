@@ -5,6 +5,8 @@ import icon_detector from "../ReactComponent/helpers/icon_detector";
 import adjustText from "../utils/adjustText";
 import type CheatsheetType from "../types/cheatsheet";
 import type { TargetType } from "../types/cheatsheet";
+import metadata from "../../data/metadata.json";
+import { formatDate } from "../utils/formatDate";
 
 class CheatsheetData {
   id: string;
@@ -14,14 +16,27 @@ class CheatsheetData {
   icon: React.ReactNode;
   progress: number;
   targets?: TargetType | TargetType[]
-  constructor(id: string, name: string, lastUpdate: string, targets?: TargetType | TargetType[]) {
+  constructor(id: string, name: string, lastUpdate: string, targets?: TargetType | TargetType[], frontmatterDate?: string) {
     this.id = id;
     this.name = name === "_" ? adjustText(this.id) : name;
     this.path = this.getPath;
     this.icon = this.getIcon;
-    this.lastUpdate = lastUpdate;
     this.progress = this.getProgressResult;
     this.targets = targets;
+
+    this.lastUpdate = lastUpdate;
+
+    const metadataKey = `pages/cheatsheets/${id}.mdx`;
+    // @ts-ignore
+    if (metadata[metadataKey]) {
+      // @ts-ignore
+      const dateStr = metadata[metadataKey].lastUpdated;
+      this.lastUpdate = formatDate(dateStr);
+    }
+
+    if (frontmatterDate) {
+      this.lastUpdate = formatDate(frontmatterDate);
+    }
   }
   get getPath() {
     return dynamicPath(this.id);
@@ -37,7 +52,7 @@ class CheatsheetData {
 class Category {
   id: string;
   _name: string;
-  data:CheatsheetType[];
+  data: CheatsheetType[];
   icon: React.ReactNode;
   number_of_cheatsheets: number;
 
@@ -56,15 +71,15 @@ class Category {
   }
 }
 
-class LanguageData extends CheatsheetData {}
-class DatabaseData extends CheatsheetData {}  
-class FrameworkData extends CheatsheetData {}
-class LibraryData extends CheatsheetData {}
-class PlatformData extends CheatsheetData {}
-class DevToolsData extends CheatsheetData {}
-class RuntimeData extends CheatsheetData {}
-class ConceptData extends CheatsheetData {}
-class AdditionalData extends CheatsheetData {}
+class LanguageData extends CheatsheetData { }
+class DatabaseData extends CheatsheetData { }
+class FrameworkData extends CheatsheetData { }
+class LibraryData extends CheatsheetData { }
+class PlatformData extends CheatsheetData { }
+class DevToolsData extends CheatsheetData { }
+class RuntimeData extends CheatsheetData { }
+class ConceptData extends CheatsheetData { }
+class AdditionalData extends CheatsheetData { }
 
 export {
   LanguageData,
