@@ -1,23 +1,16 @@
 import { LibraryData } from "./cheatsheetData";
 import type CheatsheetType from "../types/cheatsheet";
+import { getAllCheatsheets } from "../data/cheatsheets";
+
 /* 
   ------------------
   Libraries Data
   ------------------
 */
-const librariesData: CheatsheetType[] = [
-  new LibraryData("react", "_", "Feb 27, 2025"),
-  new LibraryData("jquery", "_", "Feb 27, 2025"),
-  new LibraryData("mongoose", "_", "Feb 27, 2025"),
-  new LibraryData("redux", "_", "Feb 27, 2025"),
-  new LibraryData("axios", "_", "Feb 27, 2025"),
-  new LibraryData("prisma", "_", "Feb 27, 2025"),
-  new LibraryData("pandas", "_", "Feb 27, 2025"),
-  new LibraryData("chartjs", "Chart.js", "Feb 27, 2025"),
-  new LibraryData("d3", "D3.js", "Feb 27, 2025"),
-  new LibraryData("tensorflow", "_", "Feb 27, 2025"),
-  new LibraryData("numpy", "NumPy", "Feb 27, 2025"),
-  new LibraryData("mdx", "MDX", "Feb 27, 2025"),
-];
+const all = getAllCheatsheets();
+
+const librariesData: CheatsheetType[] = all
+  .filter(c => c.category === "Library")
+  .map(c => new LibraryData(c.id, c.title, "Unknown", undefined, c.lastModified));
 
 export default librariesData;
