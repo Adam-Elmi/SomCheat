@@ -1,14 +1,20 @@
-[Header = Var, 1, 2, Adam, js]
+[Header = Var, 1, 2, Adam, Concept][end]
 
-[end]
+[Structure]
+
+
 [Section]
+# JS
 @_Code_@: js, File.js
 console.log("Hello World")
 @_end_@
 [end]
 
 [Section]
-@_Code_@: lua
+# LUA
+@_Code_@: lua, File.lua
 print("Hello World")
 @_end_@
+[end]
+
 [end]
