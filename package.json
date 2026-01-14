@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "create": "node create_cheatsheet_tasks/create_tasks.js"
+    "create": "node create_cheatsheet_tasks/create_tasks.js",
+    "badge": "node updateCheatsheetsBadge.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.1.0",
