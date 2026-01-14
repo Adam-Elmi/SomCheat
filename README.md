@@ -14,28 +14,5 @@
 
 Hadafka SomCheat waa in uu kuu sahlayo inaad si fudud oo degdeg ah dib ugu xasuusato macluumaad hore aad u baratay, gaar ahaan marka aad wax cusub baratay laakiin muddo kadib wax badan iloowday.
 
----
-
-> [!Warning]
-> In Progress. Mashruucan weli ma dhameystirmin.
-
-> [!Important]
-> Mashruucan wuxu isticmaalaya submodule marka clone-gareynaysid repository-ka habkan raac:
-
-```sh
-git clone --recurse-submodules https://github.com/Adam-Elmi/SomCheat.git
-```
-
-Haddii repository-ga clone dhahday oo aad rabtid inaad laso degtid submodules uu mashruucan adeegsanayo, adeegso command-kan:
-
-```sh
-git submodule init
-```
-
-ama command-kan(wa haddii aad rabtid inaad submodules update-gareysid)
-
-```sh
-git submodule update --init --recursive
-```
 
 ---
