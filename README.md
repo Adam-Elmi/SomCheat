@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/Adam-Elmi/SomCheat/master/public/somcheat_logo.svg" alt="SomCheat Logo" width="200" style="vertical-align: middle;"/>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-![Cheatsheets Available](https://img.shields.io/badge/Cheatsheets-1-blue.svg)
+![Cheatsheets Available](https://img.shields.io/badge/Cheatsheets-119-blue.svg)
 
 ---
 
