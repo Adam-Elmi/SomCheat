@@ -1,0 +1,53 @@
+---
+import { LinkIcon } from "../ReactComponent/icons/Other_Icons";
+import { ArrowRightLongIcon } from "../ReactComponent/icons/Arrow_Icons";
+
+interface Reference {
+  url: string;
+  title: string;
+  description?: string;
+}
+
+interface Props {
+  references: Reference[];
+}
+
+const { references }: Props = Astro.props;
+---
+
+<div class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-lg dark:bg-[#0F0F0F] bg-white overflow-hidden">
+  <!-- Top Bar -->
+  <div class="flex justify-between items-center px-5 py-3 bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300">
+    <span class="text-white font-semibold text-sm">References</span>
+    <div class="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">
+      <LinkIcon />
+    </div>
+  </div>
+
+  <!-- References List -->
+  <div class="divide-y divide-gray-200 dark:divide-gray-800">
+    {references.map(({ title, url, description }) => (
+      <div class="flex items-start p-5 group hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors duration-200">
+        <div class="shrink-0 mr-4 mt-1 text-indigo-500">
+          <ArrowRightLongIcon dimension={20} />
+        </div>
+        <div class="flex-1">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block text-lg font-semibold text-slate-700 dark:text-slate-200 group-hover:text-indigo-600 transition-colors duration-300"
+          >
+            {title}
+          </a>
+          {description && (
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              {description}
+            </p>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
