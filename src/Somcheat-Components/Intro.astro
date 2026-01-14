@@ -7,7 +7,67 @@ import path from "node:path";
 import metadata from "../../data/metadata.json";
 import { formatDate } from "../utils/formatDate";
 
-const { title, type, version, release, author, language } = Astro.props;
+export interface CheatsheetFrontmatter {
+	title: string;
+	description?: string;
+	order?: number;
+	draft?: boolean;
+}
+
+const modules = import.meta.glob<{
+	frontmatter: CheatsheetFrontmatter;
+}>("../pages/cheatsheets/*.mdx", {
+	eager: true
+});
+
+export interface CheatsheetFrontmatter {
+	layout: string;
+	title: string;
+	version: string;
+	release_date: number;
+	author: string;
+	category: string;
+	type: string;
+}
+
+export interface CheatsheetEntry {
+	slug: string;
+	frontmatter: CheatsheetFrontmatter;
+}
+
+const cheatsheetsModules = import.meta.glob<{
+	frontmatter: CheatsheetFrontmatter;
+}>("../pages/cheatsheets/*.mdx", { eager: true });
+
+const cheatsheets: CheatsheetEntry[] = Object.entries(cheatsheetsModules).map(([path, module]) => {
+	const slug = path
+		.split("/")
+		.pop()!
+		.replace(/\.mdx$/, "");
+	return { slug, frontmatter: module.frontmatter };
+});
+
+const currentPathSegments = Astro.originPathname.split("/").filter(segment => segment.length > 0);
+
+const currentSlug = currentPathSegments.length > 0 ? currentPathSegments[currentPathSegments.length - 1] : null;
+
+const currentFile: CheatsheetEntry | null = currentSlug ? (cheatsheets.find(file => file.slug === currentSlug) ?? null) : null;
+
+if (currentFile) {
+	console.log(currentFile.frontmatter.title);
+} else {
+	console.warn(currentSlug);
+}
+
+console.log(currentFile);
+const { title, version, release_date, author, category, type } = currentFile?.frontmatter ?? {
+	title: "",
+	version: "",
+	release_date: 0,
+	author: "",
+	category: "",
+	type: ""
+};
 
 function is_more_than_one(author: string | string[]) {
 	if (author && Array.isArray(author)) {
@@ -119,7 +179,7 @@ if (lastUpdated === "Unknown") {
 						>
 						Release Date
 					</dt>
-					<dd class="text-slate-400 font-mono text-sm">{release}</dd>
+					<dd class="text-slate-400 font-mono text-sm">{release_date}</dd>
 				</div>
 				<!-- Author -->
 				{
@@ -161,9 +221,9 @@ if (lastUpdated === "Unknown") {
 						</div>
 					)
 				}
-				<!-- Language -->
+				<!-- Category -->
 				{
-					language ? (
+					category ? (
 						<div class="flex items-center justify-between py-2">
 							<dt class="text-slate-300 font-semibold flex items-center gap-1">
 								<svg class="w-4 h-4 text-purple-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -172,9 +232,9 @@ if (lastUpdated === "Unknown") {
 									<circle cx="12" cy="19" r="0.5" />
 									<path d="M3 6h18" />
 								</svg>
-								Language
+								Category
 							</dt>
-							<dd class="text-slate-400 font-mono text-sm">{language}</dd>
+							<dd class="text-slate-400 font-mono text-sm">{category}</dd>
 						</div>
 					) : null
 				}
