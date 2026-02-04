@@ -14,6 +14,11 @@
     "updatedBy": "Adam-Elmi",
     "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
+  "src/pages/cheatsheets/astro.mdx": {
+    "lastUpdated": "2026-02-05T00:42:49+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "f23f69bac6b8d8d062e01a94f225bdaba33995c2"
+  },
   "src/pages/cheatsheets/axios.mdx": {
     "lastUpdated": "2026-01-15T02:21:38+03:00",
     "updatedBy": "Adam-Elmi",
@@ -55,9 +60,9 @@
     "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
   "src/pages/cheatsheets/c.mdx": {
-    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "lastUpdated": "2026-02-04T03:32:49+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+    "hash": "cea844511cd2326118775d047f0225e693e96e1d"
   },
   "src/pages/cheatsheets/cargo.mdx": {
     "lastUpdated": "2026-01-15T02:21:38+03:00",
@@ -195,9 +200,9 @@
     "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
   "src/pages/cheatsheets/go.mdx": {
-    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "lastUpdated": "2026-02-04T03:32:52+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+    "hash": "93382ad7c6e5bda5cc956005c61c9247584f6cdd"
   },
   "src/pages/cheatsheets/helix.mdx": {
     "lastUpdated": "2026-01-15T02:21:38+03:00",
@@ -230,9 +235,9 @@
     "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
   "src/pages/cheatsheets/js.mdx": {
-    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "lastUpdated": "2026-02-04T03:32:59+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+    "hash": "33150152aaaa42c9cc5ee213ec6af445c5698572"
   },
   "src/pages/cheatsheets/json.mdx": {
     "lastUpdated": "2026-01-15T02:21:38+03:00",
@@ -260,9 +265,9 @@
     "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
   "src/pages/cheatsheets/lua.mdx": {
-    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "lastUpdated": "2026-02-04T03:33:02+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+    "hash": "6dc368844dba9fa0b83ebd67f55829f762f12c77"
   },
   "src/pages/cheatsheets/luarocks.mdx": {
     "lastUpdated": "2026-01-15T02:21:38+03:00",
@@ -365,9 +370,9 @@
     "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
   "src/pages/cheatsheets/perl.mdx": {
-    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "lastUpdated": "2026-02-04T03:33:05+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+    "hash": "c3b320cb6430a0b6837112787d3d91b45a980d5a"
   },
   "src/pages/cheatsheets/phoenix.mdx": {
     "lastUpdated": "2026-01-15T02:21:38+03:00",
@@ -405,9 +410,9 @@
     "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
   "src/pages/cheatsheets/py.mdx": {
-    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "lastUpdated": "2026-02-04T03:33:09+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+    "hash": "cb8fc1f2e3a44a2959e5d2da79c00e79a11b86d7"
   },
   "src/pages/cheatsheets/pytest.mdx": {
     "lastUpdated": "2026-01-15T02:21:38+03:00",
@@ -478,6 +483,11 @@
     "lastUpdated": "2026-01-15T02:21:38+03:00",
     "updatedBy": "Adam-Elmi",
     "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/sommark.mdx": {
+    "lastUpdated": "2026-02-05T00:42:53+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "3155dd9318503f629c7e2a0724679285ac7dbfff"
   },
   "src/pages/cheatsheets/spring.mdx": {
     "lastUpdated": "2026-01-15T02:21:38+03:00",
