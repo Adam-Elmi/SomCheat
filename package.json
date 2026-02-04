@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:astro dev:watcher",
     "dev:astro": "astro dev",
-    "dev:watcher": "npx chokidar \"**/*.txt\" -c \"node create_cheatsheet_tasks/create_tasks.js\"",
+    "dev:watcher": "npx chokidar \"**/*.txt\" -c \"node scripts/create_tasks.js\"",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "create": "node create_cheatsheet_tasks/create_tasks.js",
-    "badge": "node updateCheatsheetsBadge.js"
+    "create": "node scripts/create_tasks.js",
+    "fetch_metadata": "node scripts/fetch_metadata.js",
+    "badge": "node scripts/updateCheatsheetsBadge.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.1.0",
@@ -33,6 +34,6 @@
     "chokidar-cli": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "rollup-plugin-visualizer": "^6.0.0",
-    "sommark": "^1.2.0"
+    "sommark": "^2.0.2"
   }
 }
