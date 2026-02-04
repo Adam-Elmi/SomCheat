@@ -11,6 +11,6 @@ const all = getAllCheatsheets();
 
 const devToolsData: CheatsheetType[] = all
   .filter(c => c.category === "DevTools")
-  .map(c => new DevToolsData(c.id, c.title, "Unknown", undefined, c.lastModified));
+  .map(c => new DevToolsData(c.id, c.title, c.lastModified || "Unknown", undefined));
 
 export default devToolsData;
