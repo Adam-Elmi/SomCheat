@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
-const { src, alt, ...props } = Astro.props;
+const {parentClass, src, alt, ...props } = Astro.props;
 ---
 
-<Image src={src} alt={alt} {...props} />
+<div class={parentClass}>
+    <Image src={src} alt={alt} {...props} />
+</div>
