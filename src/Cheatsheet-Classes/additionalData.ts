@@ -11,6 +11,6 @@ const all = getAllCheatsheets();
 
 const additionalData: CheatsheetType[] = all
   .filter(c => c.category === "Additional" || c.category === "Other")
-  .map(c => new AdditionalData(c.id, c.title, "Unknown", undefined, c.lastModified));
+  .map(c => new AdditionalData(c.id, c.title, c.lastModified || "Unknown", undefined));
 
 export default additionalData;
