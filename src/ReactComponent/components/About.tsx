@@ -81,7 +81,7 @@ const About = () => {
           >
             Adam Elmi
           </a>{" "}
-          si uu u fududeeyo barashada iyo horumarka.
+          si uu u fududeeyo barashada iyo horumarka tiknoolajiyada.
         </p>
 
         {/* Buttons */}
