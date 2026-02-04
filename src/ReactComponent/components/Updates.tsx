@@ -97,7 +97,7 @@ export default function Updates() {
   return (
     <div className="w-full flex flex-col justify-center items-center gap-3">
       {/* Search Input */}
-      <div className="w-[1000px] max-w-full relative">
+      <div className="w-250 max-w-full relative my-5">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <SearchIcon />
         </div>
@@ -115,7 +115,7 @@ export default function Updates() {
         ? filteredData.map((item: any, i: number) => (
           <div
             key={i}
-            className="w-[1000px] max-w-full dark:border-indigo-400 dark:bg-[#15151a] bg-white h-fit rounded-lg border-2 border-slate-200 shadow-md p-5 flex flex-col gap-3"
+            className="w-250 max-w-full dark:border-indigo-400 dark:bg-[#15151a] bg-white h-fit rounded-lg border-2 border-slate-200 shadow-md p-5 flex flex-col gap-3"
           >
             {/* Title and Icon */}
             <div className="flex gap-3 items-center">
@@ -144,7 +144,7 @@ export default function Updates() {
                       : "0%"
                       }`,
                   }}
-                  className="w-full h-[8px] bg-green-400 rounded-sm"
+                  className="w-full h-2 bg-green-400 rounded-sm"
                 ></div>
               </div>
               <span className="italic text-slate-400 font-medium">
