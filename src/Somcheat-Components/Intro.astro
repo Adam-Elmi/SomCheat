@@ -1,9 +1,5 @@
 ---
 import { DateIcon, UserIcon } from "../ReactComponent/icons/Other_Icons";
-// @ts-ignore
-import fs from "node:fs";
-// @ts-ignore
-import path from "node:path";
 import metadata from "../../data/metadata.json";
 import { formatDate } from "../utils/formatDate";
 
@@ -24,10 +20,9 @@ export interface CheatsheetFrontmatter {
 	layout: string;
 	title: string;
 	version: string;
-	release_date: number;
+	release: number;
 	author: string;
 	category: string;
-	type: string;
 }
 
 export interface CheatsheetEntry {
@@ -59,16 +54,14 @@ if (currentFile) {
 	console.warn(currentSlug);
 }
 
-console.log(currentFile);
-const { title, version, release_date, author, category, type } = currentFile?.frontmatter ?? {
+const { title, version, release, author, category } = currentFile?.frontmatter ?? {
 	title: "",
 	version: "",
-	release_date: 0,
+	release: 0,
 	author: "",
-	category: "",
-	type: ""
+	category: ""
 };
-
+const AUTHORS = author && author.split(",");
 function is_more_than_one(author: string | string[]) {
 	if (author && Array.isArray(author)) {
 		return true;
@@ -78,6 +71,7 @@ function is_more_than_one(author: string | string[]) {
 
 let lastUpdated = "Unknown";
 let updatedBy = "Unknown";
+
 try {
 	const pathname = Astro.url.pathname;
 	const id = pathname
@@ -86,46 +80,21 @@ try {
 		.pop();
 
 	if (id) {
-		const filePath = path.join(
-			// @ts-ignore
-			process.cwd(),
-			"src",
-			"pages",
-			"cheatsheets",
-			`${id}.mdx`
-		);
+		const metadataKey = `src/pages/cheatsheets/${id}.mdx`;
+		// @ts-ignore
+		const meta = metadata[metadataKey];
 
-		if (fs.existsSync(filePath)) {
-			const content = fs.readFileSync(filePath, "utf-8");
-			const match = content.match(/lastModified:\s*["']([^"']+)["']/);
-
-			const metadataKey = `pages/cheatsheets/${id}.mdx`;
-			// @ts-ignore
-			if (metadata[metadataKey]) {
-				// @ts-ignore
-				if (metadata[metadataKey].updatedBy) {
-					// @ts-ignore
-					updatedBy = metadata[metadataKey].updatedBy;
-				}
+		if (meta) {
+			if (meta.lastUpdated) {
+				lastUpdated = formatDate(meta.lastUpdated);
 			}
-
-			if (match && match[1]) {
-				lastUpdated = formatDate(match[1]);
-			} else {
-				// @ts-ignore
-				if (metadata[metadataKey]) {
-					// @ts-ignore
-					lastUpdated = formatDate(metadata[metadataKey].lastUpdated);
-				}
+			if (meta.updatedBy) {
+				updatedBy = meta.updatedBy;
 			}
 		}
 	}
 } catch (e) {
 	console.error("Error determining date in Intro.astro", e);
-}
-
-if (lastUpdated === "Unknown") {
-	lastUpdated = "Feb 27, 2025";
 }
 ---
 
@@ -156,7 +125,7 @@ if (lastUpdated === "Unknown") {
 		<div class="flex items-center gap-2 bg-[#1e2022]/80 border-b border-slate-800 px-4 py-3">
 			<span class="text-2xl font-extrabold text-yellow-100 tracking-wide">{title}</span>
 			<span class="ml-auto px-2 py-0.5 rounded bg-yellow-900/30 text-yellow-200 text-xs font-mono uppercase tracking-wider"
-				>{type}</span
+				>{category}</span
 			>
 		</div>
 		<div class="p-5">
@@ -179,13 +148,13 @@ if (lastUpdated === "Unknown") {
 						>
 						Release Date
 					</dt>
-					<dd class="text-slate-400 font-mono text-sm">{release_date}</dd>
+					<dd class="text-slate-400 font-mono text-sm">{release}</dd>
 				</div>
 				<!-- Author -->
 				{
-					is_more_than_one(author) ? (
-						Array.isArray(author) && author.length > 0 ? (
-							author.map((name: string, index: number) => (
+					is_more_than_one(AUTHORS) ? (
+						Array.isArray(AUTHORS) && AUTHORS.length > 0 ? (
+							AUTHORS.map((name: string, index: number) => (
 								<div class="flex items-center justify-between py-2">
 									<dt class="text-slate-300 font-semibold flex items-center gap-1">
 										<svg
