@@ -11,6 +11,6 @@ const all = getAllCheatsheets();
 
 const conceptData: CheatsheetType[] = all
   .filter(c => c.category === "Concept")
-  .map(c => new ConceptData(c.id, c.title, "Unknown", undefined, c.lastModified));
+  .map(c => new ConceptData(c.id, c.title, c.lastModified || "Unknown", undefined));
 
 export default conceptData;
