@@ -1,10 +1,10 @@
-import type CheatsheetType from "../types/cheatsheet";
+import metadata from "../../data/metadata.json";
+import { formatDate } from "../utils/formatDate";
 
 interface MdxFrontmatter {
     title: string;
     category: string;
     layout?: string;
-    lastModified?: string;
 }
 
 interface MdxModule {
@@ -30,11 +30,16 @@ export function getAllCheatsheets(): SimpleCheatsheet[] {
         const id = filename.replace('.mdx', '');
 
         if (id && id !== 'index') {
+            const metadataKey = `src/pages/cheatsheets/${id}.mdx`;
+            // @ts-ignore
+            const dateStr = metadata[metadataKey]?.lastUpdated;
+            const lastModified = dateStr ? formatDate(dateStr) : "Unknown";
+
             cheatsheets.push({
                 id,
                 title: mod.frontmatter.title || id,
                 category: mod.frontmatter.category || "Other",
-                lastModified: mod.frontmatter.lastModified
+                lastModified: lastModified
             });
         }
     }
