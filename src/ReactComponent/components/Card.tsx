@@ -15,7 +15,7 @@ import type CheatsheetType from "../../types/cheatsheet";
 import type { TargetType } from "../../types/cheatsheet";
 
 export default function Card({ cheatsheet }: { cheatsheet: CheatsheetType }) {
-  const labelIcon:Record<TargetType, React.ReactNode> = {
+  const labelIcon: Record<TargetType, React.ReactNode> = {
     web: (
       <span className="text-sky-400">
         <WebIcon />
@@ -33,17 +33,17 @@ export default function Card({ cheatsheet }: { cheatsheet: CheatsheetType }) {
     )
   }
   const labels = Array.isArray(cheatsheet.targets)
-      ? cheatsheet.targets.map(target => labelIcon[target] ?? null)
-      : [];
+    ? cheatsheet.targets.map(target => labelIcon[target] ?? null)
+    : [];
 
   function displayLabel() {
-      if (typeof cheatsheet.targets === "string") {
-        return labelIcon[cheatsheet.targets] ?? null;
-      }
+    if (typeof cheatsheet.targets === "string") {
+      return labelIcon[cheatsheet.targets] ?? null;
     }
+  }
   return (
     <a href={cheatsheet.path}>
-      <div className="relative dark:bg-[#15151a] bg-white dark:border-indigo-400 border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-[300px] max-w-full">
+      <div className="relative dark:bg-[#15151a] bg-white dark:border-indigo-400 border-[1.5px] m-1 border-slate-200 shadow-md p-4 rounded-md min-w-75 max-w-full">
         {/*
           ------------------
           Label
@@ -70,12 +70,12 @@ export default function Card({ cheatsheet }: { cheatsheet: CheatsheetType }) {
             </h1>
           </div>
           <span className="text-slate-500 text-[0.8rem] ml-2 flex gap-2 items-center">
-            <DateIcon dimension={15} color="#aaa" />
+            <DateIcon dimension={20} color="#aaa" />
             <span
-              title={"Last Update: " + cheatsheet.lastUpdate}
+              title={"Last Update: " + cheatsheet.lastModified}
               className="font-mono"
             >
-              {cheatsheet.lastUpdate}
+              {cheatsheet.lastModified}
             </span>
           </span>
         </div>
@@ -100,11 +100,10 @@ export default function Card({ cheatsheet }: { cheatsheet: CheatsheetType }) {
           <div className="flex-1 dark:bg-slate-700 bg-slate-100 rounded-sm">
             <div
               style={{
-                width: `${
-                  cheatsheet.progress ? cheatsheet.progress + "%" : "0%"
-                }`,
+                width: `${cheatsheet.progress ? cheatsheet.progress + "%" : "0%"
+                  }`,
               }}
-              className="w-full h-[6px] bg-green-300 rounded-sm"
+              className="w-full h-1.5 bg-green-300 rounded-sm"
             ></div>
           </div>
           <span className="italic text-slate-400 font-medium">
