@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   background-color: #fafafc;
   font-family: "roboto", Arial, sans-serif;
