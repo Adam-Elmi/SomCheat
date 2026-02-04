@@ -5,7 +5,7 @@ function getFrontmatter(title, version, release, author, category) {
 layout: "../../Layouts/SecondLayout.astro"
 title: ${title}
 version: ${version}
-release_date: ${release}
+release: ${release}
 author: ${Array.isArray(author) ? author.join(", ") : author}
 category: ${category}
 ---
@@ -22,44 +22,49 @@ import Table from "../../Somcheat-Components/Table.astro";
 import Steps from "../../Somcheat-Components/Steps.astro";
 import Step from "../../Somcheat-Components/Step.astro";
 import Colorize from "../../Somcheat-Components/Colorize.astro";
+import ImageComponent from "../../Somcheat-Components/ImageComponent.astro";
 `;
 
 const somcheatMapper = new Mapper();
-const { tag } = somcheatMapper;
+const { tag, md } = somcheatMapper;
 
-somcheatMapper.create(["Header", "header"], ({ args }) => {
-	return getFrontmatter(args[0], args[1], args[2], args[3], args[4], args[5]) + "\n" + somcheat_imports + "\n";
+somcheatMapper.register(["Header", "header"], ({ args }) => {
+	return getFrontmatter(args.title, args.version, args.release, args.author, args.category) + "\n" + somcheat_imports + "\n";
+}, {rules: {args: {
+				required: ["title", "version", "release", "author", "category"]
+			}}});
+
+somcheatMapper.register(["Intro", "intro"], ({ content }) => {
+	return "\n" + tag("Intro").body(content) + "\n";
 });
 
-somcheatMapper.create(["Intro", "intro"], ({ content }) => {
-	return tag("Intro").body(content) + "\n";
+somcheatMapper.register(["Structure", "structure"], ({ content }) => {
+	return "\n" + tag("Structure").body(content)  + "\n";
 });
 
-somcheatMapper.create(["Structure", "structure"], ({ content }) => {
-	return tag("Structure").body(content)  + "\n";
+somcheatMapper.register(["Section", "section"], ({ content }) => {
+	return "\n" + tag("Section").body(content)  + "\n";
 });
 
-somcheatMapper.create(["Section", "section"], ({ content }) => {
-	return tag("Section").body(content)  + "\n";
-});
-
-somcheatMapper.create(
+somcheatMapper.register(
 	["Code", "code"],
 	({ args, content }) => {
-		return tag("Code")
-			.attributes(args[1] ? { filename: args[1] } : null)
-			.body("\n" + `\`\`\`${args[0]}\n${content}\n\`\`\`` + "\n");
+		const lang = args[0] || args["lang"] || "text";
+		const code = md.codeBlock(content, lang);
+		return "\n" + tag("Code")
+			.attributes(args[1] ? { filename: args[1] || args["filename"] || "" } : null)
+			.body(code) + "\n";
 	},
 	{ escape: false }
 );
 
-somcheatMapper.create(["Message", "message"], ({ args, content }) => {
-	return tag("Message").attributes({ type: args[0] }).body(content);
+somcheatMapper.register(["Message", "message"], ({ args, content }) => {
+	return "\n" + tag("Message").attributes({ type: args[0] }).body(content) + "\n";
 });
 
-somcheatMapper.create(["Table", "table"], ({ args, content }) => {
+somcheatMapper.register(["Table", "table"], ({ args, content }) => {
 	content = content.split("\n").filter(line => line !== "");
-	return tag("Table")
+	return "\n" + tag("Table")
 		.props([
 			{
 				type: "other",
@@ -82,28 +87,28 @@ somcheatMapper.create(["Table", "table"], ({ args, content }) => {
 				)
 			}
 		])
-		.selfClose();
+		.selfClose() + "\n";
 });
 
-somcheatMapper.create(["Steps", "steps"], ({ args, content }) => {
-	return tag("Steps")
+somcheatMapper.register(["Steps", "steps"], ({ args, content }) => {
+	return "\n" + tag("Steps")
 		.attributes({
 			title: args[0],
 			description: args[1]
 		})
-		.body(content + "\n");
+		.body(content) + "\n";
 });
 
-somcheatMapper.create(["Step", "step"], ({ args, content }) => {
-	return tag("Step").attributes({ title: args[0] }).body(content);
+somcheatMapper.register(["Step", "step"], ({ args, content }) => {
+	return "\n" + tag("Step").attributes({ title: args[0] }).body(content.trim()) + "\n";
 });
 
-somcheatMapper.create(
+somcheatMapper.register(
 	["References", "references"],
 	({ content }) => {
 		content = content.split("\n").filter(line => line !== "");
 		return (
-			tag("References")
+			"\n" + tag("References")
 				.props([
 					{
 						type: "other",
@@ -123,8 +128,8 @@ somcheatMapper.create(
 	{ escape: false }
 );
 
-somcheatMapper.create(["Colorize", "colorize"], ({ args, content }) => {
-  return tag("Colorize").props([
+somcheatMapper.register(["Colorize", "colorize"], ({ args, content }) => {
+  return "\n" + tag("Colorize").props([
     {
       type: "string",
       color: args[0]
@@ -141,7 +146,7 @@ somcheatMapper.create(["Colorize", "colorize"], ({ args, content }) => {
       type: "other",
       is_both: args[3] ?? false
     }
-  ]).body(content) + "\n";
+  ]).body(content.trim()) + "\n";
 });
 
 export default somcheatMapper;
