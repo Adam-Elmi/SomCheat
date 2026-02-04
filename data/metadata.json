@@ -1,32 +1,592 @@
 {
-  "pages/cheatsheets/c.mdx": {
-    "lastUpdated": "2025-08-30T18:21:01+03:00",
+  "src/pages/cheatsheets/32bit_and_64bit.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "98d3ab33125376cd6e0ab467f704db2858022792"
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
-  "pages/cheatsheets/go.mdx": {
-    "lastUpdated": "2025-08-28T21:59:29+03:00",
+  "src/pages/cheatsheets/angular.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "6ab4731f147a4bfec46da993c4fd5a31d0758804"
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
-  "pages/cheatsheets/js.mdx": {
-    "lastUpdated": "2025-10-11T00:28:12+03:00",
+  "src/pages/cheatsheets/ascii.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "5d585d4d9a2b63c81ced3018e7b066b1712fa373"
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
-  "pages/cheatsheets/lua.mdx": {
-    "lastUpdated": "2025-10-11T22:34:07+03:00",
+  "src/pages/cheatsheets/axios.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "6acc78976d1970f790635ac659e9fa19d1d4638d"
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
-  "pages/cheatsheets/perl.mdx": {
-    "lastUpdated": "2025-08-17T23:40:36+03:00",
+  "src/pages/cheatsheets/babel.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "ec39e7f9ed884ffc654490a9ef279272c6792360"
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   },
-  "pages/cheatsheets/py.mdx": {
-    "lastUpdated": "2025-08-28T21:59:26+03:00",
+  "src/pages/cheatsheets/base_conversion.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
     "updatedBy": "Adam-Elmi",
-    "hash": "2188378ed2d8b7efda29d873ea83e4416e1227fe"
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/bash.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/binary.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/bootstrap.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/bulma.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/bun.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/c.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/cargo.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/chartjs.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/cpp.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/crystal.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/cs.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/css.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/curl.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/d3.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/dart.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/decimal.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/deno.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/django.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/docker.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/dotnet.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/electron.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/elixir.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/ember.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/erlang.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/eslint.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/expressjs.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/firestore.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/fish.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/flask.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/flutter.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/gin.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/git.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/gleam.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/go.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/helix.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/hex.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/html.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/java.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/jest.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/jquery.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/js.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/json.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/julia.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/kotlin.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/laravel.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/linux.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/lua.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/luarocks.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/macos.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/markdown.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/mdx.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/mocha.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/mongodb.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/mongoose.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/mysql.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/neovim.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/nextjs.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/nim.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/nix.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/nixos.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/nodejs.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/npm.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/numpy.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/nuxtjs.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/ocaml.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/pandas.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/parcel.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/perl.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/phoenix.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/php.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/pip.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/postgresql.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/powershell.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/prettier.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/prisma.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/py.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/pytest.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/pytorch.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/r.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/rails.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/rb.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/react.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/reactnative.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/reason.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/redis.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/redux.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/rolldown.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/rollup.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/rust.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/sass.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/spring.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/sqlite.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/storage_units.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/svelte.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/swift.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/tailwind.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/tensorflow.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/tmux.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/ts.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/ubuntu.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/unicode.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/v.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/vim.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/vite.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/vscode.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/vue.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/web_api.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/webpack.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/windows.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/xml.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/yaml.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
+  },
+  "src/pages/cheatsheets/zsh.mdx": {
+    "lastUpdated": "2026-01-15T02:21:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "6146cbd8bb416944c3d80f36624ca42a378a3467"
   }
 }
