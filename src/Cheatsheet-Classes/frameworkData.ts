@@ -11,6 +11,6 @@ const all = getAllCheatsheets();
 
 const frameworkData: CheatsheetType[] = all
   .filter(c => c.category === "Framework")
-  .map(c => new FrameworkData(c.id, c.title, "Unknown", undefined, c.lastModified));
+  .map(c => new FrameworkData(c.id, c.title, c.lastModified || "Unknown", undefined));
 
 export default frameworkData;
