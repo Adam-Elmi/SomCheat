@@ -1,7 +1,7 @@
 import somcheatMapper from "./mapper/somcheatMapper.js";
 
 const config = {
-    outputDir: "src/pages/cheatsheets",
+    outputDir: "./",
     outputFile: "example",
     mode: "custom",
     format: "mdx",
