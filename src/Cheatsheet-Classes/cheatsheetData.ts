@@ -5,18 +5,16 @@ import icon_detector from "../ReactComponent/helpers/icon_detector";
 import adjustText from "../utils/adjustText";
 import type CheatsheetType from "../types/cheatsheet";
 import type { TargetType } from "../types/cheatsheet";
-import metadata from "../../data/metadata.json";
-import { formatDate } from "../utils/formatDate";
 
 class CheatsheetData {
   id: string;
   name: string;
-  lastUpdate: string;
+  lastModified: string;
   path: string;
   icon: React.ReactNode;
   progress: number;
   targets?: TargetType | TargetType[]
-  constructor(id: string, name: string, lastUpdate: string, targets?: TargetType | TargetType[], frontmatterDate?: string) {
+  constructor(id: string, name: string, lastModified: string, targets?: TargetType | TargetType[]) {
     this.id = id;
     this.name = name === "_" ? adjustText(this.id) : name;
     this.path = this.getPath;
@@ -24,19 +22,7 @@ class CheatsheetData {
     this.progress = this.getProgressResult;
     this.targets = targets;
 
-    this.lastUpdate = lastUpdate;
-
-    const metadataKey = `pages/cheatsheets/${id}.mdx`;
-    // @ts-ignore
-    if (metadata[metadataKey]) {
-      // @ts-ignore
-      const dateStr = metadata[metadataKey].lastUpdated;
-      this.lastUpdate = formatDate(dateStr);
-    }
-
-    if (frontmatterDate) {
-      this.lastUpdate = formatDate(frontmatterDate);
-    }
+    this.lastModified = lastModified;
   }
   get getPath() {
     return dynamicPath(this.id);
