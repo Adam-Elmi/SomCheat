@@ -1,31 +1,26 @@
 ---
 import BasicLayout from "../../Layouts/BasicLayout.astro";
 import Nav from "../../Components/Nav.astro";
-import dataList from "../../ReactComponent/helpers/datalist";
-import Card from "../../ReactComponent/components/Card";
+import CheatsheetList from "../../ReactComponent/components/CheatsheetList";
 ---
 
 <BasicLayout title="Cheatsheets">
-{/* 
+	{
+		/* 
   ------------------ 
   Nav bar
   ------------------ 
-*/}
-  <Nav path="/cheatsheets"/>
-  {/* 
+*/
+	}
+	<Nav path="/cheatsheets" />
+	{
+		/* 
   ------------------ 
   All cheatsheets
   ------------------ 
-  */}
-  <main id="section-bar" class="w-full dark:bg-[#0f0f0f]">
-    <div class="flex justify-center items-center flex-wrap p-4 gap-5">
-      {dataList.map((list) =>
-        list.data.map((cheatsheet: any) => (
-          <a href={"/" + cheatsheet.path}>
-            <Card cheatsheet={cheatsheet}/>
-          </a>
-        ))
-      )}
-    </div>
-  </main>
+  */
+	}
+	<main id="section-bar" class="w-full dark:bg-[#0f0f0f]">
+		<CheatsheetList client:load />
+	</main>
 </BasicLayout>
