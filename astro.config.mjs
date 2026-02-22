@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
-import {visualizer} from 'rollup-plugin-visualizer';
 
 
 import mdx from '@astrojs/mdx';
@@ -18,7 +17,7 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [tailwindcss(), visualizer({ open: true, gzipSize: true, brotliSize: true,})]
+    plugins: [tailwindcss()]
   },
 
   server: {
