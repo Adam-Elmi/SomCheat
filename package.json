@@ -21,7 +21,7 @@
     "@types/unist": "^3.0.3",
     "chokidar-cli": "^3.0.0",
     "npm-run-all": "^1.1.3",
-    "sommark": "^2.2.0"
+    "sommark": "^2.3.0"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
