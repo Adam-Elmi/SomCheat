@@ -61,13 +61,8 @@ const { title, version, release, author, category } = currentFile?.frontmatter ?
 	author: "",
 	category: ""
 };
-const AUTHORS = author && author.split(",");
-function is_more_than_one(author: string | string[]) {
-	if (author && Array.isArray(author)) {
-		return true;
-	}
-	return false;
-}
+const AUTHORS = author && typeof author === "string" ? author.split(",") : author;
+
 
 let lastUpdated = "Unknown";
 let updatedBy = "Unknown";
@@ -152,29 +147,21 @@ try {
 				</div>
 				<!-- Author -->
 				{
-					is_more_than_one(AUTHORS) ? (
-						Array.isArray(AUTHORS) && AUTHORS.length > 0 ? (
-							AUTHORS.map((name: string, index: number) => (
-								<div class="flex items-center justify-between py-2">
-									<dt class="text-slate-300 font-semibold flex items-center gap-1">
-										<svg
-											class="w-4 h-4 text-green-300 mr-1"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2"
-											viewBox="0 0 24 24"
-										>
-											<>
-												<circle cx="12" cy="7" r="4" />
-												<path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
-											</>
-										</svg>
-										{`Author ${index + 1}`}
-									</dt>
-									<dd class="text-slate-400 font-mono text-sm max-[500px]:text-[0.75rem]">{name}</dd>
-								</div>
-							))
-						) : null
+					Array.isArray(AUTHORS) && AUTHORS.length > 1 ? (
+						AUTHORS.map((name: string, index: number) => (
+							<div class="flex items-center justify-between py-2">
+								<dt class="text-slate-300 font-semibold flex items-center gap-1">
+									<svg class="w-4 h-4 text-green-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+										<>
+											<circle cx="12" cy="7" r="4" />
+											<path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+										</>
+									</svg>
+									{`Author ${index + 1}`}
+								</dt>
+								<dd class="text-slate-400 font-mono text-sm max-[500px]:text-[0.75rem]">{name}</dd>
+							</div>
+						))
 					) : (
 						<div class="flex items-center justify-between py-2">
 							<dt class="text-slate-300 font-semibold flex items-center gap-1">
