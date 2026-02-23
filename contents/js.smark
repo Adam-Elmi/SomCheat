@@ -1,25 +1,18 @@
 [Header = title:Var, version:1, release:2, author:Adam, category:Concept][end]
-
 # Intro
-[Intro]
-This is an intro
-[end]
-
+[Intro]This is an intro[end]
 # Structure
 [Structure]
-
 # Section: JS
 [Section]
 # JS
 @_Code_@: js, File.js;
 console.log("Hello World")
 @_end_@
-
 @_table_@: A, B, C;
 1, 2, 3
 @_end_@
 [end]
-
 # Section: Lua
 [Section]
 # LUA
@@ -30,11 +23,9 @@ print("Hello World")
 @_step_@: step 2;
 This is step 1
 @_end_@
-
 @_step_@: step 2;
 This is step 2
 @_end_@
-
 @_step_@: 3;
 This is step 3
 @_end_@
@@ -43,12 +34,9 @@ This is step 3
 Somcheat, www.somcheat.dev, THis is somcheat's site
 Somcheat, www.somcheat.dev, THis is somcheat's site
 @_end_@
-
 Hello
 @_Colorize_@: somcheat-blue, true;
 World
 @_end_@
 [end]
-
-
 [end]
