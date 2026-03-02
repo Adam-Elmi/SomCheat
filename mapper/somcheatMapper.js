@@ -70,10 +70,11 @@ somcheatMapper.register(["Section", "section"], ({ content }) => {
 somcheatMapper.register(
 	["Code", "code"],
 	({ args, content }) => {
-		const lang = args[0] || args["lang"] || "text";
+    const lang = safeArg(args, 0, "lang", null, null, "text");
+		const filename = safeArg(args, 1, "filename", null, null, "");
 		const code = md.codeBlock(content, lang);
 		return tag("Code")
-			.attributes(args[1] ? { filename: args[1] || args["filename"] || "" } : null)
+			.attributes(filename ? { filename } : null)
 			.body(code);
 	},
 	{ escape: false }
@@ -82,7 +83,7 @@ somcheatMapper.register(
 //  Message Component                                                         //
 // ========================================================================== //
 somcheatMapper.register(["Message", "message"], ({ args, content }) => {
-	return tag("Message").attributes({ type: args[0] }).body(content);
+	return tag("Message").attributes({ type: safeArg(args, 0, "type", null, null, "note") }).body(content);
 });
 // ========================================================================== //
 //  Table Component                                                           //
@@ -102,9 +103,6 @@ somcheatMapper.register(["Table", "table"], ({ args, content }) => {
 						let rowData = line.split(",");
 						rowData = rowData.map(r => {
 							r = r.trim();
-							if (r.startsWith("-")) {
-								r = r.slice(1).trim();
-							}
 							return r;
 						});
 						return { row: rowData };
@@ -120,8 +118,8 @@ somcheatMapper.register(["Table", "table"], ({ args, content }) => {
 somcheatMapper.register(["Steps", "steps"], ({ args, content }) => {
 	return tag("Steps")
 		.attributes({
-			title: args[0],
-			description: args[1]
+			title: safeArg(args, 0, "title", null, null, ""),
+			description: safeArg(args, 1, "description", null, null, "")
 		})
 		.body(content);
 });
@@ -129,7 +127,7 @@ somcheatMapper.register(["Steps", "steps"], ({ args, content }) => {
 //  Step Component                                                            //
 // ========================================================================== //
 somcheatMapper.register(["Step", "step"], ({ args, content }) => {
-	return tag("Step").attributes({ title: args[0] }).body(content.trim());
+	return tag("Step").attributes({ title: safeArg(args, 0, "title", null, null, "") }).body(content.trim());
 });
 // ========================================================================== //
 //  References Component                                                      //
@@ -164,19 +162,19 @@ somcheatMapper.register(["Colorize", "colorize"], ({ args, content }) => {
 		.props([
 			{
 				__type__: "string",
-				color: args[0]
+				color: safeArg(args, undefined, "color", null, null, "inherit")
 			},
 			{
 				__type__: "other",
-				is_bold: args[1] ?? false
+				is_bold: safeArg(args, undefined, "is_bold", null, null, false)
 			},
 			{
 				__type__: "other",
-				is_italic: args[2] ?? false
+				is_italic: safeArg(args, undefined, "is_italic", null, null, false)
 			},
 			{
 				__type__: "other",
-				is_both: args[3] ?? false
+				is_both: safeArg(args, undefined, "is_both", null, null, false)
 			}
 		])
 		.body(content.trim());
