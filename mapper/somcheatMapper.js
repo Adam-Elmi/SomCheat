@@ -1,6 +1,9 @@
-import { Mapper } from "sommark";
+import { Mapper, MDX } from "sommark";
 
 const somcheatMapper = new Mapper();
+somcheatMapper.outputs = MDX.outputs;
+somcheatMapper.removeOutput("table");
+
 const somcheat_imports = somcheatMapper.raw_js_imports([
 	{ name: "Intro", path: "../../Somcheat-Components/Intro.astro" },
 	{ name: "Structure", path: "../../Somcheat-Components/Structure.astro" },
@@ -17,25 +20,20 @@ const somcheat_imports = somcheatMapper.raw_js_imports([
 
 const { tag, md, safeArg, makeFrontmatter } = somcheatMapper;
 
-somcheatMapper.register("Message", ({ args, content }) => {
-  const type = safeArg(args, 0, "type", null, null, "normal");
-	return tag("Message")
-		.props([{ __type__: "string", type }])
-		.body(content);
-});
-
+// ========================================================================== //
+//  Imports and FrontMatter                                                   //
+// ========================================================================== //
 somcheatMapper.register(
 	["Header", "header"],
-  ({ args }) => {
-    const [title, version, release, author, category] = args
+	({ args }) => {
 		return (
 			makeFrontmatter({
 				layout: "../../Layouts/SecondLayout.astro",
-				title,
-				version,
-				release,
-				author: ["mdx", "astro", "docs"],
-				category
+				title: safeArg(args, undefined, "title", null, null, ""),
+				version: safeArg(args,undefined, "version", null, null, ""),
+				release: safeArg(args,undefined, "release", null, null, ""),
+				author: safeArg(args,undefined, "author", null, null, ""),
+				category: safeArg(args,undefined, "category", null, null, "")
 			}) + somcheat_imports
 		);
 	},
@@ -47,19 +45,28 @@ somcheatMapper.register(
 		}
 	}
 );
-
+// ========================================================================== //
+//  Into Component                                                            //
+// ========================================================================== //
 somcheatMapper.register(["Intro", "intro"], ({ content }) => {
+  content = content;
 	return tag("Intro").body(content);
 });
-
+// ========================================================================== //
+//  Structure Component                                                       //
+// ========================================================================== //
 somcheatMapper.register(["Structure", "structure"], ({ content }) => {
 	return tag("Structure").body(content);
 });
-
+// ========================================================================== //
+//  Section Component                                                         //
+// ========================================================================== //
 somcheatMapper.register(["Section", "section"], ({ content }) => {
 	return tag("Section").body(content);
 });
-
+// ========================================================================== //
+//  Code Component                                                            //
+// ========================================================================== //
 somcheatMapper.register(
 	["Code", "code"],
 	({ args, content }) => {
@@ -71,11 +78,15 @@ somcheatMapper.register(
 	},
 	{ escape: false }
 );
-
+// ========================================================================== //
+//  Message Component                                                         //
+// ========================================================================== //
 somcheatMapper.register(["Message", "message"], ({ args, content }) => {
 	return tag("Message").attributes({ type: args[0] }).body(content);
 });
-
+// ========================================================================== //
+//  Table Component                                                           //
+// ========================================================================== //
 somcheatMapper.register(["Table", "table"], ({ args, content }) => {
 	content = content.split("\n").filter(line => line !== "");
 	return tag("Table")
@@ -103,7 +114,9 @@ somcheatMapper.register(["Table", "table"], ({ args, content }) => {
 		])
 		.selfClose();
 });
-
+// ========================================================================== //
+//   Steps Component                                                          //
+// ========================================================================== //
 somcheatMapper.register(["Steps", "steps"], ({ args, content }) => {
 	return tag("Steps")
 		.attributes({
@@ -112,11 +125,15 @@ somcheatMapper.register(["Steps", "steps"], ({ args, content }) => {
 		})
 		.body(content);
 });
-
+// ========================================================================== //
+//  Step Component                                                            //
+// ========================================================================== //
 somcheatMapper.register(["Step", "step"], ({ args, content }) => {
 	return tag("Step").attributes({ title: args[0] }).body(content.trim());
 });
-
+// ========================================================================== //
+//  References Component                                                      //
+// ========================================================================== //
 somcheatMapper.register(
 	["References", "references"],
 	({ content }) => {
@@ -139,7 +156,9 @@ somcheatMapper.register(
 	},
 	{ escape: false }
 );
-
+// ========================================================================== //
+//  Colorize Component                                                        //
+// ========================================================================== //
 somcheatMapper.register(["Colorize", "colorize"], ({ args, content }) => {
 	return tag("Colorize")
 		.props([
