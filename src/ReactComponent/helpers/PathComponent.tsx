@@ -2,15 +2,16 @@ import { RightArrow } from "../icons/Arrow_Icons";
 import replacer from "../../utils/replacer";
 
 export default function PathComponent({ path }: { path: string }) {
+
   let paths = path.split("/").filter((char) => char !== "");
   return (
     paths &&
-    paths.map((_path, i) => (
+    paths.map((_path, i, arr) => (
       <div key={i} className="flex items-center gap-3">
         <a
           key={i}
           className="no-underline italic hover:text-indigo-500 text-slate-500"
-          href={_path === "cheatsheets" ? "/" + _path : _path}
+          href={`/${arr.slice(0, i + 1).join("/")}`}
         >
           {replacer(_path)}
         </a>
