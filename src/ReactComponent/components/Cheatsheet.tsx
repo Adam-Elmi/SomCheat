@@ -26,24 +26,7 @@ export default function CheatSheet() {
             <div className="flex gap-3 items-center">
               {icon}
               <h1 className="text-[1.1rem] font-medium text-slate-500 italic">
-                {
-                  id === "langs"
-                  ? _name
-                  : id === "dbs"
-                  ? _name
-                  : id === "frame"
-                  ? _name
-                  : id === "os"
-                  ? _name
-                  : id === "lib"
-                  ? _name
-                  : id === "run"
-                  ? _name
-                  : id === "dev"
-                  ? _name
-                  : id === "add" 
-                  ?  _name
-                  : id === "con" ? _name : ""}
+                {_name}
               </h1>
             </div>
             {/* 
