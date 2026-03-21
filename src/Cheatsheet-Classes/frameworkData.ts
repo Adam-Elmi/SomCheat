@@ -10,7 +10,7 @@ import { getAllCheatsheets } from "../data/cheatsheets";
 const all = getAllCheatsheets();
 
 const frameworkData: CheatsheetType[] = all
-  .filter(c => c.category === "Framework")
-  .map(c => new FrameworkData(c.id, c.title, c.lastModified || "Unknown", undefined));
+  .filter(c => c.category === "Frameworks")
+  .map(c => new FrameworkData(c.id, c.title, c.category, c.lastModified || "Unknown", undefined));
 
 export default frameworkData;
