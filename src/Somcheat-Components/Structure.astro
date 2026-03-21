@@ -3,247 +3,238 @@ import { getAllCheatsheets } from "../data/cheatsheets";
 import { TableOfContentsIcon } from "../ReactComponent/icons/Other_Icons";
 import TableOfContents from "./TableOfContents.astro";
 
-const posts = import.meta.glob("../pages/cheatsheets/*.mdx");
+// Languages
+const languages = import.meta.glob("../pages/cheatsheets/languages/*.mdx");
+// Databases
+const databases = import.meta.glob("../pages/cheatsheets/databases/*.mdx");
+// Frameworks
+const frameworks = import.meta.glob("../pages/cheatsheets/frameworks/*.mdx");
+// Libraries
+const libraries = import.meta.glob("../pages/cheatsheets/libraries/*.mdx");
+// Platform
+const platforms = import.meta.glob("../pages/cheatsheets/platforms/*.mdx");
+// Dev-Tools
+const devTools = import.meta.glob("../pages/cheatsheets/dev-tools/*.mdx");
+// Other
+const other = import.meta.glob("../pages/cheatsheets/other/*.mdx");
+
+const modules = [languages, databases, frameworks, libraries, platforms, devTools, other];
+const all_in_one = {};
+for (const module of modules) {
+	for (const data in module) {
+		// @ts-ignore
+		all_in_one[data] = module[data];
+	}
+}
+
 const cheatsheets = getAllCheatsheets();
 let headings: { depth: number; slug: string; text: string }[] = [];
 
 interface MarkdownInstance {
-    getHeadings: () => { depth: number; slug: string; text: string }[];
+	getHeadings: () => { depth: number; slug: string; text: string }[];
 }
 
-for (const path in posts) {
-    const currentPath = Astro.url.pathname.replace(/\/$/, "");
-    const fileName = path.split("/").pop()?.replace(".mdx", "");
+for (const path in all_in_one) {
+	const currentPath = Astro.url.pathname.replace(/\/$/, "");
+	const fileName = path.split("/").pop()?.replace(".mdx", "");
 
-    if (fileName && currentPath.endsWith(fileName)) {
-        const mod = (await posts[path]()) as MarkdownInstance;
-        headings = mod.getHeadings();
-        break;
-    }
+	if (fileName && currentPath.endsWith(fileName)) {
+		// @ts-ignore
+		const mod = (await all_in_one[path]()) as MarkdownInstance;
+		headings = mod.getHeadings();
+		break;
+	}
 }
 ---
 
 <div class="w-full relative">
-    <div
-        class="w-full min-h-15 dark:bg-[#101012] dark:border-gray-700/50 bg-white border-b border-slate-200 flex gap-4 items-center justify-center"
-    >
-        <!-- Sun Icon -->
-        <button id="light-btn" class="text-yellow-500 cursor-pointer p-2">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-            >
-                <g fill="none">
-                    <path
-                        d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
-                    ></path>
-                    <path
-                        fill="currentColor"
-                        d="M12 19a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1m6.364-2.05l.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414m-12.728 0a1 1 0 0 1 1.497 1.32l-.083.094l-.707.707a1 1 0 0 1-1.497-1.32l.083-.094zM12 6a6 6 0 1 1 0 12a6 6 0 0 1 0-12m-8 5a1 1 0 0 1 .117 1.993L4 13H3a1 1 0 0 1-.117-1.993L3 11zm17 0a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2zM4.929 4.929a1 1 0 0 1 1.32-.083l.094.083l.707.707a1 1 0 0 1-1.32 1.497l-.094-.083l-.707-.707a1 1 0 0 1 0-1.414m14.142 0a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1"
-                    ></path>
-                </g>
-            </svg>
-        </button>
-        <!-- Moon Icon -->
-        <button id="dark-btn" class="text-indigo-400 cursor-pointer">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    fill="currentColor"
-                    d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981"
-                ></path>
-            </svg>
-        </button>
-        <!-- Table of Contents Icon -->
-        <button
-            id="toc-btn"
-            class="xl:hidden cursor-pointer dark:text-gray-200"
-        >
-            <TableOfContentsIcon dimension={24} />
-        </button>
-    </div>
-    <div
-        class="w-full sticky top-0 z-100 dark:bg-[#101012] dark:border-gray-700/50 bg-white border-b border-slate-200 flex items-center justify-center flex-col group/nav"
-    >
-        <button
-            id="scroll-left-btn"
-            class="absolute left-0 z-20 h-full px-2 bg-linear-to-r from-white via-white to-transparent dark:from-[#101012] dark:via-[#101012] dark:to-transparent cursor-pointer flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            >
-                <path d="m15 18-6-6 6-6"></path>
-            </svg>
-        </button>
+	<div
+		class="w-full min-h-15 dark:bg-[#101012] dark:border-gray-700/50 bg-white border-b border-slate-200 flex gap-4 items-center justify-center"
+	>
+		<!-- Sun Icon -->
+		<button id="light-btn" class="text-yellow-500 cursor-pointer p-2">
+			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+				<g fill="none">
+					<path
+						d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+					></path>
+					<path
+						fill="currentColor"
+						d="M12 19a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1m6.364-2.05l.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414m-12.728 0a1 1 0 0 1 1.497 1.32l-.083.094l-.707.707a1 1 0 0 1-1.497-1.32l.083-.094zM12 6a6 6 0 1 1 0 12a6 6 0 0 1 0-12m-8 5a1 1 0 0 1 .117 1.993L4 13H3a1 1 0 0 1-.117-1.993L3 11zm17 0a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2zM4.929 4.929a1 1 0 0 1 1.32-.083l.094.083l.707.707a1 1 0 0 1-1.32 1.497l-.094-.083l-.707-.707a1 1 0 0 1 0-1.414m14.142 0a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1"
+					></path>
+				</g>
+			</svg>
+		</button>
+		<!-- Moon Icon -->
+		<button id="dark-btn" class="text-indigo-400 cursor-pointer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+				<path
+					fill="currentColor"
+					d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981"
+				></path>
+			</svg>
+		</button>
+		<!-- Table of Contents Icon -->
+		<button id="toc-btn" class="xl:hidden cursor-pointer dark:text-gray-200">
+			<TableOfContentsIcon dimension={24} />
+		</button>
+	</div>
+	<div
+		class="w-full sticky top-0 z-100 dark:bg-[#101012] dark:border-gray-700/50 bg-white border-b border-slate-200 flex items-center justify-center flex-col group/nav"
+	>
+		<button
+			id="scroll-left-btn"
+			class="absolute left-0 z-20 h-full px-2 bg-linear-to-r from-white via-white to-transparent dark:from-[#101012] dark:via-[#101012] dark:to-transparent cursor-pointer flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<path d="m15 18-6-6 6-6"></path>
+			</svg>
+		</button>
 
-        <u
-            id="scroll-box"
-            class="scrollbar-hide dark:text-slate-300 text-[12px] font-medium active:cursor-grabbing select-none overflow-x-auto no-underline decoration-none hover:no-underline visited:no-underline w-full flex flex-nowrap whitespace-nowrap items-center gap-10 px-8 scroll-smooth"
-        >
-            {
-                cheatsheets.map((value) => {
-                    const path = "/cheatsheets/" + value.id;
-                    return (
-                        <li
-                            data-active={
-                                Astro.url.pathname === path ||
-                                Astro.url.pathname === path + "/"
-                                    ? "true"
-                                    : undefined
-                            }
-                            class={`list-none px-4 py-4 ${Astro.url.pathname === path || Astro.url.pathname === path + "/" ? "bg-indigo-600 text-slate-200" : ""}`}
-                        >
-                            <a href={path}>{value.title} </a>
-                        </li>
-                    );
-                })
-            }
-        </u>
+		<u
+			id="scroll-box"
+			class="scrollbar-hide dark:text-slate-300 text-[12px] font-medium active:cursor-grabbing select-none overflow-x-auto no-underline decoration-none hover:no-underline visited:no-underline w-full flex flex-nowrap whitespace-nowrap items-center gap-10 px-8 scroll-smooth"
+		>
+			{
+				cheatsheets.map(value => {
+					const path = value.path;
+					return (
+						<li
+							data-active={Astro.url.pathname === path || Astro.url.pathname === path + "/" ? "true" : undefined}
+							class={`list-none px-4 py-4 ${Astro.url.pathname === path || Astro.url.pathname === path + "/" ? "bg-indigo-600 text-slate-200" : ""}`}
+						>
+							<a href={path}>{value.title} </a>
+						</li>
+					);
+				})
+			}
+		</u>
 
-        <button
-            id="scroll-right-btn"
-            class="absolute right-0 z-20 h-full px-2 bg-linear-to-l from-white via-white to-transparent dark:from-[#101012] dark:via-[#101012] dark:to-transparent cursor-pointer flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            >
-                <path d="m9 18 6-6-6-6"></path>
-            </svg>
-        </button>
-    </div>
-    <div
-        id="layout-container"
-        class="p-4 flex gap-8 flex-wrap bg-slate-50 justify-between items-start"
-    >
-        <!-- Sidebar Desktop -->
-        {
-            headings.length > 0 && (
-                <aside class="hidden xl:block w-64 top-16 sticky self-start overflow-y-auto max-h-[90vh] p-4 border-r border-slate-200 dark:border-gray-700/50">
-                    <div class="font-bold text-lg mb-4 text-slate-800 dark:text-gray-200">
-                        Table of Contents
-                    </div>
-                    <TableOfContents headings={headings} />
-                </aside>
-            )
-        }
+		<button
+			id="scroll-right-btn"
+			class="absolute right-0 z-20 h-full px-2 bg-linear-to-l from-white via-white to-transparent dark:from-[#101012] dark:via-[#101012] dark:to-transparent cursor-pointer flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<path d="m9 18 6-6-6-6"></path>
+			</svg>
+		</button>
+	</div>
+	<div id="layout-container" class="p-4 flex gap-8 flex-wrap bg-slate-50 justify-between items-start">
+		<!-- Sidebar Desktop -->
+		{
+			headings.length > 0 && (
+				<aside class="hidden xl:block w-64 top-16 sticky self-start overflow-y-auto max-h-[90vh] p-4 border-r border-slate-200 dark:border-gray-700/50">
+					<div class="font-bold text-lg mb-4 text-slate-800 dark:text-gray-200">Table of Contents</div>
+					<TableOfContents headings={headings} />
+				</aside>
+			)
+		}
 
-        <div
-            class="flex-1 min-w-0 w-full gap-2 flex justify-center items-center flex-col"
-        >
-            <slot />
-        </div>
-    </div>
+		<div class="flex-1 min-w-0 w-full gap-2 flex justify-center items-center flex-col">
+			<slot />
+		</div>
+	</div>
 
-    <!-- Mobile Modal -->
-    <div
-        id="mobile-toc-modal"
-        class="fixed inset-0 z-100 bg-white dark:bg-[#101012] p-6 overflow-y-auto hidden"
-    >
-        <div class="flex justify-between items-center mb-6">
-            <div class="font-bold text-xl text-slate-800 dark:text-gray-200">
-                On this page
-            </div>
-            <button
-                id="close-toc-btn"
-                class="p-2 cursor-pointer text-slate-500 hover:text-slate-800 dark:text-gray-400 dark:hover:text-gray-200"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                >
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-        <TableOfContents headings={headings} />
-    </div>
+	<!-- Mobile Modal -->
+	<div id="mobile-toc-modal" class="fixed inset-0 z-100 bg-white dark:bg-[#101012] p-6 overflow-y-auto hidden">
+		<div class="flex justify-between items-center mb-6">
+			<div class="font-bold text-xl text-slate-800 dark:text-gray-200">On this page</div>
+			<button
+				id="close-toc-btn"
+				class="p-2 cursor-pointer text-slate-500 hover:text-slate-800 dark:text-gray-400 dark:hover:text-gray-200"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<line x1="18" y1="6" x2="6" y2="18"></line>
+					<line x1="6" y1="6" x2="18" y2="18"></line>
+				</svg>
+			</button>
+		</div>
+		<TableOfContents headings={headings} />
+	</div>
 </div>
 <style>
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-    }
-    .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
 </style>
 <script>
-    import "../utils/mouse_scroll.js";
+	import "../utils/mouse_scroll.js";
 
-    const scrollBox = document.getElementById("scroll-box");
-    const leftBtn = document.getElementById("scroll-left-btn");
-    const rightBtn = document.getElementById("scroll-right-btn");
+	const scrollBox = document.getElementById("scroll-box");
+	const leftBtn = document.getElementById("scroll-left-btn");
+	const rightBtn = document.getElementById("scroll-right-btn");
 
-    const tocBtn = document.getElementById("toc-btn");
-    const closeTocBtn = document.getElementById("close-toc-btn");
-    const mobileTocModal = document.getElementById("mobile-toc-modal");
+	const tocBtn = document.getElementById("toc-btn");
+	const closeTocBtn = document.getElementById("close-toc-btn");
+	const mobileTocModal = document.getElementById("mobile-toc-modal");
 
-    if (tocBtn && mobileTocModal && closeTocBtn) {
-        tocBtn.addEventListener("click", () => {
-            mobileTocModal.classList.remove("hidden");
-            document.body.style.overflow = "hidden";
-        });
+	if (tocBtn && mobileTocModal && closeTocBtn) {
+		tocBtn.addEventListener("click", () => {
+			mobileTocModal.classList.remove("hidden");
+			document.body.style.overflow = "hidden";
+		});
 
-        closeTocBtn.addEventListener("click", () => {
-            mobileTocModal.classList.add("hidden");
-            document.body.style.overflow = "";
-        });
+		closeTocBtn.addEventListener("click", () => {
+			mobileTocModal.classList.add("hidden");
+			document.body.style.overflow = "";
+		});
 
-        const links = mobileTocModal.querySelectorAll("a");
-        links.forEach((link) => {
-            link.addEventListener("click", () => {
-                mobileTocModal.classList.add("hidden");
-                document.body.style.overflow = "";
-            });
-        });
-    }
+		const links = mobileTocModal.querySelectorAll("a");
+		links.forEach(link => {
+			link.addEventListener("click", () => {
+				mobileTocModal.classList.add("hidden");
+				document.body.style.overflow = "";
+			});
+		});
+	}
 
-    if (scrollBox && leftBtn && rightBtn) {
-        leftBtn.addEventListener("click", () => {
-            scrollBox.scrollBy({ left: -200, behavior: "smooth" });
-        });
+	if (scrollBox && leftBtn && rightBtn) {
+		leftBtn.addEventListener("click", () => {
+			scrollBox.scrollBy({ left: -200, behavior: "smooth" });
+		});
 
-        rightBtn.addEventListener("click", () => {
-            scrollBox.scrollBy({ left: 200, behavior: "smooth" });
-        });
+		rightBtn.addEventListener("click", () => {
+			scrollBox.scrollBy({ left: 200, behavior: "smooth" });
+		});
 
-        const activeItem = scrollBox.querySelector('[data-active="true"]');
-        if (activeItem instanceof HTMLElement) {
-            const scrollLeft =
-                activeItem.offsetLeft -
-                scrollBox.clientWidth / 2 +
-                activeItem.clientWidth / 2;
-            scrollBox.scrollTo({ left: scrollLeft, behavior: "instant" });
-        }
-    }
+		const activeItem = scrollBox.querySelector('[data-active="true"]');
+		if (activeItem instanceof HTMLElement) {
+			const scrollLeft = activeItem.offsetLeft - scrollBox.clientWidth / 2 + activeItem.clientWidth / 2;
+			scrollBox.scrollTo({ left: scrollLeft, behavior: "instant" });
+		}
+	}
 </script>
