@@ -10,7 +10,7 @@ import { getAllCheatsheets } from "../data/cheatsheets";
 const all = getAllCheatsheets();
 
 const platformsData: CheatsheetType[] = all
-  .filter(c => c.category === "Platform")
-  .map(c => new PlatformData(c.id, c.title, c.lastModified || "Unknown", undefined));
+  .filter(c => c.category === "Platforms")
+  .map(c => new PlatformData(c.id, c.title, c.category, c.lastModified || "Unknown", undefined));
 
 export default platformsData;
