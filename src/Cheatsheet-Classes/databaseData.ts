@@ -10,7 +10,7 @@ import { getAllCheatsheets } from "../data/cheatsheets";
 const all = getAllCheatsheets();
 
 const databasesData: CheatsheetType[] = all
-  .filter(c => c.category === "Database")
-  .map(c => new DatabaseData(c.id, c.title, c.lastModified || "Unknown", undefined));
+  .filter(c => c.category === "Databases")
+  .map(c => new DatabaseData(c.id, c.title, c.category, c.lastModified || "Unknown", undefined));
 
 export default databasesData;
