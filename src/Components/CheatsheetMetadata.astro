@@ -1,0 +1,44 @@
+---
+import LastUpdated from "./LastUpdated.astro";
+import Contributor from "./Contributor.astro";
+import CardTitle from "./CardTitle.astro";
+import CardVersion from "./CardVersion.astro";
+import CardRelease from "./CardRelease.astro";
+import Author from "./Author.astro";
+import CardCategory from "./CardCategory.astro";
+import Description from "./Description.astro";
+const { lastUpdated, updatedBy, title, category, version, release, authors, author } = Astro.props;
+---
+
+<div class="w-full p-5 border-b dark:border-b-slate-700/50 dark:bg-[#15151a] bg-gray-800 relative">
+	<div class="flex items-center gap-4 flex-col">
+		<!-- Last Updated -->
+		<LastUpdated {lastUpdated} />
+		<!-- Updated By: Contributor -->
+		<Contributor {updatedBy} />
+	</div>
+	<!-- Info Card -->
+	<div
+		class="bg-linear-to-br from-[#232526]/80 to-[#18191b]/70 w-full max-w-130 rounded-xl border border-slate-700/60 shadow-lg overflow-hidden mt-7"
+	>
+		<!-- Title -->
+		<CardTitle {title} {category} />
+		<div class="p-5">
+			<dl class="divide-y divide-slate-800">
+				<!-- Version -->
+				<CardVersion {version} />
+				<!-- Release Date -->
+				<CardRelease {release} />
+				<!-- Author -->
+				<Author {authors} {author} />
+				<!-- Category -->
+				<CardCategory {category} />
+			</dl>
+		</div>
+	</div>
+
+	<!-- Description -->
+	<Description>
+		<slot />
+	</Description>
+</div>
