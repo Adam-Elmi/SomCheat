@@ -1,0 +1,13 @@
+---
+import { UserIcon } from "../ReactComponent/icons/Other_Icons";
+const { updatedBy } = Astro.props;
+---
+
+<!-- Updated By: Contributor -->
+<div
+	class="flex flex-wrap justify-center items-center max-[700px]:static gap-2 text-yellow-200 bg-slate-900/80 rounded-full px-3 py-1 shadow absolute top-2 right-70 border border-slate-700/60"
+>
+	<UserIcon dimension={18} color="oklch(90.5% 0.182 98.111)" />
+	<span class="italic text-sm font-medium tracking-wide">Updated by:</span>
+	<span class="font-mono text-yellow-100">{updatedBy}</span>
+</div>
