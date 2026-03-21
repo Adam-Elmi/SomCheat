@@ -1,196 +1,596 @@
 {
   "src/pages/cheatsheets/languages/bash.mdx": {
-    "lastUpdated": "2026-03-21T11:05:14.020Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:58+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "8192f29ea59af387a2f8f1d3febc12aa28c77315"
   },
   "src/pages/cheatsheets/languages/c.mdx": {
-    "lastUpdated": "2026-03-21T11:05:17.320Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:56+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "878978f79669c70952a8b4b230668980d277a7ab"
   },
   "src/pages/cheatsheets/languages/cpp.mdx": {
-    "lastUpdated": "2026-03-21T11:05:22.063Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:53+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "30f0446a3296ea23e86fb61b8ac9c19e108a6396"
   },
   "src/pages/cheatsheets/languages/crystal.mdx": {
-    "lastUpdated": "2026-03-21T11:05:24.632Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:51+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "579f60131172c64a839efdc4a40eb96c933815d3"
   },
   "src/pages/cheatsheets/languages/cs.mdx": {
-    "lastUpdated": "2026-03-21T11:06:09.340Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:47+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "c30ab584aa2a9d637fea0e8aa2b049b804e54891"
   },
   "src/pages/cheatsheets/languages/css.mdx": {
-    "lastUpdated": "2026-03-21T11:06:12.260Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:45+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "c8f61e9af326ffc50c1fbafba83885d13b17a9c7"
   },
   "src/pages/cheatsheets/languages/dart.mdx": {
-    "lastUpdated": "2026-03-21T11:06:15.185Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:43+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "1093f4e786820d722bf308e587fd6c7ad5980500"
   },
   "src/pages/cheatsheets/languages/elixir.mdx": {
-    "lastUpdated": "2026-03-21T11:06:18.941Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:40+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "90b130d37a9b508ca405b2452117f19d06a23236"
   },
   "src/pages/cheatsheets/languages/erlang.mdx": {
-    "lastUpdated": "2026-03-21T11:06:22.807Z",
+    "lastUpdated": "2026-03-21T23:10:38+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "2cc799e36a1d1a94b35092a2283e4f7eb1703f0e"
+  },
+  "src/pages/cheatsheets/languages/fish.mdx": {
+    "lastUpdated": "2026-03-21T21:24:32.482Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
   "src/pages/cheatsheets/languages/gleam.mdx": {
-    "lastUpdated": "2026-03-21T11:06:25.792Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:35+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "e8bec4acd2baad81d0f94fc62b3cd96489b937ef"
   },
   "src/pages/cheatsheets/languages/go.mdx": {
-    "lastUpdated": "2026-03-21T13:06:11.620Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:31+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "e05ff9183b3f128dc1072c8807659b0e890c4165"
   },
   "src/pages/cheatsheets/languages/html.mdx": {
-    "lastUpdated": "2026-03-21T11:06:32.511Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:29+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "bf9d4ee4be5f52e16ee5fbcc02cddc16a0ff69d3"
   },
   "src/pages/cheatsheets/languages/java.mdx": {
-    "lastUpdated": "2026-03-21T11:06:36.484Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:23+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "d03d8f53191d6eb0b57924f3c34e4a0110f21bc3"
   },
   "src/pages/cheatsheets/languages/js.mdx": {
-    "lastUpdated": "2026-03-21T11:18:18.364Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:20+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "e013555ae7174d3ef76bcb9df23ea9f1dcabe6d3"
   },
   "src/pages/cheatsheets/languages/json.mdx": {
-    "lastUpdated": "2026-03-21T11:06:39.632Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:17+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "cd1e44533a397f24c9501a6fce648e6c6991c866"
   },
   "src/pages/cheatsheets/languages/julia.mdx": {
-    "lastUpdated": "2026-03-21T11:06:44.364Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:14+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "661aebd988309b89c09f1918dcf6416bea36f99f"
   },
   "src/pages/cheatsheets/languages/kotlin.mdx": {
-    "lastUpdated": "2026-03-21T11:06:47.301Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:11+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "c93a905bb371c913d009373f763f6eb46a20fe17"
   },
   "src/pages/cheatsheets/languages/lua.mdx": {
-    "lastUpdated": "2026-03-19T21:04:20.830Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:08+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "f4b60347394dd0dcc47e5d414a1429db568f8e1c"
   },
   "src/pages/cheatsheets/languages/markdown.mdx": {
-    "lastUpdated": "2026-03-21T11:06:54.743Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:06+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "145a81db020d5ea4970f8fcb68d1d581eb022bc7"
   },
   "src/pages/cheatsheets/languages/mdx.mdx": {
-    "lastUpdated": "2026-03-21T11:07:20.245Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:10:02+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "49a25a747dfecf35c4e8c5fedcf0ce9e795ac3cf"
   },
   "src/pages/cheatsheets/languages/nim.mdx": {
-    "lastUpdated": "2026-03-21T11:07:53.728Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:59+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "a8845b15eac1b01da0ff27778b90dbfabd0df221"
   },
   "src/pages/cheatsheets/languages/ocaml.mdx": {
-    "lastUpdated": "2026-03-21T11:07:57.500Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:56+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "e385b2b222b0b2e5aa57e29bac7325da3c67718a"
   },
   "src/pages/cheatsheets/languages/perl.mdx": {
-    "lastUpdated": "2026-03-21T11:08:02.834Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:53+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "9b16cb795518060ddda3e20e458f99899c6e4e23"
   },
   "src/pages/cheatsheets/languages/php.mdx": {
-    "lastUpdated": "2026-03-21T11:08:06.605Z",
+    "lastUpdated": "2026-03-21T23:09:50+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "e6c96f91633423c3bdffa662fbc07613e297dd25"
+  },
+  "src/pages/cheatsheets/languages/powershell.mdx": {
+    "lastUpdated": "2026-03-21T21:28:08.045Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
   "src/pages/cheatsheets/languages/py.mdx": {
-    "lastUpdated": "2026-03-21T11:08:09.862Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:47+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "464e3fb955574c86f2ca995aaeb5645017c7939a"
   },
   "src/pages/cheatsheets/languages/r.mdx": {
-    "lastUpdated": "2026-03-21T11:08:16.617Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:44+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "f84c7396582d712027b9c21b9d7e16129e6c4bcd"
   },
   "src/pages/cheatsheets/languages/rb.mdx": {
-    "lastUpdated": "2026-03-21T11:08:24.557Z",
+    "lastUpdated": "2026-03-21T23:09:42+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "a2cc7b6d481a51855fe465d4823420e733f6a9eb"
+  },
+  "src/pages/cheatsheets/languages/reason.mdx": {
+    "lastUpdated": "2026-03-21T21:38:54.888Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
   "src/pages/cheatsheets/languages/rust.mdx": {
-    "lastUpdated": "2026-03-21T11:08:27.956Z",
+    "lastUpdated": "2026-03-21T23:09:40+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "b4108f0e8d546767628d5268bfd97ad62f77848b"
+  },
+  "src/pages/cheatsheets/languages/sass.mdx": {
+    "lastUpdated": "2026-03-21T21:39:07.293Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
   "src/pages/cheatsheets/languages/sommark.mdx": {
-    "lastUpdated": "2026-03-21T11:08:32.833Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:37+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "8dbe1bedf3426ce2ddcb66fcdc91f1ecd0188074"
   },
   "src/pages/cheatsheets/languages/swift.mdx": {
-    "lastUpdated": "2026-03-21T11:08:36.754Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:32+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "1df763091154c538ddff6f1502945e0f26700cc6"
   },
   "src/pages/cheatsheets/languages/ts.mdx": {
-    "lastUpdated": "2026-03-21T11:08:40.058Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:27+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "66b6b6bfd31fb1bbb11cc9ad6d8e294ced1fcce3"
   },
   "src/pages/cheatsheets/languages/v.mdx": {
-    "lastUpdated": "2026-03-21T11:08:44.350Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:25+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "b96e7273464c7a72287b5361e638898d290349b9"
   },
   "src/pages/cheatsheets/languages/xml.mdx": {
-    "lastUpdated": "2026-03-21T11:08:47.689Z",
+    "lastUpdated": "2026-03-21T23:09:22+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "1a26a6cac814ee65320ccae193faeb29493cc06c"
+  },
+  "src/pages/cheatsheets/languages/yaml.mdx": {
+    "lastUpdated": "2026-03-21T23:09:20+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "2c826e99dfc03f3f80825256d3fa6296e62296b0"
+  },
+  "src/pages/cheatsheets/languages/zsh.mdx": {
+    "lastUpdated": "2026-03-21T21:30:31.183Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
-  "src/pages/cheatsheets/languages/yaml.mdx": {
-    "lastUpdated": "2026-03-21T11:08:51.214Z",
+  "src/pages/cheatsheets/databases/firestore.mdx": {
+    "lastUpdated": "2026-03-21T21:01:52.448Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
   "src/pages/cheatsheets/databases/mongodb.mdx": {
-    "lastUpdated": "2026-03-19T20:24:29.162Z",
+    "lastUpdated": "2026-03-21T23:11:06+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "0664b070a60eb7240670e1b56d876cfdb8e25da2"
+  },
+  "src/pages/cheatsheets/databases/mysql.mdx": {
+    "lastUpdated": "2026-03-21T21:03:02.971Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/databases/postgresql.mdx": {
+    "lastUpdated": "2026-03-21T21:39:48.786Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/databases/redis.mdx": {
+    "lastUpdated": "2026-03-21T21:03:34.011Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/databases/sqlite.mdx": {
+    "lastUpdated": "2026-03-21T21:03:47.326Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/angular.mdx": {
+    "lastUpdated": "2026-03-21T21:11:52.725Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/astro.mdx": {
+    "lastUpdated": "2026-03-21T21:12:03.623Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/bootstrap.mdx": {
+    "lastUpdated": "2026-03-21T21:12:20.971Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/bulma.mdx": {
+    "lastUpdated": "2026-03-21T21:12:39.236Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/django.mdx": {
+    "lastUpdated": "2026-03-21T21:12:51.079Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/dotnet.mdx": {
+    "lastUpdated": "2026-03-21T21:13:03.875Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/electron.mdx": {
+    "lastUpdated": "2026-03-21T21:13:22.436Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/ember.mdx": {
+    "lastUpdated": "2026-03-21T21:13:39.302Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/expressjs.mdx": {
+    "lastUpdated": "2026-03-21T21:14:15.458Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/flask.mdx": {
+    "lastUpdated": "2026-03-21T21:40:08.925Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/flutter.mdx": {
+    "lastUpdated": "2026-03-21T21:14:52.587Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/gin.mdx": {
+    "lastUpdated": "2026-03-21T21:14:47.837Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/jest.mdx": {
+    "lastUpdated": "2026-03-21T21:15:09.915Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/laravel.mdx": {
+    "lastUpdated": "2026-03-21T21:15:21.787Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/mocha.mdx": {
+    "lastUpdated": "2026-03-21T21:15:37.583Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/nextjs.mdx": {
+    "lastUpdated": "2026-03-21T21:16:22.146Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/nuxtjs.mdx": {
+    "lastUpdated": "2026-03-21T21:16:38.444Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/phoenix.mdx": {
+    "lastUpdated": "2026-03-21T21:17:02.120Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/pytest.mdx": {
+    "lastUpdated": "2026-03-21T21:17:19.745Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/pytorch.mdx": {
+    "lastUpdated": "2026-03-21T21:17:46.929Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/rails.mdx": {
+    "lastUpdated": "2026-03-21T21:18:01.628Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/reactnative.mdx": {
+    "lastUpdated": "2026-03-21T21:18:57.365Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/spring.mdx": {
+    "lastUpdated": "2026-03-21T21:19:10.083Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/svelte.mdx": {
+    "lastUpdated": "2026-03-21T21:19:26.711Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/frameworks/tailwind.mdx": {
+    "lastUpdated": "2026-03-21T21:40:25.158Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/axios.mdx": {
+    "lastUpdated": "2026-03-21T21:31:09.630Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/chartjs.mdx": {
+    "lastUpdated": "2026-03-21T21:31:23.389Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/d3.mdx": {
+    "lastUpdated": "2026-03-21T21:32:10.501Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/jquery.mdx": {
+    "lastUpdated": "2026-03-21T21:32:35.039Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/mongoose.mdx": {
+    "lastUpdated": "2026-03-21T21:32:48.295Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/numpy.mdx": {
+    "lastUpdated": "2026-03-21T21:33:01.544Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/pandas.mdx": {
+    "lastUpdated": "2026-03-21T21:33:28.537Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/prisma.mdx": {
+    "lastUpdated": "2026-03-21T21:33:49.612Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/react.mdx": {
+    "lastUpdated": "2026-03-21T21:34:12.044Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/redux.mdx": {
+    "lastUpdated": "2026-03-21T21:34:52.678Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/libraries/tensorflow.mdx": {
+    "lastUpdated": "2026-03-21T21:34:38.676Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/platforms/linux.mdx": {
+    "lastUpdated": "2026-03-21T21:37:22.425Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/platforms/macos.mdx": {
+    "lastUpdated": "2026-03-21T21:37:27.463Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/platforms/nixos.mdx": {
+    "lastUpdated": "2026-03-21T21:37:40.182Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/platforms/ubuntu.mdx": {
+    "lastUpdated": "2026-03-21T21:37:46.224Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/platforms/windows.mdx": {
+    "lastUpdated": "2026-03-21T21:37:50.433Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/runtimes/bun.mdx": {
+    "lastUpdated": "2026-03-21T21:37:56.162Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/runtimes/deno.mdx": {
+    "lastUpdated": "2026-03-21T21:37:59.924Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/runtimes/nodejs.mdx": {
+    "lastUpdated": "2026-03-21T21:38:03.215Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/babel.mdx": {
+    "lastUpdated": "2026-03-21T21:47:59.903Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/cargo.mdx": {
+    "lastUpdated": "2026-03-21T21:04:37.550Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/curl.mdx": {
+    "lastUpdated": "2026-03-21T21:04:49.741Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/docker.mdx": {
+    "lastUpdated": "2026-03-21T21:05:45.709Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/eslint.mdx": {
+    "lastUpdated": "2026-03-21T21:05:41.630Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/git.mdx": {
+    "lastUpdated": "2026-03-21T21:05:37.365Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/helix.mdx": {
+    "lastUpdated": "2026-03-21T21:05:27.014Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/luarocks.mdx": {
+    "lastUpdated": "2026-03-21T21:06:21.355Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/neovim.mdx": {
+    "lastUpdated": "2026-03-21T21:06:51.002Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/nix.mdx": {
+    "lastUpdated": "2026-03-21T21:07:31.962Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/npm.mdx": {
+    "lastUpdated": "2026-03-21T21:07:36.007Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/parcel.mdx": {
+    "lastUpdated": "2026-03-21T21:07:43.029Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/pip.mdx": {
+    "lastUpdated": "2026-03-21T21:08:05.872Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/prettier.mdx": {
+    "lastUpdated": "2026-03-21T21:08:14.307Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/rolldown.mdx": {
+    "lastUpdated": "2026-03-21T21:08:26.022Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/rollup.mdx": {
+    "lastUpdated": "2026-03-21T21:08:42.169Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/tmux.mdx": {
+    "lastUpdated": "2026-03-21T21:09:07.972Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/vim.mdx": {
+    "lastUpdated": "2026-03-21T21:09:34.734Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/vite.mdx": {
+    "lastUpdated": "2026-03-21T21:09:46.408Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/vscode.mdx": {
+    "lastUpdated": "2026-03-21T21:10:15.671Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/vue.mdx": {
+    "lastUpdated": "2026-03-21T21:10:06.868Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/devtools/webpack.mdx": {
+    "lastUpdated": "2026-03-21T21:10:37.585Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
   "src/pages/cheatsheets/other/32bit_and_64bit.mdx": {
-    "lastUpdated": "2026-03-21T11:14:48.157Z",
-    "updatedBy": "Local Dev",
-    "hash": "untracked"
+    "lastUpdated": "2026-03-21T23:09:16+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "35cfc8581af227c94de42343af2c5d482f31750c"
   },
   "src/pages/cheatsheets/other/ascii.mdx": {
-    "lastUpdated": "2026-03-21T11:14:53.744Z",
+    "lastUpdated": "2026-03-21T23:09:14+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "ba73607a4cd702c0fff910216b2c1596fb218193"
+  },
+  "src/pages/cheatsheets/other/base_conversion.mdx": {
+    "lastUpdated": "2026-03-21T21:36:08.911Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
   "src/pages/cheatsheets/other/binary.mdx": {
-    "lastUpdated": "2026-03-21T11:11:18.293Z",
+    "lastUpdated": "2026-03-21T23:09:11+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "a1c4dc6b8651bd2fb526e8e0de3a8cc6c2c51d3d"
+  },
+  "src/pages/cheatsheets/other/decimal.mdx": {
+    "lastUpdated": "2026-03-21T23:09:09+03:00",
+    "updatedBy": "Adam-Elmi",
+    "hash": "1ecc3d7dfa4f6c95a615b6f1eabe6b319f7ead7e"
+  },
+  "src/pages/cheatsheets/other/hex.mdx": {
+    "lastUpdated": "2026-03-21T21:35:42.904Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
-  "src/pages/cheatsheets/other/decimal.mdx": {
-    "lastUpdated": "2026-03-21T11:11:30.476Z",
+  "src/pages/cheatsheets/other/storage_units.mdx": {
+    "lastUpdated": "2026-03-21T21:37:00.100Z",
+    "updatedBy": "Local Dev",
+    "hash": "untracked"
+  },
+  "src/pages/cheatsheets/other/unicode.mdx": {
+    "lastUpdated": "2026-03-21T21:37:06.044Z",
     "updatedBy": "Local Dev",
     "hash": "untracked"
   },
