@@ -4,6 +4,7 @@ import replacer from "../../utils/replacer";
 import AllTasks from "./AllTasks";
 import FinishedTasks from "./FinishedTasks";
 import UnfinishedTasks from "./UnfinishedTasks";
+import aliases from "../../../constants/aliases";
 
 import { StatusIcon } from "../icons/Status_Icons";
 import { DateIcon, SearchIcon } from "../icons/Other_Icons";
@@ -20,9 +21,16 @@ export default function Updates() {
     if (!dir || !tasks) return [];
     return dir
       .map((d, i) => ({ dir: d, task: tasks[i] }))
-      .filter((item) =>
-        item.dir.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      .filter(item => {
+				// @ts-ignore
+				const alias = aliases[item.dir.toLowerCase()];
+				if (item.dir.toLowerCase().includes(searchTerm.toLowerCase())) {
+					return true;
+				} else if (alias && alias.includes(searchTerm.toLowerCase())) {
+					return true;
+				}
+				return false;
+			});
   }, [dir, tasks, searchTerm]);
 
   useEffect(() => {
