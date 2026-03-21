@@ -2,6 +2,7 @@ export type TargetType = "web" | "desktop" | "mobile";
 interface CheatsheetType {
   id: string;
   name: string;
+  category: string;
   lastModified: string;
   path: string;
   icon: React.ReactNode;
