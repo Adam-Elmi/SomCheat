@@ -13,12 +13,14 @@ const frameworks = import.meta.glob("../pages/cheatsheets/frameworks/*.mdx");
 const libraries = import.meta.glob("../pages/cheatsheets/libraries/*.mdx");
 // Platform
 const platforms = import.meta.glob("../pages/cheatsheets/platforms/*.mdx");
+// Runtimes
+const runtimes = import.meta.glob("../pages/cheatsheets/runtimes/*.mdx");
 // Dev-Tools
-const devTools = import.meta.glob("../pages/cheatsheets/dev-tools/*.mdx");
+const devTools = import.meta.glob("../pages/cheatsheets/devtools/*.mdx");
 // Other
 const other = import.meta.glob("../pages/cheatsheets/other/*.mdx");
 
-const modules = [languages, databases, frameworks, libraries, platforms, devTools, other];
+const modules = [languages, databases, frameworks, libraries, platforms, runtimes, devTools, other];
 const all_in_one = {};
 for (const module of modules) {
 	for (const data in module) {
