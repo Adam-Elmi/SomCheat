@@ -1,4 +1,3 @@
-import dynamicPath from "../utils/dynamic_path";
 import { getData, getIndex } from "../utils/handle_data";
 import getProgress from "../utils/progress";
 import icon_detector from "../ReactComponent/helpers/icon_detector";
@@ -9,14 +8,16 @@ import type { TargetType } from "../types/cheatsheet";
 class CheatsheetData {
   id: string;
   name: string;
+  category: string;
   lastModified: string;
   path: string;
   icon: React.ReactNode;
   progress: number;
   targets?: TargetType | TargetType[]
-  constructor(id: string, name: string, lastModified: string, targets?: TargetType | TargetType[]) {
+  constructor(id: string, name: string, category: string, lastModified: string, targets?: TargetType | TargetType[]) {
     this.id = id;
     this.name = name === "_" ? adjustText(this.id) : name;
+    this.category = category;
     this.path = this.getPath;
     this.icon = this.getIcon;
     this.progress = this.getProgressResult;
@@ -25,7 +26,7 @@ class CheatsheetData {
     this.lastModified = lastModified;
   }
   get getPath() {
-    return dynamicPath(this.id);
+    return `cheatsheets/${this.category.toLowerCase()}/${this.id}`;
   }
   get getIcon() {
     return icon_detector(this.id);
@@ -64,8 +65,7 @@ class LibraryData extends CheatsheetData { }
 class PlatformData extends CheatsheetData { }
 class DevToolsData extends CheatsheetData { }
 class RuntimeData extends CheatsheetData { }
-class ConceptData extends CheatsheetData { }
-class AdditionalData extends CheatsheetData { }
+class Other extends CheatsheetData { }
 
 export {
   LanguageData,
@@ -75,7 +75,6 @@ export {
   PlatformData,
   DevToolsData,
   RuntimeData,
-  ConceptData,
-  AdditionalData,
+  Other,
   Category,
 };
