@@ -17,7 +17,8 @@ const databases_module = import.meta.glob<MdxModule>("../pages/cheatsheets/datab
 const frameworks_module = import.meta.glob<MdxModule>("../pages/cheatsheets/frameworks/*.mdx", { eager: true });
 const libraries_module = import.meta.glob<MdxModule>("../pages/cheatsheets/libraries/*.mdx", { eager: true });
 const platforms_module = import.meta.glob<MdxModule>("../pages/cheatsheets/platforms/*.mdx", { eager: true });
-const devTools_module = import.meta.glob<MdxModule>("../pages/cheatsheets/dev-tools/*.mdx", { eager: true });
+const runtimes_module = import.meta.glob<MdxModule>("../pages/cheatsheets/runtimes/*.mdx", { eager: true });
+const devTools_module = import.meta.glob<MdxModule>("../pages/cheatsheets/devtools/*.mdx", { eager: true });
 const other_module = import.meta.glob<MdxModule>("../pages/cheatsheets/other/*.mdx", { eager: true });
 
 const modules = [
@@ -25,7 +26,8 @@ const modules = [
 	databases_module,
 	frameworks_module,
 	libraries_module,
-	platforms_module,
+  platforms_module,
+  runtimes_module,
 	devTools_module,
 	other_module
 ];
