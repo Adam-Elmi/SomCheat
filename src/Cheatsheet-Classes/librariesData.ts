@@ -10,7 +10,7 @@ import { getAllCheatsheets } from "../data/cheatsheets";
 const all = getAllCheatsheets();
 
 const librariesData: CheatsheetType[] = all
-  .filter(c => c.category === "Library")
-  .map(c => new LibraryData(c.id, c.title, c.lastModified || "Unknown", undefined));
+  .filter(c => c.category === "Libraries")
+  .map(c => new LibraryData(c.id, c.title, c.category, c.lastModified || "Unknown", undefined));
 
 export default librariesData;
