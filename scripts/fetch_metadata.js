@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 import { execSync } from "child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const categories = ["languages", "databases", "frameworks", "libraries", "platforms", "dev-tools", "other"];
+const categories = ["languages", "databases", "frameworks", "libraries", "platforms", "runtimes", "devtools", "other"];
 const PAGES_DIR = path.resolve(__dirname, "../src/pages/");
 const METADATA_FILE = path.resolve(__dirname, "../data/metadata.json");
 
