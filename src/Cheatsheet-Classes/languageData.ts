@@ -10,7 +10,7 @@ Languages Data
 const all = getAllCheatsheets();
 
 const languagesData: CheatsheetType[] = all
-  .filter(c => c.category === "Language")
-  .map(c => new LanguageData(c.id, c.title, c.lastModified || "Unknown", undefined));
+  .filter(c => c.category === "Languages")
+  .map(c => new LanguageData(c.id, c.title, c.category, c.lastModified || "Unknown", undefined));
 
 export default languagesData;
