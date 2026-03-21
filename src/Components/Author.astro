@@ -1,0 +1,35 @@
+---
+const { authors, author } = Astro.props;
+---
+
+<!-- Author -->{
+	Array.isArray(authors) && authors.length > 1 ? (
+		authors.map((name: string, index: number) => (
+			<div class="flex items-center justify-between py-2">
+				<dt class="text-slate-300 font-semibold flex items-center gap-1">
+					<svg class="w-4 h-4 text-green-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+						<>
+							<circle cx="12" cy="7" r="4" />
+							<path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+						</>
+					</svg>
+					{`Author ${index + 1}`}
+				</dt>
+				<dd class="text-slate-400 font-mono text-sm max-[500px]:text-[0.75rem]">{name}</dd>
+			</div>
+		))
+	) : (
+		<div class="flex items-center justify-between py-2">
+			<dt class="text-slate-300 font-semibold flex items-center gap-1">
+				<svg class="w-4 h-4 text-green-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<>
+						<circle cx="12" cy="7" r="4" />
+						<path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+					</>
+				</svg>
+				Author
+			</dt>
+			<dd class="text-slate-400 font-mono text-sm">{author}</dd>
+		</div>
+	)
+}
