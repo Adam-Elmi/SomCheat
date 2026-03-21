@@ -11,7 +11,7 @@ Nav bar
 ------------------ 
 -->
 <nav
-class="w-full min-h-[50px] dark:bg-[#101012] border-b-2 border-indigo-400 flex items-center px-4 bg-amber-50"
+class="w-full min-h-12.5 dark:bg-[#101012] border-b-2 border-indigo-400 flex items-center px-4 bg-amber-50"
 >
   <div class="flex items-center gap-3">
     <a href="/" class="cursor-pointer" title="Home">
@@ -19,7 +19,7 @@ class="w-full min-h-[50px] dark:bg-[#101012] border-b-2 border-indigo-400 flex i
     </a>
     <RightArrow dimension={30} color="oklch(0.585 0.233 277.117)" />
     {
-      <PathComponent path={path} client:load/>
+      <PathComponent path={Astro.originPathname} client:load/>
     }
   </div> 
 </nav>
