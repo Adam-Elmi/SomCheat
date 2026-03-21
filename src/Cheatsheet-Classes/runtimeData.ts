@@ -10,7 +10,7 @@ import { getAllCheatsheets } from "../data/cheatsheets";
 const all = getAllCheatsheets();
 
 const runtimeData: CheatsheetType[] = all
-  .filter(c => c.category === "Runtime")
-  .map(c => new RuntimeData(c.id, c.title, c.lastModified || "Unknown", undefined));
+  .filter(c => c.category === "Runtimes")
+  .map(c => new RuntimeData(c.id, c.title, c.category, c.lastModified || "Unknown", undefined));
 
 export default runtimeData;
