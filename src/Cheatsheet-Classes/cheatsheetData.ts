@@ -1,6 +1,6 @@
 import { getData, getIndex } from "../utils/handle_data";
 import getProgress from "../utils/progress";
-import icon_detector from "../ReactComponent/helpers/icon_detector";
+import icon_detector from "../React/helpers/icon_detector";
 import adjustText from "../utils/adjustText";
 import type CheatsheetType from "../types/cheatsheet";
 import type { TargetType } from "../types/cheatsheet";
