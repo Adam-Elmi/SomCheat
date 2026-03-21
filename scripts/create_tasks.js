@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import path from "node:path";
 
 const dirname = "cheatsheet_tasks";
 
@@ -11,7 +12,7 @@ const dirname = "cheatsheet_tasks";
 async function readFolder() {
   try {
     const data = await fs.readdir(`./${dirname}`);
-    return data;
+    return data.filter(file => path.parse(file).ext !== "");
   } catch (error) {
     console.error(error);
   }
