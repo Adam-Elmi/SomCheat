@@ -1,9 +1,9 @@
 ---
 type Props = {
-    headers: string[];
+    header: string[];
     body: { row: string[] }[];
 };
-const { headers, body } = Astro.props as Props;
+const { header, body } = Astro.props as Props;
 ---
 
 <div class="overflow-auto max-h-125 rounded-xl shadow-md border border-slate-300 dark:border-gray-800">
@@ -11,10 +11,10 @@ const { headers, body } = Astro.props as Props;
     <thead>
       <tr class="dark:bg-[#121212] border-b border-b-slate-300 dark:border-gray-700 sticky top-0 z-10">
         {
-          headers && headers.length > 0
-            ? headers.map((header) => (
+          header && header.length > 0
+          ? header.map((hd) => (
                 <th class="px-4 py-3 font-semibold text-sm uppercase tracking-wide text-gray-400 dark:bg-[#121212]">
-                  {header}
+                  {hd}
                 </th>
               ))
             : null
