@@ -1,4 +1,4 @@
 {
-  "recommendations": ["astro-build.astro-vscode", "unifiedjs.vscode-mdx", "AdamElmi.sommark"],
+  "recommendations": ["astro-build.astro-vscode", "unifiedjs.vscode-mdx", "adam-elmi.sommark-lsp"],
   "unwantedRecommendations": []
 }
