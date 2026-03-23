@@ -10,7 +10,7 @@ export default function PathComponent({ path }: { path: string }) {
       <div key={i} className="flex items-center gap-3">
         <a
           key={i}
-          className="no-underline italic hover:text-indigo-500 text-slate-500"
+          className="no-underline italic hover:text-indigo-500 text-slate-500 max-[450px]:text-[12px] max-[400px]:text-[9px] max-[400px]:font-bold max-[360px]:text-[6px]"
           href={`/${arr.slice(0, i + 1).join("/")}`}
         >
           {replacer(_path)}
