@@ -26,7 +26,7 @@ export default function FinishedTasks({
             style={{ fontFamily: "Grand Hotel" }}
             className="text-slate-400 font-bold text-[1.1rem]"
           >
-            {tasks?.done_len} Tasks
+            {tasks?.total_finished_tasks} Tasks
           </span>
           {icon}
         </div>
