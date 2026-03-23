@@ -2,13 +2,19 @@
 const { release } = Astro.props;
 ---
 
-<!-- Release Date -->
-<div class="flex items-center justify-between py-2">
-	<dt class="text-slate-300 font-semibold flex items-center gap-1">
-		<svg class="w-4 h-4 text-blue-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-			><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg
-		>
-		Release Date
-	</dt>
-	<dd class="text-slate-400 font-mono text-sm">{release}</dd>
-</div>
+<!-- Release Date -->{
+	release ? (
+		<div class="flex items-center justify-between py-2">
+			<dt class="text-slate-300 font-semibold flex items-center gap-1">
+				<svg class="w-4 h-4 text-blue-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<>
+						<circle cx="12" cy="12" r="10" />
+						<path d="M12 6v6l4 2" />
+					</>
+				</svg>
+				Release Date
+			</dt>
+			<dd class="text-slate-400 font-mono text-sm">{release}</dd>
+		</div>
+	) : null
+}
