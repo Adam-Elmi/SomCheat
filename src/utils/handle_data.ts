@@ -1,4 +1,4 @@
-import json from "../../tasks/tasks.json";
+import json from "../../data/tasks.json";
 import type TaskType from "../types/task";
 
 const jsonData: TaskType[] = json;
