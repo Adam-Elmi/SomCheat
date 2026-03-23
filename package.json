@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:astro dev:watcher",
     "dev:astro": "astro dev",
-    "dev:watcher": "npx chokidar \"**/*.txt\" -c \"node scripts/create_tasks.js\"",
+    "dev:watcher": "npx chokidar \"**/*.smark\" -c \"npm run tasks\"",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "create": "node scripts/create_tasks.js",
+    "tasks": "node cheatsheet_tasks/task-processor/processor.js",
     "fetch_metadata": "node scripts/fetch_metadata.js",
     "badge": "node scripts/updateCheatsheetsBadge.js"
   },
