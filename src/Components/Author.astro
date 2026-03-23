@@ -18,7 +18,7 @@ const { authors, author } = Astro.props;
 				<dd class="text-slate-400 font-mono text-sm max-[500px]:text-[0.75rem]">{name}</dd>
 			</div>
 		))
-	) : (
+	) : author ? (
 		<div class="flex items-center justify-between py-2">
 			<dt class="text-slate-300 font-semibold flex items-center gap-1">
 				<svg class="w-4 h-4 text-green-300 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -31,5 +31,5 @@ const { authors, author } = Astro.props;
 			</dt>
 			<dd class="text-slate-400 font-mono text-sm">{author}</dd>
 		</div>
-	)
+	) : null
 }
