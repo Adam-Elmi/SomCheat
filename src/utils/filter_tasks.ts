@@ -1,4 +1,4 @@
-import jsonData from "../../tasks/tasks.json";
+import jsonData from "../../data/tasks.json";
 import type {TaskData} from "../types/task";
 
 const jData: any = jsonData;
@@ -40,10 +40,10 @@ export function filterTasks(): TaskData[] {
       const dir: string = directories[i];
       const taskName = (tasks[i] as any)?.[dir ];
       taskName.finished_t = taskName.tasks.filter((_: undefined, i: number) =>
-        taskName?.done_indices.includes(i),
+        taskName?.finished_tasks_indices.includes(i),
       );
       taskName.unfinished_t = taskName.tasks.filter((_: undefined, i: number) =>
-        taskName?.empty_indices.includes(i),
+        taskName?.unfinished_tasks_indices.includes(i),
       );
     }
   } catch (error) {
