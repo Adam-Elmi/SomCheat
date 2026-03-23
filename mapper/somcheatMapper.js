@@ -110,7 +110,7 @@ somcheat_mapper.register("Image", ({ args, content }) => {
 			},
 			{
 				__type__: "string",
-				parentClass: safeArg(args, null, "parentClass", null, null, "")
+				parentClass: safeArg(args, null, "parentClass", null, null, "flex items-center justify-center flex-col")
 			},
 			{
 				__type__: "string",

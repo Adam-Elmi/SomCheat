@@ -1,8 +1,20 @@
 ---
 import { Image } from "astro:assets";
-const {parentClass, src, alt, ...props } = Astro.props;
+const { parentClass = "flex items-center justify-center flex-col", src, alt = "Image", caption, ...props } = Astro.props;
 ---
 
 <div class={parentClass}>
-    <Image src={src} alt={alt} {...props} />
+	<Image
+		id="somcheat-image-component"
+		class="border-2 border-slate-400 dark:border-slate-800/50 p-4"
+		src={src}
+		alt={alt}
+		width={100}
+		height={100}
+		{...props}
+		loading="lazy"
+	/>
+	<span class="italic text-slate-400 dark:text-slate-600 text-sm pt-2">
+		{caption}
+	</span>
 </div>
