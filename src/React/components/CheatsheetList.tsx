@@ -3,6 +3,7 @@ import dataList from "../helpers/datalist";
 import Card from "./Card";
 import { SearchIcon } from "../icons/Other_Icons";
 import type CheatsheetType from "../../types/cheatsheet";
+import aliases from "../../../constants/aliases";
 
 export default function CheatsheetList() {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -15,10 +16,12 @@ export default function CheatsheetList() {
 		setPathname(window.location.pathname);
 	});
 	const visibleCheatsheets = useMemo(() => {
-		const lowerCaseSearch = searchTerm.toLowerCase();
-
+    const lowerCaseSearch = searchTerm.toLowerCase();
 		return allCheatsheets.filter((cheatsheet: CheatsheetType) => {
 			const matchesSearch = cheatsheet.name.toLowerCase().includes(lowerCaseSearch);
+			// @ts-ignore
+      const alias = aliases[lowerCaseSearch];
+      if (alias && alias.includes(cheatsheet.name.toLowerCase())) return true;
 			if (!matchesSearch) return false;
 
 			if (pathname === "/cheatsheets") return true;
@@ -29,7 +32,7 @@ export default function CheatsheetList() {
 	}, [allCheatsheets, searchTerm, pathname]);
 
 	return (
-		<div className="w-full flex flex-col justify-center items-center gap-5">
+		<div className="w-full flex flex-col justify-center items-center gap-5 p-2">
 			{/* Search Bar */}
 			<div className="w-100 max-w-full relative mt-5">
 				<div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
