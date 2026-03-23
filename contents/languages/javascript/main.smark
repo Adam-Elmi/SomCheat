@@ -1,0 +1,73 @@
+[import = frontmatter: "./frontmatter.smark"][end]
+[import = imports: "./imports.smark"][end]
+[import = intro: "./intro.smark"][end]
+
+[$use-module = frontmatter][end]
+[$use-module = imports][end]
+[$use-module = intro][end]
+
+[Structure]
+    [Section]
+        # Heading
+        [h1]Section 1[end]
+        Test (program)->(style: "color:somcheat_blue; font-weight: bold")
+        # Table
+        [Table]
+            [Headers]
+                [Header]A[end]
+                [Header]B[end]
+                [Header]C[end]
+            [end]
+            [Body]
+                [Row]
+                    [Cell]1[end]
+                    [Cell]2[end]
+                    [Cell]3[end]
+                [end]
+                [Row]
+                    [Cell]4[end]
+                    [Cell]5[end]
+                    [Cell]6[end]
+                [end]
+                [Row]
+                    [Cell]7[end]
+                    [Cell]8[end]
+                    [Cell]9[end]
+                [end]
+            [end]
+        [end]
+        # References
+        [References]
+            [Reference = title: Example, url: "https:\\example.com"]Visit Example website[end]
+            [Reference = title: Example, url: "https:\\example.com"]Visit Example website[end]
+            [Reference = title: Example, url: "https:\\example.com"]Visit Example website[end]
+        [end]
+        # Image
+        [Image = src: "/som.svg", alt: Logo][end]
+        # Steps
+        [Steps = title: "Astaamaha uu iska leeyahay - Const"]
+            [Step = title: "Reassignment"]
+                 Ma bedeli kartid qiimaha ku kaydsan variable-ka.
+            [end]
+            [Step = title: "Redeclaration"]
+                 Variable-ka dib uma qeexi kartid.
+            [end]
+            [Step = title: "Block scope"]
+                 Variables-ka lagu dhex qeexo '{}', kaliya waxa laga heli kara meesha lagu dhex qeexay.
+            [end]
+        [end]
+        # Message
+        [Message = type: tip]
+            Tip Message
+        [end]
+        [Message = type: note]
+            Note Message
+        [end]
+        [Message = type: warning]
+            Warning Message
+        [end]
+        [Message = type: error]
+            error Message
+        [end]
+    [end]
+[end]
