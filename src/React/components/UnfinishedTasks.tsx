@@ -25,7 +25,7 @@ export default function UnfinishedTasks({
             style={{ fontFamily: "Grand Hotel" }}
             className="text-slate-400 font-bold text-[1.1rem]"
           >
-            {tasks?.empty_len} Tasks
+            {tasks?.total_unfinished_tasks} Tasks
           </span>
           {icon}
         </div>
