@@ -135,6 +135,10 @@ try {
 }
 ---
 
-<CheatsheetMetadata {lastUpdated} {updatedBy} {title} {category} {version} {release} {authors} {author}>
-	<slot />
-</CheatsheetMetadata>
+{
+	title && category ? (
+		<CheatsheetMetadata {lastUpdated} {updatedBy} {title} {category} {version} {release} {authors} {author}>
+			<slot />
+		</CheatsheetMetadata>
+	) : null
+}
