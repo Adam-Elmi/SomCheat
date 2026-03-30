@@ -94,13 +94,14 @@
         "file handling",
         "date"
       ],
-      "total_finished_tasks": 0,
-      "total_unfinished_tasks": 32,
-      "finished_tasks_progress": 0,
-      "unfinished_tasks_progress": 100,
-      "finished_tasks_indices": [],
+      "total_finished_tasks": 1,
+      "total_unfinished_tasks": 31,
+      "finished_tasks_progress": 3,
+      "unfinished_tasks_progress": 96,
+      "finished_tasks_indices": [
+        0
+      ],
       "unfinished_tasks_indices": [
-        0,
         1,
         2,
         3,
