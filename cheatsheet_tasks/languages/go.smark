@@ -1,6 +1,6 @@
 [Json = object]
     [Array = tasks]
-        (none)->(string: "Main Entry")
+        (none)->(string: "Main Entry [done]")
         (none)->(string: "Fmt")
         (none)->(string: "Variables")
         (none)->(string: "Var")
