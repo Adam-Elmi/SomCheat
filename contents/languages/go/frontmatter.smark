@@ -1,0 +1,10 @@
+[mdx]
+---
+layout: "../../../Layouts/SecondLayout.astro"
+title: "Go"
+version: "1.24.0"
+release: 2009
+author: "Robert Griesemer, Rob Pike, Robert Griesemer"
+category: "Languages"
+---
+[end]
