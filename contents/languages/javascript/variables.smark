@@ -1,0 +1,34 @@
+[h1]Variables[end]
+Variables (ama doorsomayaal) waa meel lagu kaydiyo xog (data) oo leh magac gaar ah, taas oo lagu isticmaali karo marar badan gudaha barnaamijka 
+adigoo adeegsanaya magaca variable-ka halkii aad si toos ah u qori lahayd xogta.
+
+Variable → wuxuu kaydiyaa xog
+Wuxuu leeyahay → magac (name)
+Waxaa loo isticmaalaa → in xogta dib loogu isticmaalo
+Wuxuu ka dhigaa code-ka → mid nadiif ah oo la fahmi karo
+
+(Qaabka Isticmaalka (Syntax): )->(css:"color: #cdf; font-weight: bold;")
+@_Code_@: js;
+<keyword> <variable_name> = <initial_value>;
+@_end_@
+[Table]
+    [Header]
+        [Row = type: "header"]
+            [Cell = type: "header"]A[end]
+            [Cell = type: "header"]B[end]
+            [Cell = type: "header"]C[end]
+        [end]
+    [end]
+    [Body]
+        [Row]
+            [Cell]1[end]
+            [Cell]2[end]
+            [Cell]3[end]
+        [end]
+        [Row]
+            [Cell]4[end]
+            [Cell]5[end]
+            [Cell]6[end]
+        [end]
+    [end]
+[end]
