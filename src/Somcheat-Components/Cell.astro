@@ -1,3 +1,15 @@
-<td class="px-4 py-3 border-b border-b-slate-300 dark:border-gray-800 whitespace-nowrap">
-    <slot/>
-</td>
+---
+const { type } = Astro.props;
+---
+
+{
+	type === "header" ? (
+		<th class="px-4 py-3 font-semibold text-sm uppercase tracking-wide text-gray-400 dark:bg-[#121212]">
+			<slot />
+		</th>
+	) : (
+		<td class="px-4 py-3 border-b border-b-slate-300 dark:border-gray-800 whitespace-nowrap">
+			<slot />
+		</td>
+	)
+}
