@@ -35,13 +35,13 @@ try {
 					};
 					const get_tasks_length = (condition = true) => {
 						return task_object[filename].tasks.filter(
-							task => task.toLowerCase().replaceAll(/\s/g, "").includes("[done]") === condition
+							task => task.toLowerCase().replaceAll(/\s/g, "").includes("(done)") === condition
 						).length;
 					};
 					const get_tasks_index = (condition = true) => {
 						return task_object[filename].tasks
 							.map((task, index) => {
-								if (task.toLowerCase().replaceAll(/\s/g, "").includes("[done]") === condition) {
+								if (task.toLowerCase().replaceAll(/\s/g, "").includes("(done)") === condition) {
 									return index;
 								}
 							})
@@ -65,7 +65,7 @@ try {
 					task_object[filename].unfinished_tasks_indices = get_tasks_index(false);
 					// Clean Up Tasks
 					task_object[filename].tasks = task_object[filename].tasks.map(task =>
-						task.toLowerCase().replace(/\s*\[\s*done\s*\]/, "")
+						task.toLowerCase().replace(/\s*\(done\)/i, "")
 					);
 					main.push(task_object);
 				}
