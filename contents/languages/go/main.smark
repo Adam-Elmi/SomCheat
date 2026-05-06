@@ -1,5 +1,5 @@
 [import = frontmatter: "./frontmatter.smark"][end]
-[import = imports: "./imports.smark"][end]
+[import = imports: "../shared/imports.smark"][end]
 [import = intro: "./intro.smark"][end]
 
 [$use-module = frontmatter][end]
