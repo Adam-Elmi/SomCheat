@@ -1,30 +1,30 @@
-[Json = object]
+[object]
     [Array = tasks]
-        (none)->(string: "Main Entry")
-        (none)->(string: "Variables")
-        (none)->(string: "Data Types")
-        (none)->(string: "Operators")
-        (none)->(string: "If/Else Statements")
-        (none)->(string: "When Statement")
-        (none)->(string: "Comments")
-        (none)->(string: "Static Typing")
-        (none)->(string: "Functions")
-        (none)->(string: "Arrays")
-        (none)->(string: "Loops")
-        (none)->(string: "For Loop")
-        (none)->(string: "While Loop")
-        (none)->(string: "Do-While Loop")
-        (none)->(string: "String Functions")
-        (none)->(string: "Default and named arguments")
-        (none)->(string: "Collections (list, map, set)")
-        (none)->(string: "Type Checking and Casting")
-        (none)->(string: "Lambda Function")
-        (none)->(string: "Let / Apply / Also / Run / With")
-        (none)->(string: "Higher-Order Functions")
-        (none)->(string: "Exception Handling")
-        (none)->(string: "Classes & Objects")
-        (none)->(string: "Data Classes")
-        (none)->(string: "Companion Object")
-        (none)->(string: "Sealed Classes")
+        [string]Main Entry[end]
+        [string]Variables[end]
+        [string]Data Types[end]
+        [string]Operators[end]
+        [string]If/Else Statements[end]
+        [string]When Statement[end]
+        [string]Comments[end]
+        [string]Static Typing[end]
+        [string]Functions[end]
+        [string]Arrays[end]
+        [string]Loops[end]
+        [string]For Loop[end]
+        [string]While Loop[end]
+        [string]Do-While Loop[end]
+        [string]String Functions[end]
+        [string]Default and named arguments[end]
+        [string]Collections (list, map, set)[end]
+        [string]Type Checking and Casting[end]
+        [string]Lambda Function[end]
+        [string]Let / Apply / Also / Run / With[end]
+        [string]Higher-Order Functions[end]
+        [string]Exception Handling[end]
+        [string]Classes & Objects[end]
+        [string]Data Classes[end]
+        [string]Companion Object[end]
+        [string]Sealed Classes[end]
     [end]
 [end]

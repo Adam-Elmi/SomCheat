@@ -1,36 +1,36 @@
-[Json = object]
+[object]
     [Array = tasks]
-        (none)->(string: "Variables")
-        (none)->(string: "Semicolon Rule")
-        (none)->(string: "Data Types")
-        (none)->(string: "Operators")
-        (none)->(string: "If/Else Statements")
-        (none)->(string: "Comments")
-        (none)->(string: "Dynamic Typing")
-        (none)->(string: "Variable Scope")
-        (none)->(string: "Functions (subroutines)")
-        (none)->(string: "Arrays")
-        (none)->(string: "Loops")
-        (none)->(string: "For Loop")
-        (none)->(string: "Foreach Loop")
-        (none)->(string: "While Loop")
-        (none)->(string: "Until Loop")
-        (none)->(string: "Array Operations")
-        (none)->(string: "Hash")
-        (none)->(string: "Hash (Map) Operations")
-        (none)->(string: "References & Dereferencing")
-        (none)->(string: "Nested Structures")
-        (none)->(string: "File Handling")
-        (none)->(string: "String Handling & Regex")
-        (none)->(string: "JSON & Serialization")
-        (none)->(string: "Packages & Modules")
-        (none)->(string: "Object Oriented Perl")
-        (none)->(string: "Error Handling")
-        (none)->(string: "Testing")
-        (none)->(string: "CPAN Usage")
-        (none)->(string: "Date & Time")
-        (none)->(string: "Environment & CLI")
-        (none)->(string: "Threads & Concurrency")
-        (none)->(string: "IPC & Networking")
+        [string]Variables[end]
+        [string]Semicolon Rule[end]
+        [string]Data Types[end]
+        [string]Operators[end]
+        [string]If/Else Statements[end]
+        [string]Comments[end]
+        [string]Dynamic Typing[end]
+        [string]Variable Scope[end]
+        [string]Functions (subroutines)[end]
+        [string]Arrays[end]
+        [string]Loops[end]
+        [string]For Loop[end]
+        [string]Foreach Loop[end]
+        [string]While Loop[end]
+        [string]Until Loop[end]
+        [string]Array Operations[end]
+        [string]Hash[end]
+        [string]Hash (Map) Operations[end]
+        [string]References & Dereferencing[end]
+        [string]Nested Structures[end]
+        [string]File Handling[end]
+        [string]String Handling & Regex[end]
+        [string]JSON & Serialization[end]
+        [string]Packages & Modules[end]
+        [string]Object Oriented Perl[end]
+        [string]Error Handling[end]
+        [string]Testing[end]
+        [string]CPAN Usage[end]
+        [string]Date & Time[end]
+        [string]Environment & CLI[end]
+        [string]Threads & Concurrency[end]
+        [string]IPC & Networking[end]
     [end]
 [end]

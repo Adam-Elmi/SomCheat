@@ -1,36 +1,36 @@
-[Json = object]
+[object]
     [Array = tasks]
-        (none)->(string: "Main Entry")
-        (none)->(string: "Variables")
-        (none)->(string: "Data Types")
-        (none)->(string: "If/Else Statements")
-        (none)->(string: "Match Statement")
-        (none)->(string: "Comments")
-        (none)->(string: "Static Typing")
-        (none)->(string: "Functions")
-        (none)->(string: "Arrays")
-        (none)->(string: "Slices")
-        (none)->(string: "Vectors")
-        (none)->(string: "Loops")
-        (none)->(string: "String Methods")
-        (none)->(string: "Array/Slice Methods")
-        (none)->(string: "Ownership")
-        (none)->(string: "Borrowing")
-        (none)->(string: "Struct")
-        (none)->(string: "Enums")
-        (none)->(string: "Pattern Matching")
-        (none)->(string: "Error Handling")
-        (none)->(string: "Crate and Modules")
-        (none)->(string: "Lifetimes")
-        (none)->(string: "Traits")
-        (none)->(string: "Generic")
-        (none)->(string: "Closures")
-        (none)->(string: "Iterators")
-        (none)->(string: "Macros")
-        (none)->(string: "Unit Testing")
-        (none)->(string: "Cargo")
-        (none)->(string: "Smart Pointers")
-        (none)->(string: "Concurrency")
-        (none)->(string: "Unsafe Rust")
+        [string]Main Entry[end]
+        [string]Variables[end]
+        [string]Data Types[end]
+        [string]If/Else Statements[end]
+        [string]Match Statement[end]
+        [string]Comments[end]
+        [string]Static Typing[end]
+        [string]Functions[end]
+        [string]Arrays[end]
+        [string]Slices[end]
+        [string]Vectors[end]
+        [string]Loops[end]
+        [string]String Methods[end]
+        [string]Array/Slice Methods[end]
+        [string]Ownership[end]
+        [string]Borrowing[end]
+        [string]Struct[end]
+        [string]Enums[end]
+        [string]Pattern Matching[end]
+        [string]Error Handling[end]
+        [string]Crate and Modules[end]
+        [string]Lifetimes[end]
+        [string]Traits[end]
+        [string]Generic[end]
+        [string]Closures[end]
+        [string]Iterators[end]
+        [string]Macros[end]
+        [string]Unit Testing[end]
+        [string]Cargo[end]
+        [string]Smart Pointers[end]
+        [string]Concurrency[end]
+        [string]Unsafe Rust[end]
     [end]
 [end]

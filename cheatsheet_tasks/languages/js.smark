@@ -1,54 +1,54 @@
-[Json = object]
+[object]
     [Array = tasks]
-        (none)->(string: "Variables [done]")
-        (none)->(string: "Var [done]")
-        (none)->(string: "Let [done]")
-        (none)->(string: "Const [done]")
-        (none)->(string: "Rules for Variable Names [done]")
-        (none)->(string: "Data Types [done]")
-        (none)->(string: "Primitive Data Types [done]")
-        (none)->(string: "Operators")
-        (none)->(string: "If/Else Statements")
-        (none)->(string: "Switch Statement")
-        (none)->(string: "Ternary Operator")
-        (none)->(string: "Comments")
-        (none)->(string: "Dynamic Typing")
-        (none)->(string: "Functions")
-        (none)->(string: "Hoisting")
-        (none)->(string: "Scope")
-        (none)->(string: "Closure")
-        (none)->(string: "Arrays")
-        (none)->(string: "Loops")
-        (none)->(string: "For Loop")
-        (none)->(string: "While Loop")
-        (none)->(string: "Do-While Loop")
-        (none)->(string: "String Methods")
-        (none)->(string: "Array Methods")
-        (none)->(string: "Objects")
-        (none)->(string: "This Keyword")
-        (none)->(string: "Object Methods")
-        (none)->(string: "Getter Method")
-        (none)->(string: "Setter Method")
-        (none)->(string: "Call method (Built-in Function Method)")
-        (none)->(string: "Apply method (Built-in Function Method)")
-        (none)->(string: "Bind method (Built-in Function Method)")
-        (none)->(string: "ToString method (Built-in Function Method)")
-        (none)->(string: "Name Property (Built-in Function Property)")
-        (none)->(string: "Length Property (Built-in Function Property)")
-        (none)->(string: "Classes (ES6)")
-        (none)->(string: "Prototype")
-        (none)->(string: "Inheritance")
-        (none)->(string: "Try and Catch")
-        (none)->(string: "Nullish Coalescing (??)")
-        (none)->(string: "Optional Chaining (?.)")
-        (none)->(string: "Destructuring")
-        (none)->(string: "Modules (ES6)")
-        (none)->(string: "Export")
-        (none)->(string: "Import")
-        (none)->(string: "Promises")
-        (none)->(string: "Async & Await")
-        (none)->(string: "Strict Mode")
-        (none)->(string: "Set")
-        (none)->(string: "Map")
+        [string]Variables (done)[end]
+        [string]Var (done)[end]
+        [string]Let (done)[end]
+        [string]Const (done)[end]
+        [string]Rules for Variable Names (done)[end]
+        [string]Data Types (done)[end]
+        [string]Primitive Data Types (done)[end]
+        [string]Operators[end]
+        [string]If/Else Statements[end]
+        [string]Switch Statement[end]
+        [string]Ternary Operator[end]
+        [string]Comments[end]
+        [string]Dynamic Typing[end]
+        [string]Functions[end]
+        [string]Hoisting[end]
+        [string]Scope[end]
+        [string]Closure[end]
+        [string]Arrays[end]
+        [string]Loops[end]
+        [string]For Loop[end]
+        [string]While Loop[end]
+        [string]Do-While Loop[end]
+        [string]String Methods[end]
+        [string]Array Methods[end]
+        [string]Objects[end]
+        [string]This Keyword[end]
+        [string]Object Methods[end]
+        [string]Getter Method[end]
+        [string]Setter Method[end]
+        [string]Call method (Built-in Function Method)[end]
+        [string]Apply method (Built-in Function Method)[end]
+        [string]Bind method (Built-in Function Method)[end]
+        [string]ToString method (Built-in Function Method)[end]
+        [string]Name Property (Built-in Function Property)[end]
+        [string]Length Property (Built-in Function Property)[end]
+        [string]Classes (ES6)[end]
+        [string]Prototype[end]
+        [string]Inheritance[end]
+        [string]Try and Catch[end]
+        [string]Nullish Coalescing (??)[end]
+        [string]Optional Chaining (?.)[end]
+        [string]Destructuring[end]
+        [string]Modules (ES6)[end]
+        [string]Export[end]
+        [string]Import[end]
+        [string]Promises[end]
+        [string]Async & Await[end]
+        [string]Strict Mode[end]
+        [string]Set[end]
+        [string]Map[end]
     [end]
 [end]

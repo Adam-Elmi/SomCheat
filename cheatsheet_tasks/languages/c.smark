@@ -1,26 +1,26 @@
-[Json = object]
+[object]
     [Array = tasks]
-        (none)->(string: "Main Entry")
-        (none)->(string: "Variables")
-        (none)->(string: "Data Types")
-        (none)->(string: "Operators")
-        (none)->(string: "If/Else Statements")
-        (none)->(string: "Switch Statement")
-        (none)->(string: "Ternary Operator")
-        (none)->(string: "Comments")
-        (none)->(string: "Static Typing")
-        (none)->(string: "Functions")
-        (none)->(string: "Arrays")
-        (none)->(string: "Loops")
-        (none)->(string: "Enums")
-        (none)->(string: "Structures")
-        (none)->(string: "Typedef")
-        (none)->(string: "Pointers")
-        (none)->(string: "Memory Management")
-        (none)->(string: "Preprocessors Directives")
-        (none)->(string: "Header Files")
-        (none)->(string: "File Handling")
-        (none)->(string: "Command-Line Arguments")
-        (none)->(string: "Bitwise")
+        [string]Main Entry[end]
+        [string]Variables[end]
+        [string]Data Types[end]
+        [string]Operators[end]
+        [string]If/Else Statements[end]
+        [string]Switch Statement[end]
+        [string]Ternary Operator[end]
+        [string]Comments[end]
+        [string]Static Typing[end]
+        [string]Functions[end]
+        [string]Arrays[end]
+        [string]Loops[end]
+        [string]Enums[end]
+        [string]Structures[end]
+        [string]Typedef[end]
+        [string]Pointers[end]
+        [string]Memory Management[end]
+        [string]Preprocessors Directives[end]
+        [string]Header Files[end]
+        [string]File Handling[end]
+        [string]Command-Line Arguments[end]
+        [string]Bitwise[end]
     [end]
 [end]

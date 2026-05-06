@@ -1,39 +1,39 @@
-[Json = object]
+[object]
     [Array = tasks]
-        (none)->(string: "Type Annotation")
-        (none)->(string: "Literal Types")
-        (none)->(string: "Interfaces")
-        (none)->(string: "Union & Intersections")
-        (none)->(string: "Type Aliases")
-        (none)->(string: "Function with Types")
-        (none)->(string: "Enums")
-        (none)->(string: "Unknown & Any")
-        (none)->(string: "Optional and Default Parameter")
-        (none)->(string: "Tuples")
-        (none)->(string: "Readonly")
-        (none)->(string: "Types Assertions")
-        (none)->(string: "Generics")
-        (none)->(string: "Utility Types")
-        (none)->(string: "Type Guard")
-        (none)->(string: "Discriminated Unions")
-        (none)->(string: "Keyof & typeof")
-        (none)->(string: "Configuration")
-        (none)->(string: "Conditional Types")
-        (none)->(string: "Mapped Types")
-        (none)->(string: "Non-Null Assertion (!)")
-        (none)->(string: "Template Literal Types")
-        (none)->(string: "Recursive Types")
-        (none)->(string: "Never in Switch")
-        (none)->(string: "Abstract Classes")
-        (none)->(string: "Decorators")
-        (none)->(string: "Declaration files (.d.ts)")
-        (none)->(string: "Type Compatibility")
-        (none)->(string: "Type Inference")
-        (none)->(string: "Index Signatires")
-        (none)->(string: "Namespaces")
-        (none)->(string: "Module Resolution")
-        (none)->(string: "Satisfies Keyword (TS 4.9+)")
-        (none)->(string: "TS Dom")
-        (none)->(string: "TS Events")
+        [string]Type Annotation (done)[end]
+        [string]Literal Types[end]
+        [string]Interfaces[end]
+        [string]Union & Intersections[end]
+        [string]Type Aliases[end]
+        [string]Function with Types[end]
+        [string]Enums[end]
+        [string]Unknown & Any[end]
+        [string]Optional and Default Parameter[end]
+        [string]Tuples[end]
+        [string]Readonly[end]
+        [string]Types Assertions[end]
+        [string]Generics[end]
+        [string]Utility Types[end]
+        [string]Type Guard[end]
+        [string]Discriminated Unions[end]
+        [string]Keyof & typeof[end]
+        [string]Configuration[end]
+        [string]Conditional Types[end]
+        [string]Mapped Types[end]
+        [string]Non-Null Assertion (!)[end]
+        [string]Template Literal Types[end]
+        [string]Recursive Types[end]
+        [string]Never in Switch[end]
+        [string]Abstract Classes[end]
+        [string]Decorators[end]
+        [string]Declaration files (.d.ts)[end]
+        [string]Type Compatibility[end]
+        [string]Type Inference[end]
+        [string]Index Signatires[end]
+        [string]Namespaces[end]
+        [string]Module Resolution[end]
+        [string]Satisfies Keyword (TS 4.9+)[end]
+        [string]TS Dom[end]
+        [string]TS Events[end]
     [end]
 [end]

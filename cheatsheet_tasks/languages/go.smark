@@ -1,36 +1,36 @@
-[Json = object]
+[object]
     [Array = tasks]
-        (none)->(string: "Main Entry [done]")
-        (none)->(string: "Fmt")
-        (none)->(string: "Variables")
-        (none)->(string: "Var")
-        (none)->(string: "Const")
-        (none)->(string: "Data Types")
-        (none)->(string: "Operators")
-        (none)->(string: "If/Else Statements")
-        (none)->(string: "Switch Statement")
-        (none)->(string: "Comments")
-        (none)->(string: "Static Typing")
-        (none)->(string: "Functions")
-        (none)->(string: "Blank Identifier")
-        (none)->(string: "Array")
-        (none)->(string: "Slices")
-        (none)->(string: "Loops")
-        (none)->(string: "For Loop")
-        (none)->(string: "For Loop with range")
-        (none)->(string: "Infinite Loop")
-        (none)->(string: "String Functions")
-        (none)->(string: "Slice Functions")
-        (none)->(string: "Maps")
-        (none)->(string: "Structs")
-        (none)->(string: "Go Routines")
-        (none)->(string: "Go Modules")
-        (none)->(string: "Error Handling")
-        (none)->(string: "Interfaces")
-        (none)->(string: "Channels")
-        (none)->(string: "Testing")
-        (none)->(string: "Json Handling")
-        (none)->(string: "File Handling")
-        (none)->(string: "Date")
+        [string]Main Entry (done)[end]
+        [string]Fmt[end]
+        [string]Variables[end]
+        [string]Var[end]
+        [string]Const[end]
+        [string]Data Types[end]
+        [string]Operators[end]
+        [string]If/Else Statements[end]
+        [string]Switch Statement[end]
+        [string]Comments[end]
+        [string]Static Typing[end]
+        [string]Functions[end]
+        [string]Blank Identifier[end]
+        [string]Array[end]
+        [string]Slices[end]
+        [string]Loops[end]
+        [string]For Loop[end]
+        [string]For Loop with range[end]
+        [string]Infinite Loop[end]
+        [string]String Functions[end]
+        [string]Slice Functions[end]
+        [string]Maps[end]
+        [string]Structs[end]
+        [string]Go Routines[end]
+        [string]Go Modules[end]
+        [string]Error Handling[end]
+        [string]Interfaces[end]
+        [string]Channels[end]
+        [string]Testing[end]
+        [string]Json Handling[end]
+        [string]File Handling[end]
+        [string]Date[end]
     [end]
 [end]

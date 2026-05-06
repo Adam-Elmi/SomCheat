@@ -1,26 +1,26 @@
-[Json = object]
+[object]
     [Array = tasks]
-        (none)->(string: "Variables")
-        (none)->(string: "Data Types")
-        (none)->(string: "Operators")
-        (none)->(string: "If/Else Statements")
-        (none)->(string: "Comments")
-        (none)->(string: "Dynamic Typing")
-        (none)->(string: "Functions")
-        (none)->(string: "List")
-        (none)->(string: "Loops")
-        (none)->(string: "For Loop")
-        (none)->(string: "While Loop")
-        (none)->(string: "Tuple")
-        (none)->(string: "Set")
-        (none)->(string: "Dictionary")
-        (none)->(string: "Zip")
-        (none)->(string: "Lambda Function")
-        (none)->(string: "Error Handling")
-        (none)->(string: "Classes and Objects")
-        (none)->(string: "File Handling")
-        (none)->(string: "Json Handling")
-        (none)->(string: "Date")
-        (none)->(string: "Modules")
+        [string]Variables[end]
+        [string]Data Types[end]
+        [string]Operators[end]
+        [string]If/Else Statements[end]
+        [string]Comments[end]
+        [string]Dynamic Typing[end]
+        [string]Functions[end]
+        [string]List[end]
+        [string]Loops[end]
+        [string]For Loop[end]
+        [string]While Loop[end]
+        [string]Tuple[end]
+        [string]Set[end]
+        [string]Dictionary[end]
+        [string]Zip[end]
+        [string]Lambda Function[end]
+        [string]Error Handling[end]
+        [string]Classes and Objects[end]
+        [string]File Handling[end]
+        [string]Json Handling[end]
+        [string]Date[end]
+        [string]Modules[end]
     [end]
 [end]
