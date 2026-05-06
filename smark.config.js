@@ -1,15 +1,10 @@
-import somcheatMapper from "./mapper/somcheatMapper.js";
+import somcheat_mapper from "./mapper/somcheat_mapper.js";
 
 const config = {
-    outputDir: "./",
-    outputFile: "example",
+    outputDir: "src/pages/cheatsheets/languages",
+    outputFile: "adam",
     format: "mdx",
-  mappingFile: somcheatMapper,
-  plugins: [
-    {
-        name: "raw-content", options: {targetBlocks: ["Code"]}
-      }
-    ]
+    mapperFile: somcheat_mapper
 };
 
 export default config;
