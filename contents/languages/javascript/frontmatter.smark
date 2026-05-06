@@ -1,10 +1,8 @@
-[mdx]
----
-layout: "../../../Layouts/SecondLayout.astro"
-title: "Javascript"
-version: "ES2023"
-release: 1995
-author: "Brendan Eich"
+[Frontmatter = 
+layout: "../../../Layouts/SecondLayout.astro",
+title: "Javascript",
+version: "ES2023",
+release: 1995,
+author: "Brendan Eich",
 category: "Languages"
----
-[end]
+][end]
