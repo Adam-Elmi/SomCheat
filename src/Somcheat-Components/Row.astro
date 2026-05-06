@@ -1,3 +1,15 @@
-<tr class="dark:bg-[#101010] bg-slate-50 hover:bg-slate-200 dark:hover:bg-[#161616]">
-    <slot/>
-</tr>
+---
+const { type } = Astro.props;
+---
+
+{
+	type === "header" ? (
+		<tr class="dark:bg-[#121212] border-b border-b-slate-300 dark:border-gray-700 sticky top-0 z-10">
+			<slot />
+		</tr>
+	) : (
+		<tr class="dark:bg-[#101010] bg-slate-50 hover:bg-slate-200 dark:hover:bg-[#161616]">
+			<slot />
+		</tr>
+	)
+}
