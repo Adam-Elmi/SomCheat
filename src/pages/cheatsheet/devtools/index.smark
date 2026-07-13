@@ -1,0 +1,15 @@
+[import = Layout: "../../../layouts/Layout.smark" !]
+[import = CategoryPage: "../../../layouts/CategoryPage.smark" !]
+
+[Metadata = title: "DevTools", description: "Developer tool cheatsheets" !]
+
+${ globalThis.__cat = (await getCheatsheets()).find(c => c.key === "devtools") || {name:"DevTools",count:0,iconSvg:"",sheets:[]}}$
+
+[Layout = title: "DevTools Cheatsheets", description: "Developer tool cheatsheets"]
+  [CategoryPage!]
+[end:Layout]
+
+runtime ${
+  window.__somcheatIndex = SomMark.static(`(__cat.sheets||[]).map(s=>({title:s.title,iconHtml:s.iconHtml||'',url:s.url,aliases:s.aliases||[]}))`);
+}$
+[script = type: "module", src: "/src/scripts/search.js"][end:script]

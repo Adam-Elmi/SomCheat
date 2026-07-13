@@ -1,0 +1,31 @@
+[import = ProgressBar: "../icons/progressBar.smark"!]
+
+[a = href: v{url}, class: "sc-card"]
+
+  [div = class: "sc-card-top"]
+    [div = class: "sc-card-title-row"]
+      [span = class: "sc-card-badge", style: v{iconStyle}]v{abbr}[end:span]
+      [span = class: "sc-card-name"]v{title}[end:span]
+    [end:div]
+    [ProgressBar = color: v{progressColor}, dash: v{progressDash}, size: "32px" !]
+  [end:div]
+
+  [div = class: "sc-card-meta"]
+    [svg = xmlns: "http://www.w3.org/2000/svg", width: "13", height: "13", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", stroke-width: "2", stroke-linecap: "round", stroke-linejoin: "round"]
+      [rect = x: "3", y: "4", width: "18", height: "18", rx: "2"][end:rect]
+      [line = x1: "16", y1: "2", x2: "16", y2: "6"][end:line]
+      [line = x1: "8", y1: "2", x2: "8", y2: "6"][end:line]
+      [line = x1: "3", y1: "10", x2: "21", y2: "10"][end:line]
+    [end:svg]
+    [span]v{formattedDate}[end:span]
+  [end:div]
+
+  [div = class: "sc-card-bar-row"]
+    [ProgressBar = color: v{progressColor}, dash: v{progressDash}, size: "12px" !]
+    [div = class: "sc-card-track"]
+      [div = class: "sc-card-fill", style: v{barStyle}][end:div]
+    [end:div]
+    [span = class: "sc-card-pct"]v{progress}%[end:span]
+  [end:div]
+
+[end:a]

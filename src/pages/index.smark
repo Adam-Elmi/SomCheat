@@ -1,0 +1,83 @@
+[import = Layout: "../layouts/Layout.smark" !]
+[import = Welcome: "../components/Welcome.smark" !]
+[import = SearchBar: "../components/SearchBar.smark" !]
+[import = Indicators: "../components/Indicators.smark" !]
+[import = ProgressBar: "../icons/progressBar.smark" !]
+[import = Status: "../icons/status.smark" !]
+[import = Date: "../icons/date.smark" !]
+[import = Document: "../icons/document.smark" !]
+
+
+[Metadata = title: "SomCheat", description: "A cheatsheet for everything" !]
+
+[Layout = title: "SomCheat", description: "A cheatsheet for everything"]
+  [div = class: "hero", padding: "24px"]
+    [Welcome!]
+    [div = marginTop: "16px", display: "flex", justifyContent: "center"]
+      [div = width: "100%", maxWidth: "660px", class: "sc-search-wrapper"]
+        [SearchBar!]
+        [div = class: "sc-search-results", id: "sc-search-results", hidden: ""][end:div]
+      [end:div]
+    [end:div]
+    [div = marginTop: "16px", display: "flex", justifyContent: "center"]
+      [div = width: "100%", maxWidth: "550px"][Indicators!][end:div]
+    [end:div]
+  [end:div]
+
+  [div = class: "sc-sheets-section section-bar"]
+    [for-each = ${ await getCheatsheets() }$, as: "category"]
+      [div = class: "sc-category-section"]
+
+        [div = class: "sc-category-top"]
+          [div = class: "sc-category-header"]
+            [span = class: "sc-category-icon"]${ SomMark.raw(category.iconSvg) }$[end:span]
+            [span = class: "sc-category-name"]${ category.name }$[end:span]
+          [end:div]
+
+          [div = class: "sc-category-meta"]
+          [Document !]
+            Total Cheatsheets: [strong]${ category.count }$[end:strong]
+          [end:div]
+        [end:div]
+
+        [hr = class: "sc-category-divider"!]
+
+        [div = class: "sc-sheets-grid"]
+          [for-each = ${ category.sheets }$, as: "sheet"]
+            [a = href: ${ sheet.url }$, class: "sc-card"]
+
+              [div = class: "sc-card-top"]
+                [div = class: "sc-card-title-row"]
+                  [span = class: "sc-card-badge"]${ sheet.iconHtml ? SomMark.raw(sheet.iconHtml) : sheet.abbr }$[end:span]
+                  [span = class: "sc-card-name"]${ sheet.title }$[end:span]
+                [end:div]
+                [ProgressBar = color: ${ sheet.progressColor }$, dash: ${ sheet.progressDash }$, size: "24px" !]
+              [end:div]
+
+              [div = class: "sc-card-meta"]
+                [Date = width: "1.5em", height: "1.5em" !]
+                [span]${ sheet.formattedDate }$[end:span]
+              [end:div]
+
+              [div = class: "sc-card-bar-row"]
+                [Status !]
+                [div = class: "sc-card-track"]
+                  [div = class: "sc-card-fill", style: ${ sheet.barStyle }$][end:div]
+                [end:div]
+                [span = class: "sc-card-pct"]${ sheet.progress }$%[end:span]
+              [end:div]
+
+            [end:a]
+          [end:for-each]
+        [end:div]
+
+      [end:div]
+    [end:for-each]
+  [end:div]
+[end:Layout]
+runtime ${
+  window.__somcheatIndex = SomMark.static(`await getSearchIndex()`);
+  console.log("Search index loaded:", window.__somcheatIndex);
+}$
+[script = type: "module", src: "/src/scripts/welcome.js"][end:script]
+[script = type: "module", src: "/src/scripts/search.js"][end:script]

@@ -1,0 +1,114 @@
+[import = Layout: "../layouts/Layout.smark" !]
+[import = ProgressBar: "../icons/progressBar.smark" !]
+[import = Status: "../icons/status.smark" !]
+[import = Date: "../icons/date.smark" !]
+
+[Metadata = title: "Progress", description: "Track cheatsheet completion progress" !]
+
+${ globalThis.__pgSheets = (await getCheatsheets()).flatMap(c => c.sheets).filter(s => s.tasks > 0) }$
+
+[Layout = title: "Progress"]
+
+  [div = class: "sc-pg-page"]
+
+    [div = class: "sc-pg-header"]
+      [h1 = class: "sc-pg-title"]Progress[end:h1]
+      [p = class: "sc-pg-subtitle"]${ __pgSheets.length }$ cheatsheets tracked[end:p]
+      [div = class: "sc-pg-filter"]
+        [input = type: "text", id: "pg-filter", class: "sc-pg-filter-input", placeholder: "Filter cheatsheets..."!]
+      [end:div]
+    [end:div]
+
+    [div = class: "sc-pg-list", id: "sc-pg-list"]
+
+      [for-each = ${ __pgSheets }$, as: "sheet"]
+
+        [div = class: "sc-pg-card", data-title: ${ sheet.title.toLowerCase() }$, data-aliases: ${ sheet.aliases.join('|') }$]
+
+          [div = class: "sc-pg-card-top"]
+            [span = class: "sc-pg-icon"]${ SomMark.raw(sheet.iconHtml || '') }$[end:span]
+            [a = href: ${ sheet.url }$, class: "sc-pg-name"]${ sheet.title }$[end:a]
+          [end:div]
+
+          [div = class: "sc-card-bar-row sc-pg-bar-row"]
+            [Status!]
+            [div = class: "sc-card-track"]
+              [div = class: "sc-card-fill", style: ${ sheet.barStyle }$][end:div]
+            [end:div]
+            [span = class: "sc-card-pct"]${ sheet.progress }$%[end:span]
+            [ProgressBar = color: ${ sheet.progressColor }$, dash: ${ sheet.progressDash }$, size: "28px"!]
+          [end:div]
+
+          [div = class: "sc-pg-meta"]
+            [Date!]
+            [span]${ sheet.taskFileLastModified || sheet.formattedDate }$[end:span]
+          [end:div]
+
+          [details = class: "sc-pg-tasks"]
+            [summary = class: "sc-pg-tasks-hdr"]
+              [span = class: "sc-pg-tasks-label"]All Tasks[end:span]
+              [span = class: "sc-pg-tasks-right"]
+                [span = class: "sc-pg-tasks-count"]${ sheet.tasks }$ Tasks[end:span]
+                [span = class: "sc-pg-chevron"][end:span]
+              [end:span]
+            [end:summary]
+            [ul = class: "sc-pg-task-list"]
+              [for-each = ${ sheet.taskList }$, as: "task"]
+                [li = class: ${ task.done ? 'sc-pg-task sc-pg-task--done' : 'sc-pg-task' }$]
+                  [span = class: "sc-pg-task-icon"]${ SomMark.raw(task.done ? '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>') }$[end:span]
+                  [span = class: "sc-pg-task-name"]${ task.name }$[end:span]
+                [end:li]
+              [end:for-each]
+            [end:ul]
+          [end:details]
+
+          [details = class: "sc-pg-tasks"]
+            [summary = class: "sc-pg-tasks-hdr"]
+              [span = class: "sc-pg-tasks-label sc-pg-tasks-label--done"]Finished Tasks[end:span]
+              [span = class: "sc-pg-tasks-right"]
+                [span = class: "sc-pg-tasks-count"]${ sheet.finishedTasks }$ Tasks[end:span]
+                [span = class: "sc-pg-chevron"][end:span]
+              [end:span]
+            [end:summary]
+            [ul = class: "sc-pg-task-list"]
+              [for-each = ${ sheet.taskList.filter(t => t.done) }$, as: "task"]
+                [li = class: "sc-pg-task sc-pg-task--done"]
+                  [span = class: "sc-pg-task-icon"]${ SomMark.raw('<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') }$[end:span]
+                  [span = class: "sc-pg-task-name"]${ task.name }$[end:span]
+                [end:li]
+              [end:for-each]
+            [end:ul]
+          [end:details]
+
+          [details = class: "sc-pg-tasks"]
+            [summary = class: "sc-pg-tasks-hdr"]
+              [span = class: "sc-pg-tasks-label sc-pg-tasks-label--todo"]Unfinished Tasks[end:span]
+              [span = class: "sc-pg-tasks-right"]
+                [span = class: "sc-pg-tasks-count"]${ sheet.unfinishedTasks }$ Tasks[end:span]
+                [span = class: "sc-pg-chevron"][end:span]
+              [end:span]
+            [end:summary]
+            [ul = class: "sc-pg-task-list"]
+              [for-each = ${ sheet.taskList.filter(t => !t.done) }$, as: "task"]
+                [li = class: "sc-pg-task"]
+                  [span = class: "sc-pg-task-icon"]${ SomMark.raw('<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>') }$[end:span]
+                  [span = class: "sc-pg-task-name"]${ task.name }$[end:span]
+                [end:li]
+              [end:for-each]
+            [end:ul]
+          [end:details]
+
+        [end:div]
+
+      [end:for-each]
+
+    [end:div]
+
+  [end:div]
+
+[end:Layout]
+
+runtime ${
+  window.__pgReady = SomMark.static('true');
+}$
+[script = type: "module", src: "/src/scripts/progress.js"][end:script]

@@ -1,0 +1,41 @@
+[import = Layout: "../layouts/Layout.smark" !]
+
+[Metadata = title: "404 – Not Found", description: "Page not found" !]
+
+[Layout = title: "404 – Not Found"]
+
+  [div = class: "sc-404-page"]
+
+    [div = class: "sc-404-inner", id: "sc-404-cheatsheet", hidden: ""]
+      [div = class: "sc-404-icon-wrap"]
+        [span = class: "sc-404-emoji"]📄[end:span]
+        [span = class: "sc-404-badge"]?[end:span]
+      [end:div]
+      [h1 = class: "sc-404-title"]Cheatsheet [span = id: "sc-404-cs-name", class: "sc-404-highlight"][end:span] not found[end:h1]
+      [p = class: "sc-404-desc"]This cheatsheet doesn't exist yet. Contribute to the project or open a request.[end:p]
+      [div = class: "sc-404-actions"]
+        [a = href: "https://github.com/Adam-Elmi/SomCheat", class: "sc-btn-solid sc-404-btn", target: "_blank", rel: "noopener noreferrer"]Contribute[end:a]
+        [a = href: "#", id: "sc-404-request-btn", class: "sc-btn-ghost sc-404-btn", target: "_blank", rel: "noopener noreferrer"]Request[end:a]
+      [end:div]
+      [a = href: "/cheatsheet", class: "sc-404-browse"]Browse all cheatsheets →[end:a]
+    [end:div]
+
+    [div = class: "sc-404-inner", id: "sc-404-general"]
+      [div = class: "sc-404-numwrap"]
+        [span = class: "sc-404-num"]4[end:span]
+        [span = class: "sc-404-num sc-404-num--mid"]0[end:span]
+        [span = class: "sc-404-num"]4[end:span]
+      [end:div]
+      [h1 = class: "sc-404-title"]Page not found[end:h1]
+      [p = class: "sc-404-desc"]The page you're looking for doesn't exist or was moved.[end:p]
+      [div = class: "sc-404-actions"]
+        [a = href: "/", class: "sc-btn-solid sc-404-btn"]Go home[end:a]
+        [a = href: "/cheatsheet", class: "sc-btn-ghost sc-404-btn"]Browse cheatsheets[end:a]
+      [end:div]
+    [end:div]
+
+  [end:div]
+
+[end:Layout]
+
+[script = type: "module", src: "/src/scripts/404-detect.js"][end:script]

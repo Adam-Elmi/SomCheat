@@ -1,0 +1,29 @@
+[import = Header: "../components/Header.smark" !]
+[import = Footer: "../components/Footer.smark" !]
+
+[DOCTYPE!]
+[html = lang: "en", data-theme: "light"]
+  [head]
+    [meta = charset: "UTF-8"!]
+    [meta = name: "viewport", content: "width=device-width, initial-scale=1.0"!]
+    [title]v{title | "SomCheat"}[end]
+    [meta = name: "description", content: v{description | "A cheatsheet for everything"}!]
+    [link = rel: "icon", href: "/src/assets/som.svg", type: "image/svg+xml"!]
+    [link = rel: "stylesheet", href: "/src/styles/style.css"!]
+    [link = rel: "preconnect", href: "https://fonts.googleapis.com"!]
+    [link = rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: ""!]
+    [link = rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"!]
+  [end]
+
+  [body]
+    [Header!]
+
+    [main]
+      [slot][end]
+    [end]
+
+    [Footer!]
+
+    [script = type: "module", src: "/src/scripts/layout.js"][end:script]
+  [end]
+[end]

@@ -1,0 +1,15 @@
+[import = Layout: "../../../layouts/Layout.smark" !]
+[import = CategoryPage: "../../../layouts/CategoryPage.smark" !]
+
+[Metadata = title: "Databases", description: "Database cheatsheets" !]
+
+${ globalThis.__cat = (await getCheatsheets()).find(c => c.key === "databases") || {name:"Databases",count:0,iconSvg:"",sheets:[]}}$
+
+[Layout = title: "Databases Cheatsheets", description: "Database cheatsheets"]
+  [CategoryPage!]
+[end:Layout]
+
+runtime ${
+  window.__somcheatIndex = SomMark.static(`(__cat.sheets||[]).map(s=>({title:s.title,iconHtml:s.iconHtml||'',url:s.url,aliases:s.aliases||[]}))`);
+}$
+[script = type: "module", src: "/src/scripts/search.js"][end:script]

@@ -1,0 +1,7 @@
+[import = Nav: "./Nav.smark"!]
+[import = NavLinks: "./NavLinks.smark"!]
+
+[header = class: "sc-header"]
+  [Nav!]
+  [NavLinks!]
+[end:header]

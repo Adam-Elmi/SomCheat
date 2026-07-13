@@ -1,0 +1,22 @@
+[div = class: "ck-infocard"]
+  [div = class: "ck-ic-inner"]
+    [div = class: "ck-ic-head"]
+      [div = class: "ck-ic-title-wrap"]
+        ${ __csIconHtml ? SomMark.raw('<span class="ck-ic-icon">' + __csIconHtml + '</span>') : '' }$
+        [span = class: "ck-ic-title"]${ __csMeta?.title || '' }$[end:span]
+      [end:div]
+      [span = class: ${ 'ck-ic-badge ck-ic-cat--' + (__csCategory || 'other') }$]${ (__csCategory || 'other').toUpperCase() }$[end:span]
+    [end:div]
+    [div = class: "ck-ic-rows"]
+      ${ __csMeta?.releaseDate ? SomMark.raw('<div class="ck-ic-row ck-ic-row--release"><span class="ck-ic-label"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Release Date</span><span class="ck-ic-value">' + __csMeta.releaseDate + '</span></div>') : '' }$
+      ${ __csMeta?.version ? SomMark.raw('<div class="ck-ic-row ck-ic-row--version"><span class="ck-ic-label"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Version</span><span class="ck-ic-value">' + __csMeta.version + '</span></div>') : '' }$
+      ${
+        !__csMeta?.author ? '' :
+        Array.isArray(__csMeta.author)
+          ? SomMark.raw(__csMeta.author.map((a, i) => '<div class="ck-ic-row ck-ic-row--author"><span class="ck-ic-label"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Author ' + (i + 1) + '</span><span class="ck-ic-value">' + a + '</span></div>').join(''))
+          : SomMark.raw('<div class="ck-ic-row ck-ic-row--author"><span class="ck-ic-label"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Author</span><span class="ck-ic-value">' + __csMeta.author + '</span></div>')
+      }$
+      ${ SomMark.raw('<div class="ck-ic-row ck-ic-row--updated"><span class="ck-ic-label"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Last Update</span><span class="ck-ic-value">' + (__csLastUpdated || '—') + '</span></div>') }$
+    [end:div]
+  [end:div]
+[end:div]

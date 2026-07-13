@@ -1,0 +1,73 @@
+[import = Layout: "../layouts/Layout.smark" !]
+[import = Github: "../icons/github.smark" !]
+[import = Stack: "../icons/stack.smark" !]
+[import = Info: "../icons/info.smark" !]
+[import = User: "../icons/user.smark" !]
+
+[Metadata = title: "About", description: "About SomCheat — a fast developer cheatsheet reference" !]
+
+${ globalThis.__abStats = (await getCheatsheets()).reduce((acc, c) => ({ total: acc.total + c.count, cats: acc.cats + (c.count > 0 ? 1 : 0) }), { total: 0, cats: 0 }) }$
+
+[Layout = title: "About SomCheat"]
+
+  [div = class: "sc-ab-page"]
+
+    [div = class: "sc-ab-hero"]
+      [h1 = class: "sc-ab-title"]SomCheat[end:h1]
+      [p = class: "sc-ab-tagline"]Si sahlan kuu xasuuso macluumaadka aad ilawday.[end:p]
+      [div = class: "sc-ab-stats"]
+        [div = class: "sc-ab-stat"]
+          [span = class: "sc-ab-stat-num"]${ __abStats.total }$[end:span]
+          [span = class: "sc-ab-stat-label"]Cheatsheets[end:span]
+        [end:div]
+        [div = class: "sc-ab-stat-divider"][end:div]
+        [div = class: "sc-ab-stat"]
+          [span = class: "sc-ab-stat-num"]${ __abStats.cats }$[end:span]
+          [span = class: "sc-ab-stat-label"]Categories[end:span]
+        [end:div]
+      [end:div]
+    [end:div]
+
+    [div = class: "sc-ab-sections"]
+
+      [div = class: "sc-ab-card"]
+        [div = class: "sc-ab-card-icon sc-ab-icon--blue"][Info!][end:div]
+        [div = class: "sc-ab-card-body"]
+          [h2 = class: "sc-ab-card-title"]Waa maxay SomCheat?[end:h2]
+          [p = class: "sc-ab-card-text"]SomCheat waa il muhiim ah oo aad ka heli karto cheatsheets (xasuusiyayaal) ku qoran af Soomaali, si sahlanna kuu xasuusisa macluumaad hore aad u taqaanay.[end:p]
+        [end:div]
+      [end:div]
+
+      [div = class: "sc-ab-card"]
+        [div = class: "sc-ab-card-icon sc-ab-icon--violet"][Stack!][end:div]
+        [div = class: "sc-ab-card-body"]
+          [h2 = class: "sc-ab-card-title"]Mashruucan waxaa lagu dhisay[end:h2]
+          [div = class: "sc-ab-stack"]
+            [span = class: "sc-ab-badge"]SomMark[end:span]
+            [span = class: "sc-ab-badge"]Vite[end:span]
+            [span = class: "sc-ab-badge"]SomMark-Web[end:span]
+          [end:div]
+        [end:div]
+      [end:div]
+
+      [div = class: "sc-ab-card"]
+        [div = class: "sc-ab-card-icon sc-ab-icon--green"][User = width: 0.8em, height:0.8em !][end:div]
+        [div = class: "sc-ab-card-body"]
+          [h2 = class: "sc-ab-card-title"]Author[end:h2]
+          [p = class: "sc-ab-card-text"]Waxa mashruucan sameeyay [strong]Adam Elmi[end:strong]. Fadlan isku day inaad ka qayb qaadadid mashruucan furan, mahandsanid.[end:p]
+          [a = href: "https://github.com/Adam-Elmi", target: "_blank", rel: "noopener noreferrer", class: "sc-ab-github"]
+            [Github!]
+            [span]@Adam-Elmi[end:span]
+          [end:a]
+          [a = href: "https://github.com/Adam-Elmi/SomCheat", target: "_blank", rel: "noopener noreferrer", class: "sc-ab-github"]
+            [Github!]
+            [span]SomCheat[end:span]
+          [end:a]
+        [end:div]
+      [end:div]
+
+    [end:div]
+
+  [end:div]
+
+[end:Layout]

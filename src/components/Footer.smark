@@ -1,0 +1,44 @@
+[import = Home: "../icons/home.smark"!]
+[import = Cheatsheet: "../icons/cheatsheet.smark"!]
+[import = Progress: "../icons/progress.smark"!]
+[import = Info: "../icons/info.smark"!]
+[import = Github: "../icons/github.smark"!]
+
+[footer = class: "sc-footer"]
+  [div = class: "sc-footer-inner"]
+
+    [nav = class: "sc-footer-nav"]
+      [a = href: "/", class: "sc-footer-link"]
+        [span = color: "#6366f1", fontSize: "1.1em"][Home = width: "1.1em", height: "1.1em"!][end:span]
+        Home
+      [end:a]
+      [a = href: "/cheatsheet", class: "sc-footer-link"]
+        [span = color: "#10b981", fontSize: "1.1em"][Cheatsheet!][end:span]
+        Cheatsheets
+      [end:a]
+      [a = href: "/progress", class: "sc-footer-link"]
+        [span = color: "#06b6d4", fontSize: "1.1em"][Progress!][end:span]
+        Progress
+      [end:a]
+      [a = href: "/about", class: "sc-footer-link"]
+        [span = color: "#f59e0b", fontSize: "1.1em"][Info!][end:span]
+        About
+      [end:a]
+    [end:nav]
+
+    [div = class: "sc-footer-bottom"]
+      [span = class: "sc-footer-copy"]
+        [svg = xmlns: "http://www.w3.org/2000/svg", width: "14", height: "14", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", stroke-width: "2", stroke-linecap: "round", stroke-linejoin: "round"]
+          [circle = cx: "12", cy: "12", r: "10"!]
+          [path = d: "M15 9.354A4 4 0 1 0 12 16a4 4 0 0 0 2.99-1.354"!]
+        [end:svg]
+        [a = href: "https://github.com/Adam-Elmi", class: "sc-footer-author", target: "_blank", rel: "noopener noreferrer"]Adam Elmi[end:a]
+        2026
+      [end:span]
+      [a = href: "https://github.com/Adam-Elmi/SomCheat", class: "sc-footer-github", target: "_blank", rel: "noopener noreferrer"]
+        [Github = width: "1.2em", height: "1.2em"!]
+      [end:a]
+    [end:div]
+
+  [end:div]
+[end:footer]

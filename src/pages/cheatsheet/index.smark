@@ -1,0 +1,60 @@
+[import = Layout: "../../layouts/Layout.smark" !]
+[import = SearchBar: "../../components/SearchBar.smark" !]
+[import = ProgressBar: "../../icons/progressBar.smark" !]
+[import = Status: "../../icons/status.smark" !]
+[import = Date: "../../icons/date.smark" !]
+
+[Metadata = title: "Cheatsheets", description: "Browse all cheatsheets" !]
+
+[Layout = title: "Cheatsheets", description: "Browse all cheatsheets"]
+
+  [div = class: "cs-page-header"]
+    [div = class: "cs-page-title-row"]
+      [h1 = class: "cs-page-title"]Cheatsheets[end:h1]
+      [span = class: "cs-page-count"]${ (await getCheatsheets()).reduce((n, c) => n + c.count, 0) }$ total[end:span]
+    [end:div]
+    [div = class: "cs-search-row"]
+      [div = class: "sc-search-wrapper"]
+        [SearchBar!]
+        [div = class: "sc-search-results", id: "sc-search-results", hidden: ""][end:div]
+      [end:div]
+    [end:div]
+  [end:div]
+
+  [div = class: "sc-sheets-section"]
+    [div = class: "sc-sheets-grid"]
+      [for-each = ${ (await getCheatsheets()).flatMap(c => c.sheets) }$, as: "sheet"]
+        [a = href: ${ sheet.url }$, class: "sc-card"]
+
+          [div = class: "sc-card-top"]
+            [div = class: "sc-card-title-row"]
+              [span = class: "sc-card-badge"]${ sheet.iconHtml ? SomMark.raw(sheet.iconHtml) : sheet.abbr }$[end:span]
+              [span = class: "sc-card-name"]${ sheet.title }$[end:span]
+            [end:div]
+            [ProgressBar = color: ${ sheet.progressColor }$, dash: ${ sheet.progressDash }$, size: "24px" !]
+          [end:div]
+
+          [div = class: "sc-card-meta"]
+            [Date = width: "1.5em", height: "1.5em" !]
+            [span]${ sheet.formattedDate }$[end:span]
+          [end:div]
+
+          [div = class: "sc-card-bar-row"]
+            [Status !]
+            [div = class: "sc-card-track"]
+              [div = class: "sc-card-fill", style: ${ sheet.barStyle }$][end:div]
+            [end:div]
+            [span = class: "sc-card-pct"]${ sheet.progress }$%[end:span]
+          [end:div]
+
+        [end:a]
+      [end:for-each]
+    [end:div]
+  [end:div]
+
+[end:Layout]
+
+runtime ${
+  window.__somcheatIndex = SomMark.static(`await getSearchIndex()`);
+}$
+[script = type: "module", src: "/src/scripts/search.js"][end:script]

@@ -1,0 +1,25 @@
+{
+  "title": "Javascript",
+  "tasks": [
+    "Variables",
+    "Var",
+    "Let",
+    "Const",
+    "Data Types",
+    "Strings",
+    "Numbers",
+    "Booleans",
+    "Arrays",
+    "Objects",
+    "Functions",
+    "Arrow Functions",
+    "Conditionals",
+    "Loops",
+    "Classes",
+    "Promises",
+    "Async/Await",
+    "Modules",
+    "Error Handling",
+    "DOM Manipulation"
+  ]
+}

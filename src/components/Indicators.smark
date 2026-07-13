@@ -1,0 +1,27 @@
+[import = ProgressBar: "../icons/progressBar.smark" !]
+[import = Arrow: "../icons/arrow.smark" !]
+
+[div = class: "sc-indicators"]
+  [p = class: "sc-indicators-title"]INDICATORS[end:p]
+  [hr = class: "sc-indicators-divider"!]
+
+  [div = class: "sc-indicators-grid"]
+    [div = class: "sc-indicator-item"]
+      [ProgressBar = color: "#10b981", dash: "251.33 251.33"!]
+      [Arrow = direction: "right"!]
+      [span = class: "sc-indicator-name"]Complete Cheatsheets[end:span]
+    [end:div]
+
+    [div = class: "sc-indicator-item"]
+      [ProgressBar = color: "#3b82f6", dash: "150.8 251.33"!]
+      [Arrow = direction: "right"!]
+      [span = class: "sc-indicator-name"]In Progress Cheatsheets[end:span]
+    [end:div]
+
+    [div = class: "sc-indicator-item"]
+      [ProgressBar = color: "#f43f5e", dash: "0 251.33" !]
+      [Arrow = direction: "right"!]
+      [span = class: "sc-indicator-name"]Empty Cheatsheets[end:span]
+    [end:div]
+  [end:div]
+[end:div]

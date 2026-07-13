@@ -1,0 +1,24 @@
+[import = CheatsheetLayout: "../../../layouts/CheatsheetLayout.smark" !]
+[import = Intro: "../../../components/cheatsheet/Intro.smark" !]
+
+
+[Metadata = title: "Javascript",
+icon: "src/icons/languages/js.smark",
+aliases: ${["js", "cjs", "esm", "javascript"]}$,
+author: "Brendan Eich",
+releaseDate: "Dec 1995",
+# version: "ES2023"
+!]
+
+[CheatsheetLayout]
+
+  [Intro]
+    Javascript waxa la sameeyey sannadkii 1995-kii, waxaana loo sameeyey si logu adeegsado dhisitaanka websites. Sababtuna waxay ahayd in websites laga dhigo qaar nool, iyado javascript lo adeegsanayo si ula fal gasho HTML iyo CSS. Luuqadan waxyaabo badan ayaad ku dhisi kartaa oo ay ka mid yihiin: web apps, mobile apps, desktop apps, games iyo waxyaabo kale oo badan.
+  [end:Intro]
+
+[Code = "javascript", file: "hello.js", smark-raw: true, smark-syntax: js]
+const greet = (name) => `Hello, ${name}!`;
+console.log(greet("Adam")); // Hello, Adam!
+[end:Code]
+ 
+[end:CheatsheetLayout]
