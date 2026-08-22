@@ -124,6 +124,7 @@ html.no-transition * {
               [end:a]
             [end:for-each]
           [end:div]
+          [hr = color: --ck-border !]
         [end:for-each]
       [end:nav]
 
@@ -142,7 +143,8 @@ html.no-transition * {
     [div = class: "ck-nav-backdrop", id: "ck-nav-backdrop"][end:div]
 
     runtime ${
-      window.__ckReady = SomMark.static('true');
+    // SomMark.static('true') -> true
+      window.__ckReady = true;
     }$
     [script = type: "module", src: "/src/scripts/cheatsheet.js"][end:script]
   [end]
